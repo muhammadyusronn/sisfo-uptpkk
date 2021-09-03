@@ -50,9 +50,8 @@
 </head>
 <body class="crm_body_bg">
 
-    @include('layouts.admin.sidebar')
-
-    @include('layouts.admin.header')
+    @include('backend.layouts.sidebar')
+    @include('backend.layouts.header')
     @yield('content')
     @yield('footer')
 
