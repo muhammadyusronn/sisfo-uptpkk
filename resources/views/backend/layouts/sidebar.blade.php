@@ -9,6 +9,16 @@
     </div>
     <ul id="sidebar_menu">
         <li class="">
+            <a href="{{url('dash')}}" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <img src="{{asset('assets/img/menu-icon/dashboard.svg')}}" alt="">
+                </div>
+                <div class="nav_title">
+                    <span>Dashboard </span>
+                </div>
+            </a>
+        </li>
+        <li class="">
             <a href="#" aria-expanded="false">
                 <div class="nav_icon_small">
                     <img src="{{asset('assets/img/menu-icon/research.svg')}}" alt="">
@@ -19,54 +29,40 @@
             </a>
         </li>
         <li class="">
-            <a href="#" aria-expanded="false">
-              <div class="nav_icon_small">
-                <img src="{{('assets/img/menu-icon/newspaper.svg')}}" alt="">
-            </div>
-            <div class="nav_title">
-                <span>Berita Terbaru</span>
-            </div>
-            </a>
-        </li>
-        <li class="">
-            <a href="#" aria-expanded="false">
+            <a class="has-arrow" href="#" aria-expanded="false">
               <div class="nav_icon_small">
                 <img src="{{('assets/img/menu-icon/promotion.svg')}}" alt="">
             </div>
             <div class="nav_title">
-                <span>Pengumuman Terbaru</span>
+                <span>Pengumuman</span>
             </div>
             </a>
+            <ul>
+                <li>
+                    <a href="">Kategori</a>
+                </li>
+                <li>
+                    <a href="">Konten</a>
+                </li>
+            </ul>
         </li>
         <li class="">
-            <a href="#" aria-expanded="false">
+            <a class="has-arrow" href="#" aria-expanded="false">
               <div class="nav_icon_small">
-                <img src="{{('assets/img/menu-icon/search.svg')}}" alt="">
+                <img src="{{('assets/img/menu-icon/newspaper.svg')}}" alt="">
             </div>
             <div class="nav_title">
-                <span>Latar Belakang</span>
+                <span>Berita</span>
             </div>
             </a>
-        </li>
-        <li class="">
-            <a href="#" aria-expanded="false">
-              <div class="nav_icon_small">
-                <img src="{{('assets/img/menu-icon/idea.svg')}}" alt="">
-            </div>
-            <div class="nav_title">
-                <span>Visi, Misi & Tujuan</span>
-            </div>
-            </a>
-        </li>
-        <li class="">
-            <a href="#" aria-expanded="false">
-              <div class="nav_icon_small">
-                <img src="{{('assets/img/menu-icon/management.svg')}}" alt="">
-            </div>
-            <div class="nav_title">
-                <span>Struktur Organisasi</span>
-            </div>
-            </a>
+            <ul>
+                <li>
+                    <a href="">Kategori</a>
+                </li>
+                <li>
+                    <a href="">Konten</a>
+                </li>
+            </ul>
         </li>
         <li class="">
             <a class="has-arrow" href="#" aria-expanded="false">
@@ -77,7 +73,6 @@
                 <span>Karir</span>
             </div>
             </a>
-
             <ul>
                 <li><a href="">
                     Seminar, Training & <br>Workshop</a>
@@ -104,6 +99,39 @@
                 </li>
                 <li>
                     <a href="">Konseling</a>
+                </li>
+            </ul>
+        </li>
+        <li class="">
+            <a href="#" aria-expanded="false">
+              <div class="nav_icon_small">
+                <img src="{{('assets/img/menu-icon/search.svg')}}" alt="">
+            </div>
+            <div class="nav_title">
+                <span>Latar Belakang</span>
+            </div>
+            </a>
+        </li><li class="">
+            <a class="has-arrow" href="#" aria-expanded="false">
+              <div class="nav_icon_small">
+                <img src="{{('assets/img/menu-icon/idea.svg')}}" alt="">
+            </div>
+            <div class="nav_title">
+                <span>Profil</span>
+            </div>
+            </a>
+            <ul>
+                <li>
+                    <a href="">Visi</a>
+                </li>
+                <li>
+                    <a href="">Misi</a>
+                </li>
+                <li>
+                    <a href="">Tujuan</a>
+                </li>
+                <li>
+                    <a href="">Struktur Organisasi</a>
                 </li>
             </ul>
         </li>
