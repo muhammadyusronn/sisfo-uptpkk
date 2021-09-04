@@ -19,6 +19,16 @@
             </a>
         </li>
         <li class="">
+            <a href="{{url('admin')}}" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <img src="{{asset('assets/img/menu-icon/4.svg')}}" alt="">
+                </div>
+                <div class="nav_title">
+                    <span>Admin</span>
+                </div>
+            </a>
+        </li>
+        <li class="">
             <a href="#" aria-expanded="false">
                 <div class="nav_icon_small">
                     <img src="{{asset('assets/img/menu-icon/research.svg')}}" alt="">
@@ -39,10 +49,10 @@
             </a>
             <ul>
                 <li>
-                    <a href="">Kategori</a>
+                    <a href="{{url('PNKategori')}}">Kategori</a>
                 </li>
                 <li>
-                    <a href="">Konten</a>
+                    <a href="{{url('pengumuman')}}">Konten</a>
                 </li>
             </ul>
         </li>
@@ -57,10 +67,10 @@
             </a>
             <ul>
                 <li>
-                    <a href="">Kategori</a>
+                    <a href="{{route('BRKategori')}}">Kategori</a>
                 </li>
                 <li>
-                    <a href="">Konten</a>
+                    <a href="{{route('berita')}}">Konten</a>
                 </li>
             </ul>
         </li>
