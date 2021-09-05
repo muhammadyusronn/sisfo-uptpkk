@@ -115,7 +115,8 @@
                             <div class="profile_info_details">
                                 <a href="#">My Profile </a>
                                 <a href="#">Settings</a>
-                                <a href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Log Out</a><form action="#" method="POST" class="d-none" id="logout-form">@csrf</form>
+                                <a href="{{route('logout')}}">Log Out</a>
+                                {{--  <a href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Log Out</a><form action="#" method="POST" class="d-none" id="logout-form">@csrf</form>  --}}
                             </div>
                         </div>
                     </div>

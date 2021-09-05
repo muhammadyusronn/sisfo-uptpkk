@@ -21,8 +21,8 @@ class Cek_login
             return redirect('login')->withErrors('errorlogin', 'Mohon untuk login terlebih dahulu');
         }
         $user = Auth::user();
-        if ($user->level == $role) {
-            return redirect('dash');
+        if ($user->user_level == $role) {
+            return $next($request);
         }
         return redirect('login')->withErrors('errorlogin', 'Kamu tidak memiliki akses!');
     }
