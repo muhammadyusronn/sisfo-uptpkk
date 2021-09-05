@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('user_nip')->unique();
             $table->string('user_kontak');
             $table->enum('user_level', ['superadmin', 'admin']);
-            $table->string('user_password');
+            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });
