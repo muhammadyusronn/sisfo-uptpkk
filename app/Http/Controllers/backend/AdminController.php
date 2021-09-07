@@ -42,6 +42,22 @@ class AdminController extends Controller
         }
     }
 
+    public function update(Request $request)
+    {
+        $data['title'] = 'Update data admin';
+        if (isset($_POST['submit'])) {
+            $user = User::find($request->user_id);
+            $user->user_nip = $request->user_nip;
+            $user->user_nama = $request->user_nama;
+            $user->user_kontak = $request->user_kontak;
+            $user->user_level = $request->user_level;
+            $user->save();
+            return redirect('admin')->with('succes', 'Data berhasil diubah!');
+        } else {
+            $data['data_admin'] = User::where('user_id', 4)->get();
+            return view('backend.admin.update_admin', $data);
+        }
+    }
     public function delete(Request $req)
     {
         $id = $req->user_id;

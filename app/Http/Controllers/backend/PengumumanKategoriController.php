@@ -37,6 +37,23 @@ class PengumumanKategoriController extends Controller
         }
     }
 
+
+
+    public function update(Request $request)
+    {
+        $data['title'] = 'Update Data Kategori Pengumuman';
+        if (isset($_POST['submit'])) {
+            $kategori = Announcements_categories::find($request->kategori_id);
+            $kategori->kategori_nama = $request->kategori_nama;
+            $kategori->kategori_slug =  SlugService::createSlug(Announcements_categories::class, 'kategori_slug', $request->kategori_nama);
+            $kategori->save();
+            return redirect('PNKategori')->with('success', 'Data berhasil diubah!');
+        } else {
+            $data['data_kategori'] = Announcements_categories::where('kategori_id', $request->kategori_id)->get();
+            return view('backend.pengumuman.kategori.update_kategori', $data);
+        }
+    }
+
     public function delete(Request $request)
     {
         $delete = DB::table($this->table)->where('kategori_id', $request->kategori_id)->delete();

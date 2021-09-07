@@ -28,7 +28,7 @@
                                             </div>
                                         </div>
                                         <div class="add_button ml-10">
-                                            <a href="{{url('admin-create')}}" class="btn_1">Tambah Data</a>
+                                            <a href="{{route('admin.create')}}" class="btn_1">Tambah Data</a>
                                         </div>
                                     </div>
                                 </div>
@@ -54,10 +54,15 @@
                                                 <td><?= $i->user_kontak ?></td>
                                                 <td><?= $i->user_level ?></td>
                                                 <td>
-                                                    <form action="{{url('admin-delete')}}" method="post" class="d-inline">
+                                                    <form action="{{route('admin.delete')}}" method="post" class="d-inline">
                                                         @csrf
                                                         <input type="hidden" name="user_id" value="{{$i->user_id}}">
-                                                        <button type="submit" class="btn btn-warning"><i class="fa fa-trash"></i></button>
+                                                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                                                    </form>
+                                                    <form action="{{route('admin.update')}}" method="post" class="d-inline">
+                                                        @csrf
+                                                        <input type="hidden" name="user_id" value="{{$i->user_id}}">
+                                                        <button type="submit" class="btn btn-warning"><i class="fa fa-pen"></i></button>
                                                     </form>
                                                 </td>
                                             </tr>

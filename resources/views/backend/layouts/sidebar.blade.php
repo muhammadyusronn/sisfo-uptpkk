@@ -19,7 +19,7 @@
             </a>
         </li>
         <li class="">
-            <a href="{{url('admin')}}" aria-expanded="false">
+            <a href="{{route('admin')}}" aria-expanded="false">
                 <div class="nav_icon_small">
                     <img src="{{asset('assets/img/menu-icon/4.svg')}}" alt="">
                 </div>
@@ -49,10 +49,10 @@
             </a>
             <ul>
                 <li>
-                    <a href="{{url('PNKategori')}}">Kategori</a>
+                    <a href="{{route('PNKategori')}}">Kategori</a>
                 </li>
                 <li>
-                    <a href="{{url('pengumuman')}}">Konten</a>
+                    <a href="{{route('pengumuman')}}">Konten</a>
                 </li>
             </ul>
         </li>

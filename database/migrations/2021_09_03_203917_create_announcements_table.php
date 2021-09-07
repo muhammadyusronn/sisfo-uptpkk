@@ -22,7 +22,6 @@ class CreateAnnouncementsTable extends Migration
             $table->unsignedBigInteger('pengumuman_author');
             $table->unsignedBigInteger('pengumuman_kategori');
             $table->boolean('pengumuman_status');
-            $table->date('pengumuman_tanggal');
             $table->timestamps();
 
             $table->foreign('pengumuman_author')->references('user_id')->on('users');

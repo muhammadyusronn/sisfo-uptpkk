@@ -22,7 +22,6 @@ class CreateNewsTable extends Migration
             $table->unsignedBigInteger('berita_author');
             $table->unsignedBigInteger('berita_kategori');
             $table->boolean('berita_status');
-            $table->date('berita_tanggal');
             $table->timestamps();
 
             $table->foreign('berita_author')->references('user_id')->on('users');

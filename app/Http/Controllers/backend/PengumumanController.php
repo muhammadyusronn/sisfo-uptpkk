@@ -7,7 +7,9 @@ use App\Models\Announcements;
 use App\Models\Announcements_categories;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class PengumumanController extends Controller
 {
@@ -18,7 +20,7 @@ class PengumumanController extends Controller
     {
         $data['title'] = 'Data Pengumuman';
         $data['data_pengumuman'] = DB::table($this->table)
-            ->join('announcement_categories', 'announcements.pengumuman_id', '=', 'announcement_categories.kategori_id')
+            ->join('announcement_categories', 'announcements.pengumuman_kategori', '=', 'announcement_categories.kategori_id')
             ->get();
         return view('backend.pengumuman.data_pengumuman', $data);
     }
@@ -41,7 +43,7 @@ class PengumumanController extends Controller
                 'pengumuman_slug'       => SlugService::createSlug(Announcements::class, 'pengumuman_slug', $request->pengumuman_judul),
                 'pengumuman_konten'     => $request->pengumuman_konten,
                 'pengumuman_sampul'     => $path,
-                'pengumuman_author'     =>  '4',
+                'pengumuman_author'     =>  Auth::user()->user_id,
                 'pengumuman_status'     =>  $request->pengumuman_status,
                 'pengumuman_kategori'   =>  $request->pengumuman_kategori
             ];
@@ -52,10 +54,46 @@ class PengumumanController extends Controller
         }
     }
 
+    public function update(Request $request)
+    {
+        $data['title'] = 'Update Data Pengumuman';
+        if (isset($_POST['submit'])) {
+            if (!isset($request->pengumuman_sampul)) {
+                $pengumuman = Announcements::find($request->pengumuman_id);
+                $pengumuman->pengumuman_judul      = $request->pengumuman_judul;
+                $pengumuman->pengumuman_slug       = SlugService::createSlug(Announcements::class, 'pengumuman_slug', $request->pengumuman_judul);
+                $pengumuman->pengumuman_konten     = $request->pengumuman_konten;
+                $pengumuman->pengumuman_author     =  Auth::user()->user_id;
+                $pengumuman->pengumuman_status     =  $request->pengumuman_status;
+                $pengumuman->pengumuman_kategori   =  $request->pengumuman_kategori;
+                $pengumuman->save();
+                return redirect('pengumuman')->with('success', 'Data berhasil diubah!');
+            } else {
+                Storage::delete([$request->sampul]);
+                $path = $request->file('pengumuman_sampul')->store('pengumuman_sampul');
+                $pengumuman = Announcements::find($request->pengumuman_id);
+                $pengumuman->pengumuman_judul      = $request->pengumuman_judul;
+                $pengumuman->pengumuman_slug       = SlugService::createSlug(Announcements::class, 'pengumuman_slug', $request->pengumuman_judul);
+                $pengumuman->pengumuman_konten     = $request->pengumuman_konten;
+                $pengumuman->pengumuman_author     =  Auth::user()->user_id;
+                $pengumuman->pengumuman_sampul     =  $path;
+                $pengumuman->pengumuman_status     =  $request->pengumuman_status;
+                $pengumuman->pengumuman_kategori   =  $request->pengumuman_kategori;
+                $pengumuman->save();
+                return redirect('pengumuman')->with('success', 'Data berhasil diubah!');
+            }
+        } else {
+            $data['data_pengumuman'] = Announcements::where('pengumuman_id', $request->pengumuman_id)->get();
+            $data['data_kategori'] = Announcements_categories::all();
+            return view('backend.pengumuman.update_pengumuman', $data);
+        }
+    }
+
     public function delete(Request $request)
     {
         $delete = DB::table($this->table)->where('pengumuman_id', $request->pengumuman_id)->delete();
         if ($delete) {
+            Storage::delete([$request->pengumuman_sampul]);
             return redirect('pengumuman')->with('success', 'Data berhasil dihapus');
         } else {
             return redirect('failed', 'Data gagal diahapus!');

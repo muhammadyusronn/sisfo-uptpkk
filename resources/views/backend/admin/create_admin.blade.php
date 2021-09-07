@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title', 'Data Admin')
+@section('title', 'Form Input Admin')
 @section('content')
 <div class="main_content_iner">
         <div class="container-fluid p-0 sm_padding_15px">

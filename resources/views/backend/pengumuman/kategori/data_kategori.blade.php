@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title', 'Data Admin')
+@section('title', 'Data Kategori Pengumuman')
 @section('content')
     <div class="main_content_iner ">
         <div class="container-fluid p-0">
@@ -28,7 +28,7 @@
                                             </div>
                                         </div>
                                         <div class="add_button ml-10">
-                                            <a href="{{url('PNKategori-create')}}" class="btn_1">Tambah Data</a>
+                                            <a href="{{route('PNKategori.create')}}" class="btn_1">Tambah Data</a>
                                         </div>
                                     </div>
                                 </div>
@@ -50,10 +50,15 @@
                                                 <td><?= $i->kategori_nama ?></td>
                                                 <td><?= $i->kategori_slug ?></td>
                                                 <td>
-                                                    <form action="{{url('PNKategori-delete')}}" method="post" class="d-inline">
+                                                    <form action="{{route('PNKategori.delete')}}" method="post" class="d-inline">
                                                         @csrf
                                                         <input type="hidden" name="kategori_id" value="{{$i->kategori_id}}">
-                                                        <button type="submit" class="btn btn-warning"><i class="fa fa-trash"></i></button>
+                                                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                                                    </form>
+                                                    <form action="{{route('PNKategori.update')}}" method="post" class="d-inline">
+                                                        @csrf
+                                                        <input type="hidden" name="kategori_id" value="{{$i->kategori_id}}">
+                                                        <button type="submit" class="btn btn-warning"><i class="fa fa-pen"></i></button>
                                                     </form>
                                                 </td>
                                             </tr>

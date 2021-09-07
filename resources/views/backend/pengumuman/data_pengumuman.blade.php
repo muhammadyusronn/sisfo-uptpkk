@@ -28,7 +28,7 @@
                                             </div>
                                         </div>
                                         <div class="add_button ml-10">
-                                            <a href="{{url('pengumuman-create')}}" class="btn_1">Tambah Data</a>
+                                            <a href="{{route('pengumuman.create')}}" class="btn_1">Tambah Data</a>
                                         </div>
                                     </div>
                                 </div>
@@ -60,8 +60,14 @@
                                                 <td>
                                                     <form action="{{route('pengumuman.delete')}}" method="post" class="d-inline">
                                                         @csrf
+                                                        <input type="hidden" name="pengumuman_sampul" value="{{$i->pengumuman_sampul}}">
                                                         <input type="hidden" name="pengumuman_id" value="{{$i->pengumuman_id}}">
-                                                        <button type="submit" class="btn btn-warning"><i class="fa fa-trash"></i></button>
+                                                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                                                    </form>
+                                                    <form action="{{route('pengumuman.update')}}" method="post" class="d-inline">
+                                                        @csrf
+                                                        <input type="hidden" name="pengumuman_id" value="{{$i->pengumuman_id}}">
+                                                        <button type="submit" class="btn btn-warning"><i class="fa fa-pen"></i></button>
                                                     </form>
                                                 </td>
                                             </tr>

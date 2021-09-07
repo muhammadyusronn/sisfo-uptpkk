@@ -60,8 +60,15 @@
                                                 <td>
                                                     <form action="{{route('berita.delete')}}" method="post" class="d-inline">
                                                         @csrf
+                                                        <input type="hidden" name="sampul" value="<?= $i->berita_sampul ?>">
                                                         <input type="hidden" name="berita_id" value="{{$i->berita_id}}">
-                                                        <button type="submit" class="btn btn-warning"><i class="fa fa-trash"></i></button>
+                                                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                                                    </form>
+                                                    <form action="{{route('berita.update')}}" method="post" class="d-inline">
+                                                        @csrf
+                                                        <input type="hidden" name="berita_sampul" value="{{$i->berita_sampul}}">
+                                                        <input type="hidden" name="berita_id" value="{{$i->berita_id}}">
+                                                        <button type="submit" class="btn btn-warning"><i class="fa fa-pen"></i></button>
                                                     </form>
                                                 </td>
                                             </tr>

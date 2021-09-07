@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title', 'Form Kategori Pengumuman')
+@section('title', 'Update Data Kategori Berita')
 @section('content')
 <div class="main_content_iner">
         <div class="container-fluid p-0 sm_padding_15px">
@@ -26,14 +26,17 @@
                                     </button>
                                 </div>
                                 @endif
-                            <form method="post" action="{{route('PNKategori.save')}}">
-                                @csrf
-                                <div class="form-group">
-                                    <label for="inputKategoriNama">Nama Kategori</label>
-                                    <input type="text" class="form-control" name="kategori_nama" id="inputKategoriNama" placeholder="Masukan Kategori Pengumuman" required>
-                                </div>
-                                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-                            </form>
+                                @foreach ($data_kategori as $i)
+                                    <form method="post" action="{{route('BRKategori.update')}}">
+                                        @csrf
+                                        <div class="form-group">
+                                            <label for="inputKategoriNama">Nama Kategori</label>
+                                            <input type="hidden" value="<?= $i->kategori_id ?>" name="kategori_id">
+                                            <input type="text" class="form-control" name="kategori_nama" value="<?= $i->kategori_nama ?>" id="inputKategoriNama" placeholder="Masukan Kategori Berita" required>
+                                        </div>
+                                        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                            @endforeach
                         </div>
                     </div>
                 </div>
