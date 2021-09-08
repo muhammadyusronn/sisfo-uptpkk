@@ -34,6 +34,22 @@
                                 </div>
         
                                 <div class="QA_table mb_30">
+                                    @if($message = Session::get('error'))
+                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                            <strong>Gagal!</strong> {{$message}}
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                    @endif
+                                    @if($message = Session::get('success'))
+                                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                            <strong>Sukses!</strong> {{$message}}
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                    @endif
                                     <!-- table-responsive -->
                                     <table class="table lms_table_active3 " id="myTable">
                                         <thead>

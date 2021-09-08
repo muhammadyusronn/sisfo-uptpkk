@@ -47,6 +47,14 @@
                                             </button>
                                         </div>
                                         @endif
+                                        @if($message = Session::get('error'))
+                                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                <strong>Gagal!</strong> {{$message}}
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                        @endif
                                         <form action="{{route('auth.login')}}" method="post">
                                             @csrf
                                             <div class="form-group">

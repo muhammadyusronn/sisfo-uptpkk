@@ -26,15 +26,15 @@ class AdminController extends Controller
                 'user_nama'             => 'required',
                 'user_nip'              => 'required|unique:users',
                 'user_kontak'           => 'required|unique:users',
-                'user_password'         => 'required|min:6',
-                'password_confirmation' => 'required|same:user_password',
+                'password'              => 'required|min:6',
+                'password_confirmation' => 'required|same:password',
             ]);
 
             User::create([
                 'user_nama'     => $request->user_nama,
                 'user_nip'     => $request->user_nip,
                 'user_kontak'     => $request->user_kontak,
-                'user_password'     => bcrypt($request->user_password),
+                'password'     => bcrypt($request->password),
             ]);
             return redirect('admin')->with('success', 'Data berhasil ditambah');
         } else {
