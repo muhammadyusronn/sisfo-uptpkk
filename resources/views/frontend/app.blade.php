@@ -8,12 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="description" content="DataSoft  IT Solutions &  Services Template">
-  <link href="{{asset('frontend/assets/images/favicon/favicon.png')}}" rel="icon">
-  <title>DataSoft IT Solutions & Services Template</title>
+  <link href="{{asset('frontend/assets/images/favicon/logo-polsri.png')}}" rel="icon">
+  <title>UPTPKK</title>
 
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Roboto:wght@400;700&amp;display=swap">
   <link rel="stylesheet" href="{{asset('frontend/assets/use.fontawesome.com/releases/v5.1.1/css/all.css')}}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="{{asset('frontend/assets/css/libraries.css')}}">
   <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
 </head>
@@ -25,6 +26,7 @@
     </div><!-- /.preloader -->
     @include('frontend.layouts.header')
     @include('frontend.layouts.content')
+    @yield('content')
     @include('frontend.layouts.footer')
   </div><!-- /.wrapper -->
 
