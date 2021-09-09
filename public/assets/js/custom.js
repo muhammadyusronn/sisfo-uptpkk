@@ -343,27 +343,7 @@ $("#sidebar_menu >li a").filter(function() {
     });
 }
 
-if ($('.lms_table_active3').length) {
-    $('.lms_table_active3').DataTable({
-        bLengthChange: false,
-        "bDestroy": false,
-        language: {
-            search: "<i class='ti-search'></i>",
-            searchPlaceholder: 'Quick Search',
-            paginate: {
-                next: "<i class='ti-arrow-right'></i>",
-                previous: "<i class='ti-arrow-left'></i>"
-            }
-        },
-        columnDefs: [{
-            visible: false
-        }],
-        responsive: true,
-        searching: false,
-        info: true,
-        paging: true
-    });
-}
+
 //   layout select
   $('.layout_style').click( function(){
     if ( $(this).hasClass('layout_style_selected') ) {
