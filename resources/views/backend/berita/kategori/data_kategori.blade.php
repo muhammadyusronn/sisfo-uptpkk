@@ -43,7 +43,7 @@
                                         </div>
                                     @endif
                                     @if($message = Session::get('success'))
-                                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <div class="alert alert-success alert-dismissible fade show col-lg-4" role="alert">
                                             <strong>Sukses!</strong> {{$message}}
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                             <span aria-hidden="true">×</span>

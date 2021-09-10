@@ -26,6 +26,7 @@ class User extends Authenticatable
         'password',
         'user_kontak',
         'user_level',
+        'user_foto',
     ];
 
     /**

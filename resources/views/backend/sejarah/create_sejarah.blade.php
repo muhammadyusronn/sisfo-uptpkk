@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title', 'Update Kategori Pengumuman')
+@section('title', 'Form Sejarah')
 @section('content')
 <div class="main_content_iner">
         <div class="container-fluid p-0 sm_padding_15px">
@@ -26,17 +26,18 @@
                                     </button>
                                 </div>
                                 @endif
-                                @foreach ($data_kategori as $i)
-                                    <form method="post" action="{{route('PNKategori.update')}}">
-                                        @csrf
-                                        <div class="form-group">
-                                            <label for="inputKategoriNama">Nama Kategori</label>
-                                            <input type="hidden" name="kategori_id" value="{{$i->kategori_id}}">
-                                            <input type="text" class="form-control" name="kategori_nama" value="{{$i->kategori_nama}}" id="inputKategoriNama" placeholder="Masukan Kategori Pengumuman" required>
-                                        </div>
-                                        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-                                    </form>
-                                @endforeach
+                            <form method="post" action="{{route('sejarah.save')}}" enctype="multipart/form-data">
+                                @csrf <!-- {{ csrf_field() }} -->
+                                <div class="form-group">
+                                    <label>Sejarah</label>
+                                    <textarea name="sejarah_konten" id="kt-ckeditor-1"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputSejarahFoto">Foto Sejarah</label>
+                                    <input type="file" class="form-control-file" name="sejarah_foto" id="inputSejarahFoto" required>
+                                </div>
+                                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                            </form>
                         </div>
                     </div>
                 </div>

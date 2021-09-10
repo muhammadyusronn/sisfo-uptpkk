@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title', 'Form Pengumuman')
+@section('title', 'Update Pengumuman Pengumuman')
 @section('content')
 <div class="main_content_iner">
         <div class="container-fluid p-0 sm_padding_15px">

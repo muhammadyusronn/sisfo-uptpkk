@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title', 'Data Kategori Pengumuman')
+@section('title', 'Data Sejarah')
 @section('content')
     <div class="main_content_iner ">
         <div class="container-fluid p-0">
@@ -27,12 +27,14 @@
                                                 </form>
                                             </div>
                                         </div>
+                                        @if (count($data_sejarah) < 1)
                                         <div class="add_button ml-10">
-                                            <a href="{{route('PNKategori.create')}}" class="btn_1">Tambah Data</a>
+                                            <a href="{{route('sejarah.create')}}" class="btn_1">Tambah Data</a>
                                         </div>
+                                        @endif
                                     </div>
                                 </div>
-        
+                                
                                 <div class="QA_table mb_30">
                                     @if($message = Session::get('error'))
                                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -43,7 +45,7 @@
                                         </div>
                                     @endif
                                     @if($message = Session::get('success'))
-                                        <div class="alert alert-success alert-dismissible fade show col-lg-4" role="alert">
+                                        <div class="alert alert-success alert-dismissible fade show" role="alert">
                                             <strong>Sukses!</strong> {{$message}}
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                             <span aria-hidden="true">×</span>
@@ -54,26 +56,25 @@
                                     <table class="table lms_table_active3 " id="myTable">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Nama Kategori</th>
-                                                <th scope="col">Slug</th>
+                                                <th scope="col">Sejarah</th>
                                                 <th scope="col">Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php 
-                                            foreach($data_kategori as $i): ?>
+                                            foreach($data_sejarah as $i): ?>
                                             <tr>
-                                                <td><?= $i->kategori_nama ?></td>
-                                                <td><?= $i->kategori_slug ?></td>
+                                                <td><?= $i->sejarah_konten ?></td>
                                                 <td>
-                                                    <form action="{{route('PNKategori.delete')}}" method="post" class="d-inline">
+                                                    <form action="{{route('sejarah.delete')}}" method="post" class="d-inline">
                                                         @csrf
-                                                        <input type="hidden" name="kategori_id" value="{{$i->kategori_id}}">
+                                                        <input type="hidden" value="{{$i->sejarah_foto}}" name="sejarah_foto" id="">
+                                                        <input type="hidden" name="sejarah_id" value="{{$i->sejarah_id}}">
                                                         <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
                                                     </form>
-                                                    <form action="{{route('PNKategori.update')}}" method="post" class="d-inline">
+                                                    <form action="{{route('sejarah.update')}}" method="post" class="d-inline">
                                                         @csrf
-                                                        <input type="hidden" name="kategori_id" value="{{$i->kategori_id}}">
+                                                        <input type="hidden" name="sejarah_id" value="{{$i->sejarah_id}}">
                                                         <button type="submit" class="btn btn-warning"><i class="fa fa-pen"></i></button>
                                                     </form>
                                                 </td>

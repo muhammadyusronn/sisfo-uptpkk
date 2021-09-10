@@ -29,16 +29,6 @@
             </a>
         </li>
         <li class="">
-            <a href="#" aria-expanded="false">
-                <div class="nav_icon_small">
-                    <img src="{{asset('assets/img/menu-icon/research.svg')}}" alt="">
-                </div>
-                <div class="nav_title">
-                    <span>Lowongan Terbaru </span>
-                </div>
-            </a>
-        </li>
-        <li class="">
             <a class="has-arrow" href="#" aria-expanded="false">
               <div class="nav_icon_small">
                 <img src="{{('assets/img/menu-icon/promotion.svg')}}" alt="">
@@ -75,53 +65,26 @@
             </ul>
         </li>
         <li class="">
-            <a class="has-arrow" href="#" aria-expanded="false">
-              <div class="nav_icon_small">
-                <img src="{{('assets/img/menu-icon/blogger.svg')}}" alt="">
-            </div>
-            <div class="nav_title">
-                <span>Karir</span>
-            </div>
-            </a>
-            <ul>
-                <li><a href="">
-                    Seminar, Training & <br>Workshop</a>
-                </li>
-                <li>
-                    <a href="">Konseling</a>
-                </li>
-            </ul>
-        </li>
-        <li class="">
-            <a class="has-arrow" href="#" aria-expanded="false">
-              <div class="nav_icon_small">
-                <img src="{{('assets/img/menu-icon/people-trading.svg')}}" alt="">
-            </div>
-            <div class="nav_title">
-                <span>Kewirausahan</span>
-            </div>
-            </a>
-
-            <ul>
-                <li><a href="">Kewirausahan</a></li>
-                <li><a href="">
-                    Seminar, Training & <br>Workshop</a>
-                </li>
-                <li>
-                    <a href="">Konseling</a>
-                </li>
-            </ul>
-        </li>
-        <li class="">
             <a href="#" aria-expanded="false">
-              <div class="nav_icon_small">
-                <img src="{{('assets/img/menu-icon/search.svg')}}" alt="">
-            </div>
-            <div class="nav_title">
-                <span>Latar Belakang</span>
-            </div>
+                <div class="nav_icon_small">
+                    <img src="{{asset('assets/img/menu-icon/blogger.svg')}}" alt="">
+                </div>
+                <div class="nav_title">
+                    <span>Karir</span>
+                </div>
             </a>
-        </li><li class="">
+        </li>
+       <li class="">
+            <a href="#" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <img src="{{asset('assets/img/menu-icon/people-trading.svg')}}" alt="">
+                </div>
+                <div class="nav_title">
+                    <span>Kewirausahaan</span>
+                </div>
+            </a>
+        </li>
+        <li class="">
             <a class="has-arrow" href="#" aria-expanded="false">
               <div class="nav_icon_small">
                 <img src="{{('assets/img/menu-icon/idea.svg')}}" alt="">
@@ -132,13 +95,11 @@
             </a>
             <ul>
                 <li>
-                    <a href="">Visi</a>
+                    <a href="{{route('sejarah')}}">Sejarah</a>
                 </li>
                 <li>
-                    <a href="">Misi</a>
-                </li>
                 <li>
-                    <a href="">Tujuan</a>
+                    <a href="{{route('visimisi')}}">Visi dan Misi</a>
                 </li>
                 <li>
                     <a href="">Struktur Organisasi</a>

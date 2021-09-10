@@ -56,7 +56,7 @@ class BeritaController extends Controller
     {
         $data['title'] = 'Update data berita';
         if (isset($_POST['submit'])) {
-            if (isset($request->pengumuman_sampul)) {
+            if (isset($request->berita_sampul)) {
                 Storage::delete([$request->sampul]);
                 $path = $request->file('berita_sampul')->store('berita_sampul');
                 $news = News::find($request->berita_id);
@@ -94,7 +94,7 @@ class BeritaController extends Controller
             Storage::delete([$request->sampul]);
             return redirect('berita')->with('success', 'Data berhasil dihapus');
         } else {
-            return redirect('failed', 'Data gagal diahapus!');
+            return redirect('berita')->with('failed', 'Data gagal diahapus!');
         }
     }
 }

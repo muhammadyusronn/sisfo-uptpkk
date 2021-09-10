@@ -43,7 +43,7 @@
                                         </div>
                                     @endif
                                     @if($message = Session::get('success'))
-                                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <div class="alert alert-success alert-dismissible fade show col-lg-4" role="alert">
                                             <strong>Sukses!</strong> {{$message}}
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                             <span aria-hidden="true">×</span>
@@ -73,6 +73,7 @@
                                                     <form action="{{route('admin.delete')}}" method="post" class="d-inline">
                                                         @csrf
                                                         <input type="hidden" name="user_id" value="{{$i->user_id}}">
+                                                        <input type="hidden" name="user_foto" value="{{$i->user_foto}}" id="">
                                                         <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
                                                     </form>
                                                     <form action="{{route('admin.update')}}" method="post" class="d-inline">

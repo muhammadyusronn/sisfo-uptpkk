@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title', 'Data Kategori Pengumuman')
+@section('title', 'Data Visi dan Misi')
 @section('content')
     <div class="main_content_iner ">
         <div class="container-fluid p-0">
@@ -27,9 +27,11 @@
                                                 </form>
                                             </div>
                                         </div>
+                                        <?php if(count($data_visimisi)<1){ ?>
                                         <div class="add_button ml-10">
-                                            <a href="{{route('PNKategori.create')}}" class="btn_1">Tambah Data</a>
+                                            <a href="{{route('visimisi.create')}}" class="btn_1">Tambah Data</a>
                                         </div>
+                                        <?php } ?>
                                     </div>
                                 </div>
         
@@ -50,30 +52,37 @@
                                             </button>
                                         </div>
                                     @endif
+                                    @if($message = Session::get('failed'))
+                                        <div class="alert alert-danger alert-dismissible fade show col-lg-4" role="alert">
+                                            <strong>Gagal!</strong> {{$message}}
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                    @endif
                                     <!-- table-responsive -->
                                     <table class="table lms_table_active3 " id="myTable">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Nama Kategori</th>
-                                                <th scope="col">Slug</th>
+                                                <th scope="col">Visi dan Misi</th>
                                                 <th scope="col">Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php 
-                                            foreach($data_kategori as $i): ?>
+                                            foreach($data_visimisi as $i): ?>
                                             <tr>
-                                                <td><?= $i->kategori_nama ?></td>
-                                                <td><?= $i->kategori_slug ?></td>
+                                                <td><?= substr_replace($i->visi_konten, "...", 40) ?></td>
                                                 <td>
-                                                    <form action="{{route('PNKategori.delete')}}" method="post" class="d-inline">
+                                                    <form action="{{route('visimisi.delete')}}" method="post" class="d-inline">
                                                         @csrf
-                                                        <input type="hidden" name="kategori_id" value="{{$i->kategori_id}}">
+                                                        <input type="hidden" name="visi_foto" value="{{$i->visi_foto}}">
+                                                        <input type="hidden" name="visi_id" value="{{$i->visi_id}}">
                                                         <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
                                                     </form>
-                                                    <form action="{{route('PNKategori.update')}}" method="post" class="d-inline">
+                                                    <form action="{{route('visimisi.update')}}" method="post" class="d-inline">
                                                         @csrf
-                                                        <input type="hidden" name="kategori_id" value="{{$i->kategori_id}}">
+                                                        <input type="hidden" name="visi_id" value="{{$i->visi_id}}">
                                                         <button type="submit" class="btn btn-warning"><i class="fa fa-pen"></i></button>
                                                     </form>
                                                 </td>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -29,13 +30,25 @@ class AdminController extends Controller
                 'password'              => 'required|min:6',
                 'password_confirmation' => 'required|same:password',
             ]);
+            if (isset($request->user_foto)) {
+                $path = $request->file('user_foto')->store('user_foto');
+                User::create([
+                    'user_nama'     => $request->user_nama,
+                    'user_nip'     => $request->user_nip,
+                    'user_kontak'     => $request->user_kontak,
+                    'password'     => bcrypt($request->password),
+                    'user_foto'     => $path,
+                ]);
+            } else {
+                User::create([
+                    'user_nama'     => $request->user_nama,
+                    'user_nip'     => $request->user_nip,
+                    'user_kontak'     => $request->user_kontak,
+                    'password'     => bcrypt($request->password),
+                    'user_foto'     => 'user_foto/avatar.png',
 
-            User::create([
-                'user_nama'     => $request->user_nama,
-                'user_nip'     => $request->user_nip,
-                'user_kontak'     => $request->user_kontak,
-                'password'     => bcrypt($request->password),
-            ]);
+                ]);
+            }
             return redirect('admin')->with('success', 'Data berhasil ditambah');
         } else {
             return view('backend.admin.create_admin', $data);
@@ -52,9 +65,9 @@ class AdminController extends Controller
             $user->user_kontak = $request->user_kontak;
             $user->user_level = $request->user_level;
             $user->save();
-            return redirect('admin')->with('succes', 'Data berhasil diubah!');
+            return redirect('admin')->with('success', 'Data berhasil diubah!');
         } else {
-            $data['data_admin'] = User::where('user_id', 4)->get();
+            $data['data_admin'] = User::where('user_id', $request->user_id)->get();
             return view('backend.admin.update_admin', $data);
         }
     }
@@ -63,6 +76,9 @@ class AdminController extends Controller
         $id = $req->user_id;
         $delete = DB::table($this->table)->where('user_id', $id)->delete();
         if ($delete) {
+            if ($req->user_foto != 'user_foto/avatar.png') {
+                Storage::delete($req->user_foto);
+            }
             return redirect('admin')->with('success', 'Data berhasil dihapus');
         } else {
             return redirect('admin')->with('failed', 'Data berhasil dihapus');
