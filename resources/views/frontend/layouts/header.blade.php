@@ -20,7 +20,7 @@
                       <a href="https://jcdc.polsri.ac.id/" target="_blank" class="nav__item-link">Lowongan Terbaru</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
-                      <a href="{{route('berita')}}" class="nav__item-link">Berita Terbaru</a>
+                      <a href="{{route('berita-terbaru')}}" class="nav__item-link">Berita Terbaru</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
                       <a href="home-classic.html" class="nav__item-link">Pengumuman Terbaru</a>

@@ -10,6 +10,9 @@ use App\Http\Controllers\backend\PengumumanKategoriController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+
+Route::view('/user', 'frontend.app')->name('home');
+Route::view('/berita-terbaru', 'frontend.page.berita')->name('berita-terbaru');
 Route::get('/', function () {
     dd(Auth::user());
 });
