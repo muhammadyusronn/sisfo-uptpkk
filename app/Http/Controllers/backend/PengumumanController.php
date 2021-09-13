@@ -96,7 +96,7 @@ class PengumumanController extends Controller
             Storage::delete([$request->pengumuman_sampul]);
             return redirect('pengumuman')->with('success', 'Data berhasil dihapus');
         } else {
-            return redirect('failed', 'Data gagal diahapus!');
+            return redirect('pengumuman')->with('failed', 'Data gagal diahapus!');
         }
     }
 }

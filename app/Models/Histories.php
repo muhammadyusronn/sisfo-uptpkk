@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Visi extends Model
+class Histories extends Model
 {
     use HasFactory;
-    protected $table = 'visi';
-    protected $primaryKey = 'visi_id';
+    protected $table = 'histories';
+    protected $primaryKey = 'sejarah_id';
 
     protected $fillable = [
-        'visi_konten',
-        'visi_foto',
+        'sejarah_konten',
+        'sejarah_foto',
     ];
 }

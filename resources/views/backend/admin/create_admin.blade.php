@@ -26,7 +26,7 @@
                                     </button>
                                 </div>
                                 @endif
-                            <form method="post" action="{{url('admin/save')}}">
+                            <form method="post" action="{{url('admin/save')}}" enctype="multipart/form-data">
                                 @csrf <!-- {{ csrf_field() }} -->
                                 <div class="form-group">
                                     <label for="inputNip">NIP</label>
@@ -48,6 +48,10 @@
                                 <div class="form-group">
                                     <label for="inputPasswordConfirm">Password</label>
                                     <input type="password" class="form-control" id="inputPasswordConfirm" name="password_confirmation" placeholder="Password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputUserFoto">Foto User</label>
+                                    <input type="file" class="form-control-file" name="user_foto" id="inputUserFoto" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputLevel">Level</label>

@@ -43,7 +43,7 @@
                                         </div>
                                     @endif
                                     @if($message = Session::get('success'))
-                                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <div class="alert alert-success alert-dismissible fade show col-lg-4" role="alert">
                                             <strong>Sukses!</strong> {{$message}}
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                             <span aria-hidden="true">×</span>
@@ -82,6 +82,7 @@
                                                     </form>
                                                     <form action="{{route('pengumuman.update')}}" method="post" class="d-inline">
                                                         @csrf
+                                                        <input type="hidden" name="pengumuman_sampul" value="{{$i->pengumuman_sampul}}">
                                                         <input type="hidden" name="pengumuman_id" value="{{$i->pengumuman_id}}">
                                                         <button type="submit" class="btn btn-warning"><i class="fa fa-pen"></i></button>
                                                     </form>
