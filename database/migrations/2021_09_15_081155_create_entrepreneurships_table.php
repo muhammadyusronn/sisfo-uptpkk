@@ -16,10 +16,12 @@ class CreateEntrepreneurshipsTable extends Migration
         Schema::create('entrepreneurships', function (Blueprint $table) {
             $table->bigIncrements('kewirausahaan_id');
             $table->string('kewirausahaan_judul');
+            $table->string('kewirausahaan_tanggal');
             $table->text('kewirausahaan_konten');
             $table->string('kewirausahaan_foto');
             $table->unsignedBigInteger('kewirausahaan_author');
             $table->boolean('kewirausahaan_status');
+            $table->string('kewirausahaan_kategori');
             $table->timestamps();
             $table->foreign('kewirausahaan_author')->references('user_id')->on('users');
         });
