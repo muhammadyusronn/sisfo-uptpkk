@@ -1,7 +1,8 @@
+ 
  <!-- =========================
         Header
     =========================== -->
-    <header class="header header-transparent header-full">
+    <header class="header header-transparent header-full bg-dark">
         <nav class="navbar navbar-expand-lg sticky-navbar">
           <div class="container">
             <a class="navbar-brand" href="index-2.html">
@@ -48,7 +49,7 @@
                       <a href="https://jcdc.polsri.ac.id/" target="_blank" class="nav__item-link">Lowongan Kerja</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
-                      <a href="case-studies-classic.html" class="nav__item-link">Seminar, Training & Workshop</a>
+                      <a href="{{route('seminar-karir')}}" class="nav__item-link">Seminar, Training & Workshop</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
                       <a href="case-studies-single.html" class="nav__item-link">Konseling Karir</a>
