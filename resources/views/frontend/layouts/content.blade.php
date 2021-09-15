@@ -90,165 +90,237 @@
         </div><!-- /.slide-item -->
     </div><!-- /.carousel -->
 </section><!-- /.slider -->
-<!-- =========================== 
-    portfolio layout 2
-============================= -->
-  <section class="portfolio-layout2">
+<section class="portfolio-layout2">
+  <div class="container">
+    <nav>
+        <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Berita</li>
+        </ol>
+        </nav>
+    <div id="filtered-items-wrap" class="row">
+    <!-- portfolio item #1 -->
+    <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Support">
+        <div class="portfolio-item">
+        <div class="portfolio__img">
+            <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}"
+                alt="portfolio img"></a>
+        </div><!-- /.portfolio-img -->
+        <div class="portfolio__icon">
+            <img src="{{asset('frontend/assets/images/icons/1.png')}}" alt="icon">
+        </div><!-- ')}}/.portfolio__icon -->
+        <div class="portfolio__content">
+            <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
+            <p class="portfolio__desc">Isi berita.</p>
+            <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+            <span>Read More</span>
+            <i class="icon-arrow-right"></i>
+            </a>
+        </div><!-- /.portfolio-content -->
+
+        </div><!-- /.portfolio-item -->
+    </div><!-- /.col-lg-4 -->
+    <!-- portfolio item #2 -->
+    <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Consulting">
+        <div class="portfolio-item">
+        <div class="portfolio__img">
+            <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}"
+                alt="portfolio img"></a>
+        </div><!-- /.portfolio-img -->
+        <div class="portfolio__icon">
+            <img src="{{asset('frontend/assets/images/icons/2.png')}}" alt="icon">
+        </div><!-- /.portfolio__icon -->
+        <div class="portfolio__content">
+            <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
+            <p class="portfolio__desc">Isi berita.</p>
+            <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+            <span>Read More</span>
+            <i class="icon-arrow-right"></i>
+            </a>
+        </div><!-- /.portfolio-content -->
+        </div><!-- /.portfolio-item -->
+    </div><!-- /.col-lg-4 -->
+    <!-- portfolio item #3 -->
+    <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Security">
+        <div class="portfolio-item">
+        <div class="portfolio__img">
+            <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}"
+                alt="portfolio img"></a>
+        </div><!-- /.portfolio-img -->
+        <div class="portfolio__icon">
+            <img src="{{asset('frontend/assets/images/icons/3.png')}}" alt="icon">
+        </div><!-- portfolio__icon -->
+        <div class="portfolio__content">
+            <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
+            <p class="portfolio__desc">Isi berita.</p>
+            <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+            <span>Read More</span>
+            <i class="icon-arrow-right"></i>
+            </a>
+        </div><!-- /.portfolio-content -->
+        </div><!-- /.portfolio-item -->
+    </div><!-- /.col-lg-4 -->
+    <!-- portfolio item #4 -->
+    <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Software">
+        <div class="portfolio-item">
+        <div class="portfolio__img">
+            <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}" alt="portfolio img"></a>
+        </div><!-- /.portfolio-img -->
+        <div class="portfolio__icon">
+            <img src="{{asset('frontend/assets/images/icons/4.png')}}" alt="icon">
+        </div><!-- /.portfolio__icon -->
+        <div class="portfolio__content">
+            <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
+            <p class="portfolio__desc">Isi berita.</p>
+            <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+            <span>Read More</span>
+            <i class="icon-arrow-right"></i>
+            </a>
+        </div><!-- /.portfolio-content -->
+        </div><!-- /.portfolio-item -->
+    </div><!-- /.col-lg-4 -->
+    <!-- portfolio item #5 -->
+    <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Management">
+        <div class="portfolio-item">
+        <div class="portfolio__img">
+            <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}"
+                alt="portfolio img"></a>
+        </div><!-- /.portfolio-img -->
+        <div class="portfolio__icon">
+            <img src="{{asset('frontend/assets/images/icons/5.png')}}" alt="icon">
+        </div><!-- /.portfolio__icon -->
+        <div class="portfolio__content">
+            <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
+            <p class="portfolio__desc">Isi berita.</p>
+            <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+            <span>Read More</span>
+            <i class="icon-arrow-right"></i>
+            </a>
+        </div><!-- /.portfolio-content -->
+        </div><!-- /.portfolio-item -->
+    </div><!-- /.col-lg-4 -->
+    <!-- portfolio item #6 -->
+    <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Cloud">
+        <div class="portfolio-item">
+        <div class="portfolio__img">
+            <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}"
+                alt="portfolio img"></a>
+        </div><!-- /.portfolio-img -->
+        <div class="portfolio__icon">
+            <img src="{{asset('frontend/assets/images/icons/6.png')}}" alt="icon">
+        </div><!-- /.portfolio__icon -->
+        <div class="portfolio__content">
+            <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
+            <p class="portfolio__desc">Isi berita.</p>
+            <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+            <span>Read More</span>
+            <i class="icon-arrow-right"></i>
+            </a>
+        </div><!-- /.portfolio-content -->
+        </div><!-- /.portfolio-item -->
+    </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+    <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+        <nav class="pagination-area">
+        <ul class="pagination justify-content-center mb-0">
+            <li><a class="current" href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#"><i class="icon-arrow-right"></i></a></li>
+        </ul>
+        </nav><!-- .pagination-area -->
+    </div><!-- /.col-lg-12 -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section><!-- /.portfolio layout 2 -->
+<section class="features-layout2 bg-overlay bg-overlay-secondary-gradient pt-130">
+    <div class="bg-img"><img src="{{asset('frontend/assets/images/banners/4.jpg')}}" alt="background"></div>
     <div class="container">
-        <nav>
-            <ol class="breadcrumb justify-content-center">
-              <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Berita</li>
-            </ol>
-          </nav>
-      <div id="filtered-items-wrap" class="row">
-        <!-- portfolio item #1 -->
-        <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Support">
-          <div class="portfolio-item">
-            <div class="portfolio__img">
-              <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}"
-                  alt="portfolio img"></a>
-            </div><!-- /.portfolio-img -->
-            <div class="portfolio__icon">
-              <img src="{{asset('frontend/assets/images/icons/1.png')}}" alt="icon">
-            </div><!-- ')}}/.portfolio__icon -->
-            <div class="portfolio__content">
-              <h4 class="portfolio__title"><a href="#">Financial’s Need For
-                  Strategic Advisor</a></h4>
-              <p class="portfolio__desc">We delivered solutions at every step, and moved seamlessly into a more
-                proactive role as a strategic advisor, providing support and guidance across all IT topics.</p>
-              <a href="case-studies-single.html" class="btn btn__secondary btn__link">
-                <span>Read More</span>
+        <div class="row mb-40">
+        <div class="col-sm-12 col-md-12 col-lg-5">
+            <h2 class="heading__subtitle color-primary">Pengumuman Terbaru</h2>
+            <h3 class="heading__title color-white">Pengumuman Terbaru
+            </h3>
+        </div><!-- /col-lg-5 -->
+        {{-- <div class="col-sm-12 col-md-12 col-lg-5 offset-lg-1">
+            <p class="heading__desc color-gray">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere maxime velit earum explicabo ex quidem eum accusantium eos nostrum adipisci recusandae, esse quia corporis nulla error ab. Officiis, id molestias?
+            </p>
+            <div class="d-flex flex-wrap mt-40 mb-30">
+            <a href="#" class="btn btn__primary btn__primary-style2 mr-30">
                 <i class="icon-arrow-right"></i>
-              </a>
-            </div><!-- /.portfolio-content -->
-
-          </div><!-- /.portfolio-item -->
-        </div><!-- /.col-lg-4 -->
-        <!-- portfolio item #2 -->
-        <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Consulting">
-          <div class="portfolio-item">
-            <div class="portfolio__img">
-              <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}"
-                  alt="portfolio img"></a>
-            </div><!-- /.portfolio-img -->
-            <div class="portfolio__icon">
-              <img src="{{asset('frontend/assets/images/icons/2.png')}}" alt="icon">
-            </div><!-- /.portfolio__icon -->
-            <div class="portfolio__content">
-              <h4 class="portfolio__title"><a href="#">24x7 System Monitoring
-                  and Alert Response</a></h4>
-              <p class="portfolio__desc">This single, unified platform integrates all operational phases of
-                selling and activation of their wireless services and devices, and serves as the backbone .</p>
-              <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+                <span>Get Started</span>
+            </a>
+            <a href="#" class="btn btn__white btn__outlined">Request A Demo</a>
+            </div>
+        </div><!-- /.col-lg-6 --> --}}
+        </div><!-- /.row -->
+        <div class="row">
+        <!-- Feature item #1 -->
+        <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="feature-item">
+            <div class="feature__icon">
+                <i class="icon-statistic"></i>
+            </div>
+            <h4 class="feature__title">Judul Pengumuman</h4>
+            <p class="feature__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora incidunt itaque, eligendi iure aut doloribus nisi perspiciatis. Eligendi deserunt molestiae sint exercitationem, cum quam voluptate reprehenderit modi possimus? Cumque, possimus.</p>
+            <a href="#" class="btn__link">
+                <i class="icon-arrow-right icon-outlined"></i>
                 <span>Read More</span>
-                <i class="icon-arrow-right"></i>
-              </a>
-            </div><!-- /.portfolio-content -->
-          </div><!-- /.portfolio-item -->
-        </div><!-- /.col-lg-4 -->
-        <!-- portfolio item #3 -->
-        <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Security">
-          <div class="portfolio-item">
-            <div class="portfolio__img">
-              <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}"
-                  alt="portfolio img"></a>
-            </div><!-- /.portfolio-img -->
-            <div class="portfolio__icon">
-              <img src="{{asset('frontend/assets/images/icons/3.png')}}" alt="icon">
-            </div><!-- portfolio__icon -->
-            <div class="portfolio__content">
-              <h4 class="portfolio__title"><a href="#">Nonprofit Organization
-                  Utilized Security</a></h4>
-              <p class="portfolio__desc">Servers going down on a weekly basis had become the organization’s
-                “normal.” We came on board with the objective of stabilizing the environment,</p>
-              <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+            </a>
+            </div><!-- /.feature-item -->
+        </div><!-- /.col-lg-3 -->
+        <!-- Feature item #2 -->
+        <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="feature-item">
+            <div class="feature__icon">
+                <i class="icon-software"></i>
+            </div>
+            <h4 class="feature__title">Judul Pengumuman</h4>
+            <p class="feature__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora incidunt itaque, eligendi iure aut doloribus nisi perspiciatis. Eligendi deserunt molestiae sint exercitationem, cum quam voluptate reprehenderit modi possimus? Cumque, possimus.</p>
+            <a href="#" class="btn__link">
+                <i class="icon-arrow-right icon-outlined"></i>
                 <span>Read More</span>
-                <i class="icon-arrow-right"></i>
-              </a>
-            </div><!-- /.portfolio-content -->
-          </div><!-- /.portfolio-item -->
-        </div><!-- /.col-lg-4 -->
-        <!-- portfolio item #4 -->
-        <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Software">
-          <div class="portfolio-item">
-            <div class="portfolio__img">
-              <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}" alt="portfolio img"></a>
-            </div><!-- /.portfolio-img -->
-            <div class="portfolio__icon">
-              <img src="{{asset('frontend/assets/images/icons/4.png')}}" alt="icon">
-            </div><!-- /.portfolio__icon -->
-            <div class="portfolio__content">
-              <h4 class="portfolio__title"><a href="#">Powerful IT Upgrade Aligns
-                  With Your Objectives</a></h4>
-              <p class="portfolio__desc">They needed a robust management solution to organize archive critical
-                documents for client cases, and wanted to determine solutions at every step.</p>
-              <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+            </a>
+            </div><!-- /.feature-item -->
+        </div><!-- /.col-lg-3 -->
+        <!-- Feature item #3 -->
+        <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="feature-item">
+            <div class="feature__icon">
+                <i class="icon-website"></i>
+            </div>
+            <h4 class="feature__title">Judul Pengumuman</h4>
+            <p class="feature__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora incidunt itaque, eligendi iure aut doloribus nisi perspiciatis. Eligendi deserunt molestiae sint exercitationem, cum quam voluptate reprehenderit modi possimus? Cumque, possimus.</p>
+            <a href="#" class="btn__link">
+                <i class="icon-arrow-right icon-outlined"></i>
                 <span>Read More</span>
-                <i class="icon-arrow-right"></i>
-              </a>
-            </div><!-- /.portfolio-content -->
-          </div><!-- /.portfolio-item -->
-        </div><!-- /.col-lg-4 -->
-        <!-- portfolio item #5 -->
-        <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Management">
-          <div class="portfolio-item">
-            <div class="portfolio__img">
-              <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}"
-                  alt="portfolio img"></a>
-            </div><!-- /.portfolio-img -->
-            <div class="portfolio__icon">
-              <img src="{{asset('frontend/assets/images/icons/5.png')}}" alt="icon">
-            </div><!-- /.portfolio__icon -->
-            <div class="portfolio__content">
-              <h4 class="portfolio__title"><a href="#">The Best IT Practices in
-                  Cloud and Security</a></h4>
-              <p class="portfolio__desc">A standardized set of practices, we produce an extensive report
-                recommendations, and health ratings for each technolog phases of selling .</p>
-              <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+            </a>
+            </div><!-- /.feature-item -->
+        </div><!-- /.col-lg-3 -->
+        <!-- Feature item #4 -->
+        <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="feature-item">
+            <div class="feature__icon">
+                <i class="icon-management"></i>
+            </div>
+            <h4 class="feature__title">Judul Pengumuman</h4>
+            <p class="feature__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora incidunt itaque, eligendi iure aut doloribus nisi perspiciatis. Eligendi deserunt molestiae sint exercitationem, cum quam voluptate reprehenderit modi possimus? Cumque, possimus.</p>
+            <a href="#" class="btn__link">
+                <i class="icon-arrow-right icon-outlined"></i>
                 <span>Read More</span>
-                <i class="icon-arrow-right"></i>
-              </a>
-            </div><!-- /.portfolio-content -->
-          </div><!-- /.portfolio-item -->
-        </div><!-- /.col-lg-4 -->
-        <!-- portfolio item #6 -->
-        <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Cloud">
-          <div class="portfolio-item">
-            <div class="portfolio__img">
-              <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}"
-                  alt="portfolio img"></a>
-            </div><!-- /.portfolio-img -->
-            <div class="portfolio__icon">
-              <img src="{{asset('frontend/assets/images/icons/6.png')}}" alt="icon">
-            </div><!-- /.portfolio__icon -->
-            <div class="portfolio__content">
-              <h4 class="portfolio__title"><a href="#">Helping Companies With
-                  Healthcare Inustry</a></h4>
-              <p class="portfolio__desc">The client was not satisfied with the level of responsiveness and the
-                lack of support provided by their previous service with the objective of stabilizing.</p>
-              <a href="case-studies-single.html" class="btn btn__secondary btn__link">
-                <span>Read More</span>
-                <i class="icon-arrow-right"></i>
-              </a>
-            </div><!-- /.portfolio-content -->
-          </div><!-- /.portfolio-item -->
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-      <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-          <nav class="pagination-area">
-            <ul class="pagination justify-content-center mb-0">
-              <li><a class="current" href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#"><i class="icon-arrow-right"></i></a></li>
-            </ul>
-          </nav><!-- .pagination-area -->
-        </div><!-- /.col-lg-12 -->
-      </div><!-- /.row -->
+            </a>
+            </div><!-- /.feature-item -->
+        </div><!-- /.col-lg-3 -->
+        </div><!-- /.row -->
+        <div class="row">
+        <div class="col-12 text-center mt-40">
+            <p class="font-weight-bold color-white mb-0">Feel free to contact us, or you can call us any time
+            <a href="tel:(002) 01061245741" class="color-white-hover">(002) 01061245741</a>
+            </p>
+        </div>
+        </div>
     </div><!-- /.container -->
-  </section><!-- /.portfolio layout 2 -->
-
+</section><!-- /.Features Layout 2 -->
 <!-- ========================
 About Layout 2
 =========================== -->
@@ -257,7 +329,7 @@ About Layout 2
     <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5">
         <div class="about__img mb-40">
-        <img src="{{asset('frontend/assets/images/about/1.jpg')}}" ')}}alt="about">
+        <img src="{{asset('frontend/assets/images/about/1.jpg')}}" alt="about">
         <blockquote class="blockquote mb-0">
             <h4 class="blockquote__title">You are helping to lead the charge; we can help you build on your
             past successes and prepare for your great future.
@@ -702,4 +774,5 @@ About Layout 2
         </div><!-- /.row -->
     </div><!-- /.container -->
 </section><!-- /.blog Grid -->  
+
 @endsection

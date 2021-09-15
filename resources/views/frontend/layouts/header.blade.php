@@ -23,7 +23,7 @@
                       <a href="{{route('berita-terbaru')}}" class="nav__item-link">Berita Terbaru</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
-                      <a href="home-classic.html" class="nav__item-link">Pengumuman Terbaru</a>
+                      <a href="{{route('pengumuman-terbaru')}}" class="nav__item-link">Pengumuman Terbaru</a>
                     </li><!-- /.nav-item -->
                   </ul><!-- /.dropdown-menu -->
                 </li><!-- /.nav-item -->
