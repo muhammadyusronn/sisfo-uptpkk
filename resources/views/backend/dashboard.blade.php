@@ -9,21 +9,18 @@
                     <div class="page_title_box d-flex flex-wrap align-items-center justify-content-between">
                         <div class="page_title_left d-flex align-items-center">
                             <h3 class="f_s_25 f_w_700 dark_text mr_30" >Dashboard</h3>
-                            <ol class="breadcrumb page_bradcam mb-0">
-                                <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
-                                <li class="breadcrumb-item active">Analytic</li>
-                            </ol>
-                        </div>
-                        <div class="page_title_right">
-                            <div class="page_date_button d-flex align-items-center"> 
-                                <img src="img/icon/calender_icon.svg" alt="">
-                                August 1, 2020 - August 31, 2020
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row ">
+            <div class="col-xl-12">
+                    <div class="white_card mb_30 card_height_100">
+                        <div class="white_card_header">
+                            <marquee><h3>Selamat datang di website UPTPKK Politeknik Negeri Sriwijaya</h3></marquee>
+                        </div>
+                    </div>
+        </div>
+            {{--  <div class="row ">
                 <div class="col-xl-8 ">
                     <div class="white_card mb_30 card_height_100">
                         <div class="white_card_header">
@@ -1089,7 +1086,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>  --}}
         </div>
     </div>
 
@@ -1099,7 +1096,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="footer_iner text-center">
-                    <p>2020 © Influence - Designed by <a href="#"> <i class="ti-heart"></i> </a><a href="#"> DashboardPack</a></p>
+                    {{--  <p>2020 © Influence - Designed by <a href="#"> <i class="ti-heart"></i> </a><a href="#"> DashboardPack</a></p>  --}}
                 </div>
             </div>
         </div>
