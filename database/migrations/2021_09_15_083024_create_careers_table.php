@@ -16,11 +16,13 @@ class CreateCareersTable extends Migration
         Schema::create('careers', function (Blueprint $table) {
             $table->bigIncrements('karir_id');
             $table->string('karir_judul');
+            $table->string('karir_slug');
             $table->string('karir_tanggal');
             $table->text('karir_konten');
             $table->string('karir_foto');
             $table->unsignedBigInteger('karir_author');
             $table->string('karir_kategori');
+            $table->boolean('karir_status');
             $table->timestamps();
         });
     }

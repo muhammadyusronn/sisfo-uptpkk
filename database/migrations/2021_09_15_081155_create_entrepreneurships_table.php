@@ -16,6 +16,7 @@ class CreateEntrepreneurshipsTable extends Migration
         Schema::create('entrepreneurships', function (Blueprint $table) {
             $table->bigIncrements('kewirausahaan_id');
             $table->string('kewirausahaan_judul');
+            $table->string('kewirausahaan_slug');
             $table->string('kewirausahaan_tanggal');
             $table->text('kewirausahaan_konten');
             $table->string('kewirausahaan_foto');
