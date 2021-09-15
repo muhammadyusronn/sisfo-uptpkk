@@ -8,6 +8,7 @@ use App\Http\Controllers\backend\LoginController;
 use App\Http\Controllers\backend\PengumumanController;
 use App\Http\Controllers\backend\PengumumanKategoriController;
 use App\Http\Controllers\backend\SejarahController;
+use App\Http\Controllers\backend\StrukturOrganisasiController;
 use App\Http\Controllers\backend\VisiMisiController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -69,9 +70,14 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('sejarah/save', [SejarahController::class, 'create'])->name('sejarah.save');
         Route::post('sejarah/update', [SejarahController::class, 'update'])->name('sejarah.update');
         Route::post('sejarah/delete', [SejarahController::class, 'delete'])->name('sejarah.delete');
+
+        Route::get('struktur', [StrukturOrganisasiController::class, 'index'])->name('struktur');
+        Route::get('struktur-create', [StrukturOrganisasiController::class, 'create'])->name('struktur.create');
+        Route::post('struktur/save', [StrukturOrganisasiController::class, 'create'])->name('struktur.save');
+        Route::post('struktur/update', [StrukturOrganisasiController::class, 'update'])->name('struktur.update');
+        Route::post('struktur/delete', [StrukturOrganisasiController::class, 'delete'])->name('struktur.delete');
     });
     Route::group(['middleware' => ['cek_login:admin']], function () {
-        // Route::get('/admin', [HomeController::class, 'index']);
     });
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
     //
