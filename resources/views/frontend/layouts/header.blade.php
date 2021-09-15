@@ -63,7 +63,7 @@
                       <a href="blog.html" class="nav__item-link">Informasi Kewirausahaan</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
-                      <a href="blog-single-post.html" class="nav__item-link">Seminar, Training & Workshop</a>
+                      <a href="{{route('seminar-kewirausahaan')}}" class="nav__item-link">Seminar, Training & Workshop</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
                       <a href="blog-single-post.html" class="nav__item-link">Konseling Kewirausahaan</a>

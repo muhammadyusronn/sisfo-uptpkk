@@ -17,6 +17,7 @@ Route::view('/user', 'frontend.app')->name('home');
 Route::view('/berita-terbaru', 'frontend.page.berita')->name('berita-terbaru');
 Route::view('/pengumuman-terbaru', 'frontend.page.pengumuman')->name('pengumuman-terbaru');
 Route::view('/seminar-karir', 'frontend.page.seminarkarir')->name('seminar-karir');
+Route::view('/seminar-kewirausahaan', 'frontend.page.seminarkewirausahaan')->name('seminar-kewirausahaan');
 Route::get('/', function () {
     dd(Auth::user());
 });
