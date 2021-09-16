@@ -52,7 +52,7 @@
                       <a href="{{route('seminar-karir')}}" class="nav__item-link">Seminar, Training & Workshop</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
-                      <a href="case-studies-single.html" class="nav__item-link">Konseling Karir</a>
+                      <a href="{{route('konseling-karir')}}" class="nav__item-link">Konseling Karir</a>
                     </li><!-- /.nav-item -->
                   </ul><!-- /.dropdown-menu -->
                 </li><!-- /.nav-item -->
@@ -66,7 +66,7 @@
                       <a href="{{route('seminar-kewirausahaan')}}" class="nav__item-link">Seminar, Training & Workshop</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
-                      <a href="blog-single-post.html" class="nav__item-link">Konseling Kewirausahaan</a>
+                      <a href="{{route('konseling-kewirausahaan')}}" class="nav__item-link">Konseling Kewirausahaan</a>
                     </li><!-- /.nav-item -->
                   </ul><!-- /.dropdown-menu -->
                 </li><!-- /.nav-item -->
