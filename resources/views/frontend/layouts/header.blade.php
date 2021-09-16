@@ -60,7 +60,7 @@
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Kewirausahaan</a>
                   <ul class="dropdown-menu">
                     <li class="nav__item">
-                      <a href="blog.html" class="nav__item-link">Informasi Kewirausahaan</a>
+                      <a href="{{route('informasi-kewirausahaan')}}" class="nav__item-link">Informasi Kewirausahaan</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
                       <a href="{{route('seminar-kewirausahaan')}}" class="nav__item-link">Seminar, Training & Workshop</a>

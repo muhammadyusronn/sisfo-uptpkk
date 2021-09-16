@@ -8,11 +8,11 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <h1 class="pagetitle__heading">Berita Terbaru</h1>
+              <h1 class="pagetitle__heading">Informasi Kewirausahaan</h1>
               <nav>
                 <ol class="breadcrumb justify-content-center mb-0">
                   <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Berita</li>
+                  <li class="breadcrumb-item active" aria-current="page">Informasi Kewirausahaan</li>
                 </ol>
               </nav>
             </div><!-- /.col-lg-12 -->
@@ -37,8 +37,8 @@
                   <img src="{{asset('frontend/assets/images/icons/1.png')}}" alt="icon">
                 </div><!-- ')}}/.portfolio__icon -->
                 <div class="portfolio__content">
-                  <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
-                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, beatae assumenda. Similique, atque magnam. Architecto omnis qui nulla. Voluptatem illo sed dolores quas, quisquam dolorum eius odio? Possimus, rerum voluptatum?</p>
+                  <h4 class="portfolio__title"><a href="#">Judul Informasi Kewirausahaan</a></h4>
+                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nobis facere vitae cum expedita recusandae porro voluptatibus dolore corrupti. Error voluptatum veritatis eaque voluptatibus et rerum omnis corporis esse nesciunt!</p>
                   <a href="case-studies-single.html" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
@@ -58,8 +58,8 @@
                   <img src="{{asset('frontend/assets/images/icons/2.png')}}" alt="icon">
                 </div><!-- /.portfolio__icon -->
                 <div class="portfolio__content">
-                  <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
-                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, beatae assumenda. Similique, atque magnam. Architecto omnis qui nulla. Voluptatem illo sed dolores quas, quisquam dolorum eius odio? Possimus, rerum voluptatum?</p>
+                  <h4 class="portfolio__title"><a href="#">Judul Informasi Kewirausahaan</a></h4>
+                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nobis facere vitae cum expedita recusandae porro voluptatibus dolore corrupti. Error voluptatum veritatis eaque voluptatibus et rerum omnis corporis esse nesciunt!</p>
                   <a href="case-studies-single.html" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
@@ -78,8 +78,8 @@
                   <img src="{{asset('frontend/assets/images/icons/3.png')}}" alt="icon">
                 </div><!-- portfolio__icon -->
                 <div class="portfolio__content">
-                  <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
-                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, beatae assumenda. Similique, atque magnam. Architecto omnis qui nulla. Voluptatem illo sed dolores quas, quisquam dolorum eius odio? Possimus, rerum voluptatum?,</p>
+                  <h4 class="portfolio__title"><a href="#">Judul Informasi Kewirausahaan</a></h4>
+                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nobis facere vitae cum expedita recusandae porro voluptatibus dolore corrupti. Error voluptatum veritatis eaque voluptatibus et rerum omnis corporis esse nesciunt!</p>
                   <a href="case-studies-single.html" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
@@ -97,8 +97,8 @@
                   <img src="{{asset('frontend/assets/images/icons/4.png')}}" alt="icon">
                 </div><!-- /.portfolio__icon -->
                 <div class="portfolio__content">
-                  <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
-                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, beatae assumenda. Similique, atque magnam. Architecto omnis qui nulla. Voluptatem illo sed dolores quas, quisquam dolorum eius odio? Possimus, rerum voluptatum?</p>
+                  <h4 class="portfolio__title"><a href="#">Judul Informasi Kewirausahaan</a></h4>
+                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nobis facere vitae cum expedita recusandae porro voluptatibus dolore corrupti. Error voluptatum veritatis eaque voluptatibus et rerum omnis corporis esse nesciunt!</p>
                   <a href="case-studies-single.html" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
@@ -117,8 +117,8 @@
                   <img src="{{asset('frontend/assets/images/icons/5.png')}}" alt="icon">
                 </div><!-- /.portfolio__icon -->
                 <div class="portfolio__content">
-                  <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
-                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, beatae assumenda. Similique, atque magnam. Architecto omnis qui nulla. Voluptatem illo sed dolores quas, quisquam dolorum eius odio? Possimus, rerum voluptatum?</p>
+                  <h4 class="portfolio__title"><a href="#">Judul Informasi Kewirausahaan</a></h4>
+                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nobis facere vitae cum expedita recusandae porro voluptatibus dolore corrupti. Error voluptatum veritatis eaque voluptatibus et rerum omnis corporis esse nesciunt!</p>
                   <a href="case-studies-single.html" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
@@ -137,8 +137,8 @@
                   <img src="{{asset('frontend/assets/images/icons/6.png')}}" alt="icon">
                 </div><!-- /.portfolio__icon -->
                 <div class="portfolio__content">
-                  <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
-                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, beatae assumenda. Similique, atque magnam. Architecto omnis qui nulla. Voluptatem illo sed dolores quas, quisquam dolorum eius odio? Possimus, rerum voluptatum?</p>
+                  <h4 class="portfolio__title"><a href="#">Judul Informasi Kewirausahaan</a></h4>
+                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nobis facere vitae cum expedita recusandae porro voluptatibus dolore corrupti. Error voluptatum veritatis eaque voluptatibus et rerum omnis corporis esse nesciunt!</p>
                   <a href="case-studies-single.html" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
