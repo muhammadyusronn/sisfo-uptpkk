@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::view('/user', 'frontend.app')->name('home');
-Route::view('/berita-terbaru', 'frontend.page.berita')->name('berita-terbaru');
+Route::view('/berita-terbaru', 'frontend.page.berita.berita')->name('berita-terbaru');
+Route::view('/detail-berita', 'frontend.page.berita.detail_berita')->name('detail-berita');
 Route::view('/pengumuman-terbaru', 'frontend.page.pengumuman')->name('pengumuman-terbaru');
 Route::view('/seminar-karir', 'frontend.page.seminarkarir')->name('seminar-karir');
 Route::view('/seminar-kewirausahaan', 'frontend.page.seminarkewirausahaan')->name('seminar-kewirausahaan');

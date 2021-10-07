@@ -39,7 +39,7 @@
                 <div class="portfolio__content">
                   <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
                   <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, beatae assumenda. Similique, atque magnam. Architecto omnis qui nulla. Voluptatem illo sed dolores quas, quisquam dolorum eius odio? Possimus, rerum voluptatum?</p>
-                  <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+                  <a href="{{route('detail-berita')}}" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -60,7 +60,7 @@
                 <div class="portfolio__content">
                   <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
                   <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, beatae assumenda. Similique, atque magnam. Architecto omnis qui nulla. Voluptatem illo sed dolores quas, quisquam dolorum eius odio? Possimus, rerum voluptatum?</p>
-                  <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+                  <a href="{{route('detail-berita')}}" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -80,7 +80,7 @@
                 <div class="portfolio__content">
                   <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
                   <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, beatae assumenda. Similique, atque magnam. Architecto omnis qui nulla. Voluptatem illo sed dolores quas, quisquam dolorum eius odio? Possimus, rerum voluptatum?,</p>
-                  <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+                  <a href="{{route('detail-berita')}}" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -99,7 +99,7 @@
                 <div class="portfolio__content">
                   <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
                   <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, beatae assumenda. Similique, atque magnam. Architecto omnis qui nulla. Voluptatem illo sed dolores quas, quisquam dolorum eius odio? Possimus, rerum voluptatum?</p>
-                  <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+                  <a href="{{route('detail-berita')}}" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -119,7 +119,7 @@
                 <div class="portfolio__content">
                   <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
                   <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, beatae assumenda. Similique, atque magnam. Architecto omnis qui nulla. Voluptatem illo sed dolores quas, quisquam dolorum eius odio? Possimus, rerum voluptatum?</p>
-                  <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+                  <a href="{{route('detail-berita')}}" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -139,7 +139,7 @@
                 <div class="portfolio__content">
                   <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
                   <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, beatae assumenda. Similique, atque magnam. Architecto omnis qui nulla. Voluptatem illo sed dolores quas, quisquam dolorum eius odio? Possimus, rerum voluptatum?</p>
-                  <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+                  <a href="{{route('detail-berita')}}" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                   </a>

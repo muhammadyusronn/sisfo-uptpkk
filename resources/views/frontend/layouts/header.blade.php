@@ -2,10 +2,10 @@
  <!-- =========================
         Header
     =========================== -->
-    <header class="header header-transparent header-full bg-dark">
+    <header class="header header-transparent header-full">
         <nav class="navbar navbar-expand-lg sticky-navbar">
           <div class="container">
-            <a class="navbar-brand" href="index-2.html">
+            <a class="navbar-brand" href="{{route('home')}}">
               <img src="{{asset('frontend/assets/images/logo/mini_uptpkk_light.png')}}" class="logo-light" alt="logo">
               <img src="{{asset('frontend/assets/images/logo/logo_uptpkk.png')}}" class="logo-dark" alt="logo">
             </a>
