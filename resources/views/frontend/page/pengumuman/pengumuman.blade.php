@@ -1,14 +1,24 @@
 @extends('frontend.app')
 @section('content')
+<section class="page-title page-title-layout12 bg-overlay bg-overlay-gradient bg-parallax text-center">
+    <div class="bg-img"><img src="{{asset('frontend/assets/images/pengumuman/pengumuman.jpg')}}" alt="background"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="pagetitle__heading">Pengumuman Terbaru</h1>
+          <nav>
+            <ol class="breadcrumb justify-content-center mb-0">
+              <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Pengumuman</li>
+            </ol>
+          </nav>
+        </div><!-- /.col-lg-12 -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </section><!-- /.page-title -->
 <section class="features-layout2 bg-overlay bg-overlay-secondary-gradient pt-130">
-    <div class="bg-img"><img src="{{asset('frontend/assets/images/banners/4.jpg')}}" alt="background"></div>
     <div class="container">
         <div class="row mb-40">
-        <div class="col-sm-12 col-md-12 col-lg-5">
-            <h2 class="heading__subtitle color-primary">Pengumuman Terbaru</h2>
-            <h3 class="heading__title color-white">Pengumuman Terbaru
-            </h3>
-        </div><!-- /col-lg-5 -->
         {{-- <div class="col-sm-12 col-md-12 col-lg-5 offset-lg-1">
             <p class="heading__desc color-gray">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere maxime velit earum explicabo ex quidem eum accusantium eos nostrum adipisci recusandae, esse quia corporis nulla error ab. Officiis, id molestias?
             </p>
@@ -30,7 +40,7 @@
             </div>
             <h4 class="feature__title">Judul Pengumuman</h4>
             <p class="feature__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora incidunt itaque, eligendi iure aut doloribus nisi perspiciatis. Eligendi deserunt molestiae sint exercitationem, cum quam voluptate reprehenderit modi possimus? Cumque, possimus.</p>
-            <a href="#" class="btn__link">
+            <a href="{{route('detail-pengumuman')}}" class="btn__link">
                 <i class="icon-arrow-right icon-outlined"></i>
                 <span>Read More</span>
             </a>
