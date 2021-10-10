@@ -18,7 +18,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="post-item">
                 <div class="post__img">
-                    <a href="blog-single-post.html">
+                    <a href="{{route('detail-seminar-kewirausahaan')}}">
                     <img src="{{asset('frontend/assets/images/blog/grid/1.jpg')}}" alt="blog image">
                     </a>
                 </div><!-- /.blog-img -->
@@ -33,7 +33,7 @@
                     </div>
                     <p class="post__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet in, quam exercitationem enim dolorum sed quis repudiandae reprehenderit quo unde libero, dolores, possimus aut officiis laudantium? Unde facilis perspiciatis inventore ...
                     </p>
-                    <a href="blog-single-post.html" class="btn btn__secondary btn__link">
+                    <a href="{{route('detail-seminar-kewirausahaan')}}" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                     </a>
@@ -44,7 +44,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="post-item">
                 <div class="post__img">
-                    <a href="blog-single-post.html">
+                    <a href="{{route('detail-seminar-kewirausahaan')}}">
                     <img src="{{asset('frontend/assets/images/blog/grid/2.jpg')}}" alt="blog image">
                     </a>
                 </div><!-- /.blog-img -->
@@ -59,7 +59,7 @@
                     </div>
                     <p class="post__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet in, quam exercitationem enim dolorum sed quis repudiandae reprehenderit quo unde libero, dolores, possimus aut officiis laudantium? Unde facilis perspiciatis inventore ...
                     </p>
-                    <a href="blog-single-post.html" class="btn btn__secondary btn__link">
+                    <a href="{{route('detail-seminar-kewirausahaan')}}" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                     </a>
@@ -70,7 +70,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="post-item">
                 <div class="post__img">
-                    <a href="blog-single-post.html">
+                    <a href="{{route('detail-seminar-kewirausahaan')}}">
                     <img src="{{asset('frontend/assets/images/blog/grid/3.jpg')}}" alt="blog image">
                     </a>
                 </div><!-- /.blog-img -->
@@ -85,7 +85,7 @@
                     </div>
                     <p class="post__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet in, quam exercitationem enim dolorum sed quis repudiandae reprehenderit quo unde libero, dolores, possimus aut officiis laudantium? Unde facilis perspiciatis inventore ...
                     </p>
-                    <a href="blog-single-post.html" class="btn btn__secondary btn__link">
+                    <a href="{{route('detail-seminar-kewirausahaan')}}" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                     </a>

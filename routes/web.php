@@ -20,6 +20,7 @@ Route::view('/pengumuman-terbaru', 'frontend.page.pengumuman.pengumuman')->name(
 Route::view('/detail-pengumuman', 'frontend.page.pengumuman.detail_pengumuman')->name('detail-pengumuman');
 Route::view('/seminar-karir', 'frontend.page.karir.seminarkarir')->name('seminar-karir');
 Route::view('/detail-seminar-karir', 'frontend.page.karir.detail-seminar')->name('detail-seminar-karir');
+Route::view('/detail-seminar-kewirausahaan', 'frontend.page.kewirausahaan.detail-seminar-kewirausahaan')->name('detail-seminar-kewirausahaan');
 Route::view('/seminar-kewirausahaan', 'frontend.page.kewirausahaan.seminarkewirausahaan')->name('seminar-kewirausahaan');
 Route::view('/konseling-karir', 'frontend.page.karir.konseling-karir')->name('konseling-karir');
 Route::view('/detail-konseling-karir', 'frontend.page.karir.detail-konseling-karir')->name('detail-konseling-karir');
