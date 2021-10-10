@@ -8,11 +8,11 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1 class="pagetitle__heading">Berita Terbaru</h1>
+          <h1 class="pagetitle__heading">Konseling Karir</h1>
           <nav>
             <ol class="breadcrumb justify-content-center mb-0">
               <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Berita</li>
+              <li class="breadcrumb-item active" aria-current="page">Konseling Karir</li>
             </ol>
           </nav>
         </div><!-- /.col-lg-12 -->
@@ -46,7 +46,7 @@
                 <div class="service__content">
                 <p class="service__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ex nihil totam nesciunt doloribus nisi quod eius eum cupiditate laudantium quidem qui deserunt impedit neque deleniti eaque rerum harum eveniet.
                 </p>
-                <a href="it-solutions-single.html" class="btn btn__primary">
+                <a href="{{route('detail-konseling-karir')}}" class="btn btn__primary">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                 </a>
@@ -60,7 +60,7 @@
                 <h4 class="service__title">Judul Informasi Karir</h4>
                 <div class="service__content">
                 <p class="service__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ex nihil totam nesciunt doloribus nisi quod eius eum cupiditate laudantium quidem qui deserunt impedit neque deleniti eaque rerum harum eveniet.</p>
-                <a href="it-solutions-single.html" class="btn btn__primary">
+                <a href="{{route('detail-konseling-karir')}}" class="btn btn__primary">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                 </a>
@@ -75,7 +75,7 @@
                 <div class="service__content">
                 <p class="service__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ex nihil totam nesciunt doloribus nisi quod eius eum cupiditate laudantium quidem qui deserunt impedit neque deleniti eaque rerum harum eveniet.
                 </p>
-                <a href="it-solutions-single.html" class="btn btn__primary">
+                <a href="{{route('detail-konseling-karir')}}" class="btn btn__primary">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                 </a>
@@ -90,7 +90,7 @@
                 <div class="service__content">
                 <p class="service__desc">Trying to solve all your IT challenges internally can become costly and a
                     major distraction, Leveraging knowledgeable IT consulting firms like ushelps your business.</p>
-                <a href="it-solutions-single.html" class="btn btn__primary">
+                <a href="{{route('detail-konseling-karir')}}" class="btn btn__primary">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                 </a>
@@ -106,7 +106,7 @@
                 <p class="service__desc">With shorter product cycles, rapid innovation, and mergers contributing to
                     constant change, you are faced with making business decisions every day to advance your mission.
                 </p>
-                <a href="it-solutions-single.html" class="btn btn__primary">
+                <a href="{{route('detail-konseling-karir')}}" class="btn btn__primary">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                 </a>
@@ -122,7 +122,7 @@
                 <p class="service__desc">While you can’t predict unexpected events, we’ll ensure the right
                     precautions
                     are in place to minimize downtime and keep you moving in the right direction.</p>
-                <a href="it-solutions-single.html" class="btn btn__primary">
+                <a href="{{route('detail-konseling-karir')}}" class="btn btn__primary">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                 </a>
