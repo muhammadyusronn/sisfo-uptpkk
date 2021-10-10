@@ -1,8 +1,24 @@
 @extends('frontend.app')
 @section('content')
 <!-- ========================
-    Services Layout 1
+       page title 
 =========================== -->
+<section class="page-title page-title-layout12 bg-overlay bg-overlay-gradient bg-parallax text-center">
+    <div class="bg-img"><img src="{{asset('frontend/assets/images/page-titles/13.jpg')}}" alt="background"></div>
+     <div class="container">
+       <div class="row">
+         <div class="col-12">
+           <h1 class="pagetitle__heading">Konseling Kewirausahaan</h1>
+           <nav>
+             <ol class="breadcrumb justify-content-center mb-0">
+               <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
+               <li class="breadcrumb-item active" aria-current="page">Konseling Kewirausahaan</li>
+             </ol>
+           </nav>
+         </div><!-- /.col-lg-12 -->
+       </div><!-- /.row -->
+   </div><!-- /.container -->
+ </section><!-- /.page-title -->>
 <section class="services-layout1 services-carousel pb-100">
     <div class="bg-img"><img src="{{asset('frontend/assets/images/backgrounds/5.png')}}" alt="backgrounds"></div>
     <div class="container">
@@ -27,7 +43,7 @@
                 <div class="service__content">
                 <p class="service__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ex nihil totam nesciunt doloribus nisi quod eius eum cupiditate laudantium quidem qui deserunt impedit neque deleniti eaque rerum harum eveniet.
                 </p>
-                <a href="it-solutions-single.html" class="btn btn__primary">
+                <a href="{{route('detail-konseling-kewirausahaan')}}" class="btn btn__primary">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                 </a>
@@ -41,7 +57,7 @@
                 <h4 class="service__title">Judul Konseling Kewirausahaan</h4>
                 <div class="service__content">
                 <p class="service__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ex nihil totam nesciunt doloribus nisi quod eius eum cupiditate laudantium quidem qui deserunt impedit neque deleniti eaque rerum harum eveniet.</p>
-                <a href="it-solutions-single.html" class="btn btn__primary">
+                <a href="{{route('detail-konseling-kewirausahaan')}}" class="btn btn__primary">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                 </a>
@@ -56,7 +72,7 @@
                 <div class="service__content">
                 <p class="service__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ex nihil totam nesciunt doloribus nisi quod eius eum cupiditate laudantium quidem qui deserunt impedit neque deleniti eaque rerum harum eveniet.
                 </p>
-                <a href="it-solutions-single.html" class="btn btn__primary">
+                <a href="{{route('detail-konseling-kewirausahaan')}}" class="btn btn__primary">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                 </a>
@@ -71,7 +87,7 @@
                 <div class="service__content">
                 <p class="service__desc">Trying to solve all your IT challenges internally can become costly and a
                     major distraction, Leveraging knowledgeable IT consulting firms like ushelps your business.</p>
-                <a href="it-solutions-single.html" class="btn btn__primary">
+                <a href="{{route('detail-konseling-kewirausahaan')}}" class="btn btn__primary">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                 </a>
@@ -87,7 +103,7 @@
                 <p class="service__desc">With shorter product cycles, rapid innovation, and mergers contributing to
                     constant change, you are faced with making business decisions every day to advance your mission.
                 </p>
-                <a href="it-solutions-single.html" class="btn btn__primary">
+                <a href="{{route('detail-konseling-kewirausahaan')}}" class="btn btn__primary">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                 </a>

@@ -25,6 +25,7 @@ Route::view('/seminar-kewirausahaan', 'frontend.page.kewirausahaan.seminarkewira
 Route::view('/konseling-karir', 'frontend.page.karir.konseling-karir')->name('konseling-karir');
 Route::view('/detail-konseling-karir', 'frontend.page.karir.detail-konseling-karir')->name('detail-konseling-karir');
 Route::view('/konseling-kewirausahaan', 'frontend.page.kewirausahaan.konseling-kewirausahaan')->name('konseling-kewirausahaan');
+Route::view('/detail-konseling-kewirausahaan', 'frontend.page.kewirausahaan.detail-konseling-kewirausahaan')->name('detail-konseling-kewirausahaan');
 Route::view('/informasi-kewirausahaan', 'frontend.page.kewirausahaan.informasi-kewirausahaan')->name('informasi-kewirausahaan');
 Route::get('/', function () {
     dd(Auth::user());
