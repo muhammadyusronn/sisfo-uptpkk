@@ -18,11 +18,12 @@ Route::view('/berita-terbaru', 'frontend.page.berita.berita')->name('berita-terb
 Route::view('/detail-berita', 'frontend.page.berita.detail_berita')->name('detail-berita');
 Route::view('/pengumuman-terbaru', 'frontend.page.pengumuman.pengumuman')->name('pengumuman-terbaru');
 Route::view('/detail-pengumuman', 'frontend.page.pengumuman.detail_pengumuman')->name('detail-pengumuman');
-Route::view('/seminar-karir', 'frontend.page.seminarkarir')->name('seminar-karir');
-Route::view('/seminar-kewirausahaan', 'frontend.page.seminarkewirausahaan')->name('seminar-kewirausahaan');
-Route::view('/konseling-karir', 'frontend.page.konseling-karir')->name('konseling-karir');
-Route::view('/konseling-kewirausahaan', 'frontend.page.konseling-kewirausahaan')->name('konseling-kewirausahaan');
-Route::view('/informasi-kewirausahaan', 'frontend.page.informasi-kewirausahaan')->name('informasi-kewirausahaan');
+Route::view('/seminar-karir', 'frontend.page.karir.seminarkarir')->name('seminar-karir');
+Route::view('/detail-seminar-karir', 'frontend.page.karir.detail-seminar')->name('detail-seminar-karir');
+Route::view('/seminar-kewirausahaan', 'frontend.page.kewirausahaan.seminarkewirausahaan')->name('seminar-kewirausahaan');
+Route::view('/konseling-karir', 'frontend.page.karir.konseling-karir')->name('konseling-karir');
+Route::view('/konseling-kewirausahaan', 'frontend.page.kewirausahaan.konseling-kewirausahaan')->name('konseling-kewirausahaan');
+Route::view('/informasi-kewirausahaan', 'frontend.page.kewirausahaan.informasi-kewirausahaan')->name('informasi-kewirausahaan');
 Route::get('/', function () {
     dd(Auth::user());
 });

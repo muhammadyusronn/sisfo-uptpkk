@@ -1,8 +1,27 @@
 @extends('frontend.app')
 @section('content')
+<!-- ========================
+       page title 
+=========================== -->
+<section class="page-title page-title-layout12 bg-overlay bg-overlay-gradient bg-parallax text-center">
+   <div class="bg-img"><img src="{{asset('frontend/assets/images/page-titles/13.jpg')}}" alt="background"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="pagetitle__heading">Seminar, Training dan Workshop</h1>
+          <nav>
+            <ol class="breadcrumb justify-content-center mb-0">
+              <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Seminar, Training dan Workshop</li>
+            </ol>
+          </nav>
+        </div><!-- /.col-lg-12 -->
+      </div><!-- /.row -->
+  </div><!-- /.container -->
+</section><!-- /.page-title -->
 <!-- ======================
       Blog Grid
-    ========================= -->
+========================= -->
     <section class="blog-grid pb-50">
         <div class="container">
             <div class="row">
@@ -18,7 +37,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="post-item">
                 <div class="post__img">
-                    <a href="blog-single-post.html">
+                    <a href="{{route('detail-seminar-karir')}}">
                     <img src="{{asset('frontend/assets/images/blog/grid/1.jpg')}}" alt="blog image">
                     </a>
                 </div><!-- /.blog-img -->
@@ -33,7 +52,7 @@
                     </div>
                     <p class="post__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet in, quam exercitationem enim dolorum sed quis repudiandae reprehenderit quo unde libero, dolores, possimus aut officiis laudantium? Unde facilis perspiciatis inventore ...
                     </p>
-                    <a href="blog-single-post.html" class="btn btn__secondary btn__link">
+                    <a href="{{route('detail-seminar-karir')}}" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                     </a>
@@ -44,7 +63,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="post-item">
                 <div class="post__img">
-                    <a href="blog-single-post.html">
+                    <a href="{{route('detail-seminar-karir')}}">
                     <img src="{{asset('frontend/assets/images/blog/grid/2.jpg')}}" alt="blog image">
                     </a>
                 </div><!-- /.blog-img -->
@@ -59,7 +78,7 @@
                     </div>
                     <p class="post__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet in, quam exercitationem enim dolorum sed quis repudiandae reprehenderit quo unde libero, dolores, possimus aut officiis laudantium? Unde facilis perspiciatis inventore ...
                     </p>
-                    <a href="blog-single-post.html" class="btn btn__secondary btn__link">
+                    <a href="{{route('detail-seminar-karir')}}" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                     </a>
@@ -70,7 +89,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="post-item">
                 <div class="post__img">
-                    <a href="blog-single-post.html">
+                    <a href="{{route('detail-seminar-karir')}}">
                     <img src="{{asset('frontend/assets/images/blog/grid/3.jpg')}}" alt="blog image">
                     </a>
                 </div><!-- /.blog-img -->
@@ -85,7 +104,7 @@
                     </div>
                     <p class="post__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet in, quam exercitationem enim dolorum sed quis repudiandae reprehenderit quo unde libero, dolores, possimus aut officiis laudantium? Unde facilis perspiciatis inventore ...
                     </p>
-                    <a href="blog-single-post.html" class="btn btn__secondary btn__link">
+                    <a href="{{route('detail-seminar-karir')}}" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                     </a>

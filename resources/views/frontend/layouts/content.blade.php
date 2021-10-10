@@ -112,7 +112,7 @@
         <div class="portfolio__content">
             <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
             <p class="portfolio__desc">Isi berita.</p>
-            <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+            <a href="{{route('detail-berita')}}" class="btn btn__secondary btn__link">
             <span>Read More</span>
             <i class="icon-arrow-right"></i>
             </a>
@@ -133,7 +133,7 @@
         <div class="portfolio__content">
             <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
             <p class="portfolio__desc">Isi berita.</p>
-            <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+            <a href="{{route('detail-berita')}}" class="btn btn__secondary btn__link">
             <span>Read More</span>
             <i class="icon-arrow-right"></i>
             </a>
@@ -153,7 +153,7 @@
         <div class="portfolio__content">
             <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
             <p class="portfolio__desc">Isi berita.</p>
-            <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+            <a href="{{route('detail-berita')}}" class="btn btn__secondary btn__link">
             <span>Read More</span>
             <i class="icon-arrow-right"></i>
             </a>
@@ -172,7 +172,7 @@
         <div class="portfolio__content">
             <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
             <p class="portfolio__desc">Isi berita.</p>
-            <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+            <a href="{{route('detail-berita')}}" class="btn btn__secondary btn__link">
             <span>Read More</span>
             <i class="icon-arrow-right"></i>
             </a>
@@ -192,7 +192,7 @@
         <div class="portfolio__content">
             <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
             <p class="portfolio__desc">Isi berita.</p>
-            <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+            <a href="{{route('detail-berita')}}" class="btn btn__secondary btn__link">
             <span>Read More</span>
             <i class="icon-arrow-right"></i>
             </a>
@@ -212,7 +212,7 @@
         <div class="portfolio__content">
             <h4 class="portfolio__title"><a href="#">Judul Berita</a></h4>
             <p class="portfolio__desc">Isi berita.</p>
-            <a href="case-studies-single.html" class="btn btn__secondary btn__link">
+            <a href="{{route('detail-berita')}}" class="btn btn__secondary btn__link">
             <span>Read More</span>
             <i class="icon-arrow-right"></i>
             </a>
@@ -232,7 +232,7 @@
     </div><!-- /.col-lg-12 -->
     </div><!-- /.row -->
   </div><!-- /.container -->
-</section><!-- /.portfolio layout 2 -->
+</section><!-- /.berita terbaru layout 2 -->
 <section class="features-layout2 bg-overlay bg-overlay-secondary-gradient pt-130">
     <div class="bg-img"><img src="{{asset('frontend/assets/images/banners/4.jpg')}}" alt="background"></div>
     <div class="container">
@@ -263,7 +263,7 @@
             </div>
             <h4 class="feature__title">Judul Pengumuman</h4>
             <p class="feature__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora incidunt itaque, eligendi iure aut doloribus nisi perspiciatis. Eligendi deserunt molestiae sint exercitationem, cum quam voluptate reprehenderit modi possimus? Cumque, possimus.</p>
-            <a href="#" class="btn__link">
+            <a href="{{route('detail-pengumuman')}}" class="btn__link">
                 <i class="icon-arrow-right icon-outlined"></i>
                 <span>Read More</span>
             </a>
@@ -277,7 +277,7 @@
             </div>
             <h4 class="feature__title">Judul Pengumuman</h4>
             <p class="feature__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora incidunt itaque, eligendi iure aut doloribus nisi perspiciatis. Eligendi deserunt molestiae sint exercitationem, cum quam voluptate reprehenderit modi possimus? Cumque, possimus.</p>
-            <a href="#" class="btn__link">
+            <a href="{{route('detail-pengumuman')}}" class="btn__link">
                 <i class="icon-arrow-right icon-outlined"></i>
                 <span>Read More</span>
             </a>
@@ -291,7 +291,7 @@
             </div>
             <h4 class="feature__title">Judul Pengumuman</h4>
             <p class="feature__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora incidunt itaque, eligendi iure aut doloribus nisi perspiciatis. Eligendi deserunt molestiae sint exercitationem, cum quam voluptate reprehenderit modi possimus? Cumque, possimus.</p>
-            <a href="#" class="btn__link">
+            <a href="{{route('detail-pengumuman')}}" class="btn__link">
                 <i class="icon-arrow-right icon-outlined"></i>
                 <span>Read More</span>
             </a>
@@ -305,7 +305,7 @@
             </div>
             <h4 class="feature__title">Judul Pengumuman</h4>
             <p class="feature__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora incidunt itaque, eligendi iure aut doloribus nisi perspiciatis. Eligendi deserunt molestiae sint exercitationem, cum quam voluptate reprehenderit modi possimus? Cumque, possimus.</p>
-            <a href="#" class="btn__link">
+            <a href="{{route('detail-pengumuman')}}" class="btn__link">
                 <i class="icon-arrow-right icon-outlined"></i>
                 <span>Read More</span>
             </a>
