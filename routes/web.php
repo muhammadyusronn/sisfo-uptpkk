@@ -9,15 +9,17 @@ use App\Http\Controllers\backend\PengumumanController;
 use App\Http\Controllers\backend\PengumumanKategoriController;
 use App\Http\Controllers\backend\SejarahController;
 use App\Http\Controllers\backend\VisiMisiController;
+use App\Http\Controllers\PengumumanControllers;
+use App\Http\Controllers\BeritaControllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
 Route::view('/user', 'frontend.app')->name('home');
-Route::view('/berita-terbaru', 'frontend.page.berita.berita')->name('berita-terbaru');
+Route::get('/berita-terbaru', [BeritaControllers::class, 'index'])->name('berita-terbaru');
 Route::view('/detail-berita', 'frontend.page.berita.detail_berita')->name('detail-berita');
-Route::view('/pengumuman-terbaru', 'frontend.page.pengumuman.pengumuman')->name('pengumuman-terbaru');
-Route::view('/detail-pengumuman', 'frontend.page.pengumuman.detail_pengumuman')->name('detail-pengumuman');
+Route::get('/pengumuman-terbaru', [PengumumanControllers::class, 'index'])->name('pengumuman-terbaru');
+Route::get('/detail-pengumuman', [PengumumanControllers::class, 'details'])->name('detail-pengumuman');
 Route::view('/seminar-karir', 'frontend.page.karir.seminarkarir')->name('seminar-karir');
 Route::view('/detail-seminar-karir', 'frontend.page.karir.detail-seminar')->name('detail-seminar-karir');
 Route::view('/detail-seminar-kewirausahaan', 'frontend.page.kewirausahaan.detail-seminar-kewirausahaan')->name('detail-seminar-kewirausahaan');
