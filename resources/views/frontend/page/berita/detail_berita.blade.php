@@ -1,4 +1,4 @@
-@extends('frontend.app')
+@extends('frontend.layouts.app')
 @section('content')
 <section class="page-title page-title-layout12 bg-overlay bg-overlay-gradient bg-parallax text-center">
     <div class="bg-img"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}" alt="background"></div>

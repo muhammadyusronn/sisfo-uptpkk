@@ -32,7 +32,7 @@
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Profile</a>
                   <ul class="dropdown-menu">
                     <li class="nav__item">
-                      <a href="about-us.html" class="nav__item-link">Visi, Misi & Tujuan</a>
+                      <a href="{{route('visi-misi')}}" class="nav__item-link">Visi, Misi & Tujuan</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
                       <a href="why-us.html" class="nav__item-link">Struktur Organisasi</a>

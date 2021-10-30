@@ -1,4 +1,4 @@
-@extends('frontend.app')
+@extends('frontend.layouts.app')
 @section('content')
 <!-- ========================
        page title 

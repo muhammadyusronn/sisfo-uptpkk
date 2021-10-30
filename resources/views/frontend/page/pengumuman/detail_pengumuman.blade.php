@@ -1,4 +1,4 @@
-@extends('frontend.app')
+@extends('frontend.layouts.app')
 @section('content')
 <section class="page-title-detail" style="background-color: #091d3e">
 </section><!-- /.page-title -->

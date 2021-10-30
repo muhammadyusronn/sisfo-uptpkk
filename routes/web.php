@@ -21,6 +21,7 @@ Route::get('/berita-terbaru', [BeritaControllers::class, 'index'])->name('berita
 Route::view('/detail-berita', 'frontend.page.berita.detail_berita')->name('detail-berita');
 Route::get('/pengumuman-terbaru', [PengumumanControllers::class, 'index'])->name('pengumuman-terbaru');
 Route::get('/detail-pengumuman', [PengumumanControllers::class, 'details'])->name('detail-pengumuman');
+Route::view('/about', 'frontend.page.about.index')->name('visi-misi');
 Route::view('/seminar-karir', 'frontend.page.karir.seminarkarir')->name('seminar-karir');
 Route::view('/detail-seminar-karir', 'frontend.page.karir.detail-seminar')->name('detail-seminar-karir');
 Route::view('/detail-seminar-kewirausahaan', 'frontend.page.kewirausahaan.detail-seminar-kewirausahaan')->name('detail-seminar-kewirausahaan');
