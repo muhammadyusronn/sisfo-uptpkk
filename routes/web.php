@@ -11,11 +11,12 @@ use App\Http\Controllers\backend\SejarahController;
 use App\Http\Controllers\backend\VisiMisiController;
 use App\Http\Controllers\PengumumanControllers;
 use App\Http\Controllers\BeritaControllers;
+use App\Http\Controllers\HomeControllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
-Route::view('/user', 'frontend.app')->name('home');
+Route::get('/user', [HomeControllers::class, 'index'])->name('home');
 Route::get('/berita-terbaru', [BeritaControllers::class, 'index'])->name('berita-terbaru');
 Route::view('/detail-berita', 'frontend.page.berita.detail_berita')->name('detail-berita');
 Route::get('/pengumuman-terbaru', [PengumumanControllers::class, 'index'])->name('pengumuman-terbaru');

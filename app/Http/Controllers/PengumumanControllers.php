@@ -10,7 +10,7 @@ class PengumumanControllers extends Controller
     protected $table = 'announcements';
     
     public function index(){
-        $data['data_pengumuman'] = DB::table($this->table)
+        $data['data_pengumuman'] = DB::table('announcements')
             ->join('announcement_categories', 'announcements.pengumuman_kategori', '=', 'announcement_categories.kategori_id')
             ->get();
             // dd($data);

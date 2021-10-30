@@ -34,7 +34,7 @@
                       alt="portfolio img"></a>
                 </div><!-- /.portfolio-img -->
                 <div class="portfolio__icon">
-                  <img src="{{asset('frontend/assets/images/icons/1.png')}}" alt="icon">
+                  <img src="{{asset('frontend/assets/images/icons/database.png')}}" alt="icon">
                 </div><!-- ')}}/.portfolio__icon -->
                 <div class="portfolio__content">
                   <h4 class="portfolio__title"><a href="#">Judul Informasi Kewirausahaan</a></h4>
@@ -47,117 +47,6 @@
   
               </div><!-- /.portfolio-item -->
             </div><!-- /.col-lg-4 -->
-            <!-- portfolio item #2 -->
-            <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Consulting">
-              <div class="portfolio-item">
-                <div class="portfolio__img">
-                  <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}"
-                      alt="portfolio img"></a>
-                </div><!-- /.portfolio-img -->
-                <div class="portfolio__icon">
-                  <img src="{{asset('frontend/assets/images/icons/2.png')}}" alt="icon">
-                </div><!-- /.portfolio__icon -->
-                <div class="portfolio__content">
-                  <h4 class="portfolio__title"><a href="#">Judul Informasi Kewirausahaan</a></h4>
-                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nobis facere vitae cum expedita recusandae porro voluptatibus dolore corrupti. Error voluptatum veritatis eaque voluptatibus et rerum omnis corporis esse nesciunt!</p>
-                  <a href="case-studies-single.html" class="btn btn__secondary btn__link">
-                    <span>Read More</span>
-                    <i class="icon-arrow-right"></i>
-                  </a>
-                </div><!-- /.portfolio-content -->
-              </div><!-- /.portfolio-item -->
-            </div><!-- /.col-lg-4 -->
-            <!-- portfolio item #3 -->
-            <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Security">
-              <div class="portfolio-item">
-                <div class="portfolio__img">
-                  <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}"
-                      alt="portfolio img"></a>
-                </div><!-- /.portfolio-img -->
-                <div class="portfolio__icon">
-                  <img src="{{asset('frontend/assets/images/icons/3.png')}}" alt="icon">
-                </div><!-- portfolio__icon -->
-                <div class="portfolio__content">
-                  <h4 class="portfolio__title"><a href="#">Judul Informasi Kewirausahaan</a></h4>
-                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nobis facere vitae cum expedita recusandae porro voluptatibus dolore corrupti. Error voluptatum veritatis eaque voluptatibus et rerum omnis corporis esse nesciunt!</p>
-                  <a href="case-studies-single.html" class="btn btn__secondary btn__link">
-                    <span>Read More</span>
-                    <i class="icon-arrow-right"></i>
-                  </a>
-                </div><!-- /.portfolio-content -->
-              </div><!-- /.portfolio-item -->
-            </div><!-- /.col-lg-4 -->
-            <!-- portfolio item #4 -->
-            <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Software">
-              <div class="portfolio-item">
-                <div class="portfolio__img">
-                  <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}" alt="portfolio img"></a>
-                </div><!-- /.portfolio-img -->
-                <div class="portfolio__icon">
-                  <img src="{{asset('frontend/assets/images/icons/4.png')}}" alt="icon">
-                </div><!-- /.portfolio__icon -->
-                <div class="portfolio__content">
-                  <h4 class="portfolio__title"><a href="#">Judul Informasi Kewirausahaan</a></h4>
-                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nobis facere vitae cum expedita recusandae porro voluptatibus dolore corrupti. Error voluptatum veritatis eaque voluptatibus et rerum omnis corporis esse nesciunt!</p>
-                  <a href="case-studies-single.html" class="btn btn__secondary btn__link">
-                    <span>Read More</span>
-                    <i class="icon-arrow-right"></i>
-                  </a>
-                </div><!-- /.portfolio-content -->
-              </div><!-- /.portfolio-item -->
-            </div><!-- /.col-lg-4 -->
-            <!-- portfolio item #5 -->
-            <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Management">
-              <div class="portfolio-item">
-                <div class="portfolio__img">
-                  <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}"
-                      alt="portfolio img"></a>
-                </div><!-- /.portfolio-img -->
-                <div class="portfolio__icon">
-                  <img src="{{asset('frontend/assets/images/icons/5.png')}}" alt="icon">
-                </div><!-- /.portfolio__icon -->
-                <div class="portfolio__content">
-                  <h4 class="portfolio__title"><a href="#">Judul Informasi Kewirausahaan</a></h4>
-                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nobis facere vitae cum expedita recusandae porro voluptatibus dolore corrupti. Error voluptatum veritatis eaque voluptatibus et rerum omnis corporis esse nesciunt!</p>
-                  <a href="case-studies-single.html" class="btn btn__secondary btn__link">
-                    <span>Read More</span>
-                    <i class="icon-arrow-right"></i>
-                  </a>
-                </div><!-- /.portfolio-content -->
-              </div><!-- /.portfolio-item -->
-            </div><!-- /.col-lg-4 -->
-            <!-- portfolio item #6 -->
-            <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Cloud">
-              <div class="portfolio-item">
-                <div class="portfolio__img">
-                  <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}"
-                      alt="portfolio img"></a>
-                </div><!-- /.portfolio-img -->
-                <div class="portfolio__icon">
-                  <img src="{{asset('frontend/assets/images/icons/6.png')}}" alt="icon">
-                </div><!-- /.portfolio__icon -->
-                <div class="portfolio__content">
-                  <h4 class="portfolio__title"><a href="#">Judul Informasi Kewirausahaan</a></h4>
-                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nobis facere vitae cum expedita recusandae porro voluptatibus dolore corrupti. Error voluptatum veritatis eaque voluptatibus et rerum omnis corporis esse nesciunt!</p>
-                  <a href="case-studies-single.html" class="btn btn__secondary btn__link">
-                    <span>Read More</span>
-                    <i class="icon-arrow-right"></i>
-                  </a>
-                </div><!-- /.portfolio-content -->
-              </div><!-- /.portfolio-item -->
-            </div><!-- /.col-lg-4 -->
-          </div><!-- /.row -->
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-              <nav class="pagination-area">
-                <ul class="pagination justify-content-center mb-0">
-                  <li><a class="current" href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#"><i class="icon-arrow-right"></i></a></li>
-                </ul>
-              </nav><!-- .pagination-area -->
-            </div><!-- /.col-lg-12 -->
-          </div><!-- /.row -->
         </div><!-- /.container -->
       </section><!-- /.portfolio layout 2 -->
 @endsection
