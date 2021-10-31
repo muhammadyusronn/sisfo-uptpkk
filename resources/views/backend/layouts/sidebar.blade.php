@@ -96,7 +96,7 @@
                     <a href="{{route('sejarah')}}">Informasi</a>
                 </li>
                 <li>
-                    <a href="{{route('visimisi')}}">Seminar dan Training</a>
+                    <a href="{{route('seminar-kewirausahaan')}}">Seminar dan Training</a>
                 </li>
                 <li>
                     <a href="{{route('struktur-organisasi')}}">Konseling</a>

@@ -9,6 +9,8 @@ use App\Http\Controllers\backend\PengumumanController;
 use App\Http\Controllers\backend\PengumumanKategoriController;
 use App\Http\Controllers\backend\SeminarKarirController;
 use App\Http\Controllers\backend\KonselingKarirController;
+use App\Http\Controllers\backend\SeminarKewirausahaanController;
+use App\Http\Controllers\backend\KonselingKewirausahaanController;
 use App\Http\Controllers\backend\StrukturOrganisasiController;
 use App\Http\Controllers\backend\SejarahController;
 use App\Http\Controllers\backend\VisiMisiController;
@@ -92,6 +94,20 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/konseling-karir-save', [KonselingKarirController::class, 'create'])->name('konseling-karir.save');
         Route::post('/konseling-karir-update', [KonselingKarirController::class, 'update'])->name('konseling-karir.update');
         Route::post('/konseling-karir-delete', [KonselingKarirController::class, 'delete'])->name('konseling-karir.delete');
+
+        //Routing Seminar Kewirausahaan
+        Route::get('/seminar-kewirausahaan', [SeminarKewirausahaanController::class, 'index'])->name('seminar-kewirausahaan');
+        Route::get('/seminar-kewirausahaan-create', [SeminarKewirausahaanController::class, 'create'])->name('seminar-kewirausahaan.create');
+        Route::post('/seminar-kewirausahaan-save', [SeminarKewirausahaanController::class, 'create'])->name('seminar-kewirausahaan.save');
+        Route::post('/seminar-kewirausahaan-update', [SeminarKewirausahaanController::class, 'update'])->name('seminar-kewirausahaan.update');
+        Route::post('/seminar-kewirausahaan-delete', [SeminarKewirausahaanController::class, 'delete'])->name('seminar-kewirausahaan.delete');
+
+        //Routing Konseling Kewirausahaan
+        Route::get('/konseling-kewirausahaan', [KonselingKewirausahaanController::class, 'index'])->name('konseling-kewirausahaan');
+        Route::get('/konseling-kewirausahaan-create', [KonselingKewirausahaanController::class, 'create'])->name('konseling-kewirausahaan.create');
+        Route::post('/konseling-kewirausahaan-save', [KonselingKewirausahaanController::class, 'create'])->name('konseling-kewirausahaan.save');
+        Route::post('/konseling-kewirausahaan-update', [KonselingKewirausahaanController::class, 'update'])->name('konseling-kewirausahaan.update');
+        Route::post('/konseling-kewirausahaan-delete', [KonselingKewirausahaanController::class, 'delete'])->name('konseling-kewirausahaan.delete');
 
         //Routing Visi Misi
         Route::get('/visimisi', [VisiMisiController::class, 'index'])->name('visimisi');
