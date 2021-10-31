@@ -1,7 +1,7 @@
 <!-- ========================
         Footer
 ========================== -->
-<footer class="footer bg-secondary">
+<footer id="footer" class="footer bg-secondary">
     <div class="container">
         <div class="footer-primary">
           <div class="row">

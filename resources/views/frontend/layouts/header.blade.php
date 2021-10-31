@@ -30,14 +30,6 @@
                 </li><!-- /.nav-item -->
                 <li class="nav__item has-dropdown">
                   <a href="{{route('about')}}" class="nav__item-link">Profile</a>
-                  {{-- <ul class="dropdown-menu">
-                    <li class="nav__item">
-                      <a href="" class="nav__item-link">Visi, Misi & Tujuan</a>
-                    </li><!-- /.nav-item -->
-                    <li class="nav__item">
-                      <a href="why-us.html" class="nav__item-link">Struktur Organisasi</a>
-                    </li><!-- /.nav-item -->
-                  </ul><!-- /.dropdown-menu --> --}}
                 </li><!-- /.nav-item -->
                 <li class="nav__item has-dropdown">
                   <a href="https://uptpkk.polsri.ac.id/" target="_blank" class="dropdown-toggle nav__item-link">Tracer Study</a>
@@ -71,7 +63,7 @@
                   </ul><!-- /.dropdown-menu -->
                 </li><!-- /.nav-item -->
                 <li class="nav__item">
-                  <a href="contact-us.html" class="nav__item-link">Kontak</a>
+                  <a href="#footer" class="nav__item-link">Kontak</a>
                 </li><!-- /.nav-item -->
               </ul><!-- /.navbar-nav -->
               <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
