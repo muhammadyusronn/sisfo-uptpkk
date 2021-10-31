@@ -149,6 +149,23 @@
                 .catch( error => {
                     console.error( error );
                 } );
+
+                ClassicEditor
+                .create( document.querySelector( '#kt-ckeditor-2' ) )
+                .then( editor => {
+                    console.log( editor );
+                } )
+                .catch( error => {
+                    console.error( error );
+                } );
+                ClassicEditor
+                .create( document.querySelector( '#kt-ckeditor-3' ) )
+                .then( editor => {
+                    console.log( editor );
+                } )
+                .catch( error => {
+                    console.error( error );
+                } );
         }
     
         return {

@@ -29,15 +29,15 @@
                   </ul><!-- /.dropdown-menu -->
                 </li><!-- /.nav-item -->
                 <li class="nav__item has-dropdown">
-                  <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Profile</a>
-                  <ul class="dropdown-menu">
+                  <a href="{{route('about')}}" class="nav__item-link">Profile</a>
+                  {{-- <ul class="dropdown-menu">
                     <li class="nav__item">
-                      <a href="{{route('visi-misi')}}" class="nav__item-link">Visi, Misi & Tujuan</a>
+                      <a href="" class="nav__item-link">Visi, Misi & Tujuan</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
                       <a href="why-us.html" class="nav__item-link">Struktur Organisasi</a>
                     </li><!-- /.nav-item -->
-                  </ul><!-- /.dropdown-menu -->
+                  </ul><!-- /.dropdown-menu --> --}}
                 </li><!-- /.nav-item -->
                 <li class="nav__item has-dropdown">
                   <a href="https://uptpkk.polsri.ac.id/" target="_blank" class="dropdown-toggle nav__item-link">Tracer Study</a>

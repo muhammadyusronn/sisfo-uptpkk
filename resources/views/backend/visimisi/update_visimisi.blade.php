@@ -30,10 +30,22 @@
                                     <form method="post" action="{{route('visimisi.update')}}" enctype="multipart/form-data">
                                         @csrf <!-- {{ csrf_field() }} -->
                                         <div class="form-group">
-                                            <label>Visi dan Misi</label>
+                                            <label>Visi</label>
                                             <input type="hidden" value="{{$i->visi_id}}" name="visi_id" id="">
                                             <input type="hidden" value="{{$i->visi_foto}}" name="sampul">
                                             <textarea name="visi_konten" id="kt-ckeditor-1">{{$i->visi_konten}}</textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Misi</label>
+                                            <input type="hidden" value="{{$i->visi_id}}" name="misi_id" id="">
+                                            <input type="hidden" value="{{$i->visi_foto}}" name="sampul">
+                                            <textarea name="misi_konten" id="kt-ckeditor-2">{{$i->misi_konten}}</textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Tujuan</label>
+                                            <input type="hidden" value="{{$i->visi_id}}" name="tujuan_id" id="">
+                                            <input type="hidden" value="{{$i->visi_foto}}" name="sampul">
+                                            <textarea name="tujuan_konten" id="kt-ckeditor-3">{{$i->tujuan_konten}}</textarea>
                                         </div>
                                         <div class="form-group">
                                             <label for="inputVisiFoto">Foto Visi Misi</label>

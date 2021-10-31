@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Visi;
+use App\Models\Organizational_structures;
 
 class HomeControllers extends Controller
 {
@@ -18,5 +20,12 @@ class HomeControllers extends Controller
         ->get();
             // dd($data);
         return view('frontend.app', $data);
+    }
+
+    public function visiMisi(){
+        $data['title'] = 'Visi dan Misi';
+        $data['data_visimisi'] = Visi::all();
+        $data['data_struktur'] = Organizational_structures::all();
+        return view('frontend.page.about.index', $data);
     }
 }

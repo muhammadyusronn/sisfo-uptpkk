@@ -15,7 +15,9 @@ class CreateVisiTable extends Migration
     {
         Schema::create('visi', function (Blueprint $table) {
             $table->bigIncrements('visi_id');
-            $table->string('visi_konten');
+            $table->string('visi_konten', 5000);
+            $table->string('misi_konten', 5000);
+            $table->string('tujuan_konten', 5000);
             $table->string('visi_foto');
             $table->timestamps();
         });

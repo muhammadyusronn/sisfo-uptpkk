@@ -3,7 +3,7 @@
 <!-- ======================
 Page Title
 ========================= -->
-<section class="page-title-detail" style="background-color: #303030">
+<section class="page-title-detail" style="background-color: #091d3e">
 </section><!-- /.page-title -->
 
 <section class="blog blog-single pt-0 pb-80">

@@ -102,7 +102,7 @@
                     <a href="{{route('visimisi')}}">Visi dan Misi</a>
                 </li>
                 <li>
-                    <a href="">Struktur Organisasi</a>
+                    <a href="{{route('struktur-organisasi')}}">Struktur Organisasi</a>
                 </li>
             </ul>
         </li>

@@ -7,6 +7,7 @@ use App\Http\Controllers\backend\HomeController;
 use App\Http\Controllers\backend\LoginController;
 use App\Http\Controllers\backend\PengumumanController;
 use App\Http\Controllers\backend\PengumumanKategoriController;
+use App\Http\Controllers\backend\StrukturOrganisasiController;
 use App\Http\Controllers\backend\SejarahController;
 use App\Http\Controllers\backend\VisiMisiController;
 use App\Http\Controllers\PengumumanControllers;
@@ -21,7 +22,7 @@ Route::get('/berita-terbaru', [BeritaControllers::class, 'index'])->name('berita
 Route::view('/detail-berita', 'frontend.page.berita.detail_berita')->name('detail-berita');
 Route::get('/pengumuman-terbaru', [PengumumanControllers::class, 'index'])->name('pengumuman-terbaru');
 Route::get('/detail-pengumuman', [PengumumanControllers::class, 'details'])->name('detail-pengumuman');
-Route::view('/about', 'frontend.page.about.index')->name('visi-misi');
+Route::get('/about', [HomeControllers::class, 'visiMisi'])->name('about');
 Route::view('/seminar-karir', 'frontend.page.karir.seminarkarir')->name('seminar-karir');
 Route::view('/detail-seminar-karir', 'frontend.page.karir.detail-seminar')->name('detail-seminar-karir');
 Route::view('/detail-seminar-kewirausahaan', 'frontend.page.kewirausahaan.detail-seminar-kewirausahaan')->name('detail-seminar-kewirausahaan');
@@ -76,6 +77,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/BRKategori-update', [BeritaKategoriController::class, 'update'])->name('BRKategori.update');
         Route::post('/BRKategori-delete', [BeritaKategoriController::class, 'delete'])->name('BRKategori.delete');
 
+        //Routing Visi Misi
         Route::get('/visimisi', [VisiMisiController::class, 'index'])->name('visimisi');
         Route::get('/visimisi/create', [VisiMisiController::class, 'create'])->name('visimisi.create');
         Route::get('/visimisi/create', [VisiMisiController::class, 'create'])->name('visimisi.create');
@@ -83,11 +85,19 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/visimisi-update', [VisiMisiController::class, 'update'])->name('visimisi.update');
         Route::post('/visimisi/delete', [VisiMisiController::class, 'delete'])->name('visimisi.delete');
 
+        //Routing Sejarah
         Route::get('sejarah', [SejarahController::class, 'index'])->name('sejarah');
         Route::get('sejarah-create', [SejarahController::class, 'create'])->name('sejarah.create');
         Route::post('sejarah/save', [SejarahController::class, 'create'])->name('sejarah.save');
         Route::post('sejarah/update', [SejarahController::class, 'update'])->name('sejarah.update');
         Route::post('sejarah/delete', [SejarahController::class, 'delete'])->name('sejarah.delete');
+
+        //Routing Stuktur Organisasi
+        Route::get('struktur-organisasi', [StrukturOrganisasiController::class, 'index'])->name('struktur-organisasi');
+        Route::get('struktur-organisasi-create', [StrukturOrganisasiController::class, 'create'])->name('struktur-organisasi.create');
+        Route::post('struktur-organisasi/save', [StrukturOrganisasiController::class, 'create'])->name('struktur-organisasi.save');
+        Route::post('struktur-organisasi/update', [StrukturOrganisasiController::class, 'update'])->name('struktur-organisasi.update');
+        Route::post('struktur-organisasi/delete', [StrukturOrganisasiController::class, 'delete'])->name('struktur-organisasi.delete');
     });
     Route::group(['middleware' => ['cek_login:admin']], function () {
         // Route::get('/admin', [HomeController::class, 'index']);

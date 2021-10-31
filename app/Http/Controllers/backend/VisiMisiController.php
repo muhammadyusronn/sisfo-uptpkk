@@ -25,11 +25,14 @@ class VisiMisiController extends Controller
         if (isset($_POST['submit'])) {
             $this->validate($request, [
                 'visi_konten' => 'required',
-                'visi_konten' => 'required'
+                'misi_konten' => 'required',
+                'tujuan_konten' => 'required'
             ]);
             $path = $request->file('visi_foto')->store('visi_foto');
             Visi::create([
                 'visi_konten'   => $request->visi_konten,
+                'misi_konten' => $request->misi_konten,
+                'tujuan_konten' => $request->tujuan_konten,
                 'visi_foto'     => $path,
             ]);
             return redirect('visimisi')->with('success', 'Data berhasil ditambah');
@@ -46,11 +49,15 @@ class VisiMisiController extends Controller
                 $path = $request->file('visi_foto')->store('visi_foto');
                 $visi = Visi::find($request->visi_id);
                 $visi->visi_konten = $request->visi_konten;
+                $visi->misi_konten = $request->misi_konten;
+                $visi->tujuan_konten = $request->tujuan_konten;
                 $visi->visi_foto = $path;
                 $visi->save();
             } else {
                 $visi = Visi::find($request->visi_id);
                 $visi->visi_konten = $request->visi_konten;
+                $visi->misi_konten = $request->misi_konten;
+                $visi->tujuan_konten = $request->tujuan_konten;
                 $visi->save();
             }
             return redirect('visimisi')->with('success', 'Data berhasil diubah!');

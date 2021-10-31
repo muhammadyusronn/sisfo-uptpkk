@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title', 'Form Visi dan Misi')
+@section('title', 'Form Struktur Organisasi')
 @section('content')
 <div class="main_content_iner">
         <div class="container-fluid p-0 sm_padding_15px">
@@ -26,23 +26,11 @@
                                     </button>
                                 </div>
                                 @endif
-                            <form method="post" action="{{route('visimisi.save')}}" enctype="multipart/form-data">
+                            <form method="post" action="{{route('struktur-organisasi.save')}}" enctype="multipart/form-data">
                                 @csrf <!-- {{ csrf_field() }} -->
                                 <div class="form-group">
-                                    <label>Visi</label>
-                                    <textarea name="visi_konten" id="kt-ckeditor-1"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label>Misi</label>
-                                    <textarea name="misi_konten" id="kt-ckeditor-1"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label>Tujuan</label>
-                                    <textarea name="tujuan_konten" id="kt-ckeditor-1"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputVisiFoto">Foto Visi Misi</label>
-                                    <input type="file" class="form-control-file" name="visi_foto" id="inputVisiFoto" required>
+                                    <label for="inputStrukturOrganisasi">Foto Struktur Organisasi</label>
+                                    <input type="file" class="form-control-file" name="struktur_foto" id="inputStrukturOrganisasi" required>
                                 </div>
                                 <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                             </form>
