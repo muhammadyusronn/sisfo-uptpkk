@@ -25,7 +25,7 @@
                                     <span aria-hidden="true">×</span>
                                     </button>
                                 </div>
-                                @endif
+                            @endif
                                 @foreach ($data_sejarah as $i)
                                     <form method="post" action="{{route('sejarah.update')}}" enctype="multipart/form-data">
                                         @csrf <!-- {{ csrf_field() }} -->

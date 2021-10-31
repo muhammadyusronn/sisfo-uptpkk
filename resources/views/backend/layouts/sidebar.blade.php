@@ -65,7 +65,7 @@
             </ul>
         </li>
         <li class="">
-            <a href="#" aria-expanded="false">
+            <a class="has-arrow" href="#" aria-expanded="false">
                 <div class="nav_icon_small">
                     <img src="{{asset('assets/img/menu-icon/blogger.svg')}}" alt="">
                 </div>
@@ -73,9 +73,17 @@
                     <span>Karir</span>
                 </div>
             </a>
+            <ul>
+                <li>
+                    <a href="{{route('seminar-karir')}}">Seminar dan Training</a>
+                </li>
+                <li>
+                    <a href="{{route('struktur-organisasi')}}">Konseling</a>
+                </li>
+            </ul>
         </li>
        <li class="">
-            <a href="#" aria-expanded="false">
+            <a class="has-arrow" href="#" aria-expanded="false">
                 <div class="nav_icon_small">
                     <img src="{{asset('assets/img/menu-icon/people-trading.svg')}}" alt="">
                 </div>
@@ -83,6 +91,17 @@
                     <span>Kewirausahaan</span>
                 </div>
             </a>
+            <ul>
+                <li>
+                    <a href="{{route('sejarah')}}">Informasi</a>
+                </li>
+                <li>
+                    <a href="{{route('visimisi')}}">Seminar dan Training</a>
+                </li>
+                <li>
+                    <a href="{{route('struktur-organisasi')}}">Konseling</a>
+                </li>
+            </ul>
         </li>
         <li class="">
             <a class="has-arrow" href="#" aria-expanded="false">

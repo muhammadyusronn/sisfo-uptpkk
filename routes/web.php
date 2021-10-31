@@ -7,6 +7,7 @@ use App\Http\Controllers\backend\HomeController;
 use App\Http\Controllers\backend\LoginController;
 use App\Http\Controllers\backend\PengumumanController;
 use App\Http\Controllers\backend\PengumumanKategoriController;
+use App\Http\Controllers\backend\SeminarKarirController;
 use App\Http\Controllers\backend\StrukturOrganisasiController;
 use App\Http\Controllers\backend\SejarahController;
 use App\Http\Controllers\backend\VisiMisiController;
@@ -76,6 +77,13 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/BRKategori-save', [BeritaKategoriController::class, 'create'])->name('BRKategori.save');
         Route::post('/BRKategori-update', [BeritaKategoriController::class, 'update'])->name('BRKategori.update');
         Route::post('/BRKategori-delete', [BeritaKategoriController::class, 'delete'])->name('BRKategori.delete');
+
+        //Routing Seminar Karir
+        Route::get('/seminar-karir', [SeminarKarirController::class, 'index'])->name('seminar-karir');
+        Route::get('/seminar-karir-create', [SeminarKarirController::class, 'create'])->name('seminar-karir.create');
+        Route::post('/seminar-karir-save', [SeminarKarirController::class, 'create'])->name('seminar-karir.save');
+        Route::post('/seminar-karir-update', [SeminarKarirController::class, 'update'])->name('seminar-karir.update');
+        Route::post('/seminar-karir-delete', [SeminarKarirController::class, 'delete'])->name('seminar-karir.delete');
 
         //Routing Visi Misi
         Route::get('/visimisi', [VisiMisiController::class, 'index'])->name('visimisi');
