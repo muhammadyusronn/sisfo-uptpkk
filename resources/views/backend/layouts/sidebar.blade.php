@@ -78,7 +78,7 @@
                     <a href="{{route('seminar-karir')}}">Seminar dan Training</a>
                 </li>
                 <li>
-                    <a href="{{route('struktur-organisasi')}}">Konseling</a>
+                    <a href="{{route('konseling-karir')}}">Konseling</a>
                 </li>
             </ul>
         </li>

@@ -8,6 +8,7 @@ use App\Http\Controllers\backend\LoginController;
 use App\Http\Controllers\backend\PengumumanController;
 use App\Http\Controllers\backend\PengumumanKategoriController;
 use App\Http\Controllers\backend\SeminarKarirController;
+use App\Http\Controllers\backend\KonselingKarirController;
 use App\Http\Controllers\backend\StrukturOrganisasiController;
 use App\Http\Controllers\backend\SejarahController;
 use App\Http\Controllers\backend\VisiMisiController;
@@ -84,6 +85,13 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/seminar-karir-save', [SeminarKarirController::class, 'create'])->name('seminar-karir.save');
         Route::post('/seminar-karir-update', [SeminarKarirController::class, 'update'])->name('seminar-karir.update');
         Route::post('/seminar-karir-delete', [SeminarKarirController::class, 'delete'])->name('seminar-karir.delete');
+
+        //Routing Konseling Karir
+        Route::get('/konseling-karir', [KonselingKarirController::class, 'index'])->name('konseling-karir');
+        Route::get('/konseling-karir-create', [KonselingKarirController::class, 'create'])->name('konseling-karir.create');
+        Route::post('/konseling-karir-save', [KonselingKarirController::class, 'create'])->name('konseling-karir.save');
+        Route::post('/konseling-karir-update', [KonselingKarirController::class, 'update'])->name('konseling-karir.update');
+        Route::post('/konseling-karir-delete', [KonselingKarirController::class, 'delete'])->name('konseling-karir.delete');
 
         //Routing Visi Misi
         Route::get('/visimisi', [VisiMisiController::class, 'index'])->name('visimisi');
