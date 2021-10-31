@@ -93,7 +93,7 @@
             </a>
             <ul>
                 <li>
-                    <a href="{{route('sejarah')}}">Informasi</a>
+                    <a href="{{route('informasi-kewirausahaan')}}">Informasi</a>
                 </li>
                 <li>
                     <a href="{{route('seminar-kewirausahaan')}}">Seminar dan Training</a>
