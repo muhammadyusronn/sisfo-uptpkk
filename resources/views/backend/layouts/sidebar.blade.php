@@ -99,7 +99,7 @@
                     <a href="{{route('seminar-kewirausahaan')}}">Seminar dan Training</a>
                 </li>
                 <li>
-                    <a href="{{route('struktur-organisasi')}}">Konseling</a>
+                    <a href="{{route('konseling-kewirausahaan')}}">Konseling</a>
                 </li>
             </ul>
         </li>

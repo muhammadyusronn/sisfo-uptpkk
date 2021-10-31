@@ -3,21 +3,21 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\KonselingKarir;
+use App\Models\KonselingKewirausahaan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
-class KonselingKarirController extends Controller
+class KonselingKewirausahaanController extends Controller
 {
     //
-    protected $table = 'konseling_karirs';
+    protected $table = 'konseling_kewirausahaans';
 
     public function index()
     {
-        $data['title'] = 'Data Konseling Karir';
-        $data['data_konseling'] = KonselingKarir::all();
-        return view('backend.karir.konseling.data_konseling', $data);
+        $data['title'] = 'Data Konseling Kewirausahaan';
+        $data['data_konseling'] = KonselingKewirausahaan::all();
+        return view('backend.kewirausahaan.konseling.data_konseling', $data);
     }
 
     public function create(Request $request)
@@ -38,11 +38,11 @@ class KonselingKarirController extends Controller
                 'konseling_tanggal'    =>  $request->konseling_tanggal,
                 'konseling_foto'      => $path
             ];
-            KonselingKarir::create($konseling);
-            return redirect('konseling-karir')->with('success', 'Data berhasil ditambah');
+            KonselingKewirausahaan::create($konseling);
+            return redirect('konseling-kewirausahaan')->with('success', 'Data berhasil ditambah');
         } else {
-            $data['title'] = 'Data Konseling Karir';
-            return view('backend.karir.konseling.create_konseling', $data);
+            $data['title'] = 'Data Konseling Kewirausahaan';
+            return view('backend.kewirausahaan.konseling.create_konseling', $data);
         }
     }
 
@@ -53,7 +53,7 @@ class KonselingKarirController extends Controller
             if (isset($request->konseling_foto)) {
                 Storage::delete([$request->sampul]);
                 $path = $request->file('konseling_foto')->store('konseling_foto');
-                $konseling = KonselingKarir::find($request->id);
+                $konseling = KonselingKewirausahaan::find($request->id);
                 $konseling->konseling_judul = $request->konseling_judul;
                 $konseling->konseling_penulis = $request->konseling_penulis;
                 $konseling->konseling_konten = $request->konseling_konten;
@@ -61,18 +61,18 @@ class KonselingKarirController extends Controller
                 $konseling->konseling_foto = $path;
                 $konseling->save();
             } else {
-                $konseling = KonselingKarir::find($request->id);
+                $konseling = KonselingKewirausahaan::find($request->id);
                 $konseling->konseling_judul = $request->konseling_judul;
                 $konseling->konseling_penulis = $request->konseling_penulis;
                 $konseling->konseling_konten = $request->konseling_konten;
                 $konseling->konseling_tanggal = $request->konseling_tanggal;
                 $konseling->save();
             }
-            return redirect('konseling-karir')->with('success', 'Data berhasil diubah!');
+            return redirect('konseling-kewirausahaan')->with('success', 'Data berhasil diubah!');
         } else {
-            $data['title'] = 'Update Konseling Karir';
-            $data['data_konseling'] = KonselingKarir::where('id', $request->id)->get();
-            return view('backend.karir.konseling.update_konseling', $data);
+            $data['title'] = 'Update Konseling Kewirausahaan';
+            $data['data_konseling'] = KonselingKewirausahaan::where('id', $request->id)->get();
+            return view('backend.kewirausahaan.konseling.update_konseling', $data);
         }
     }
 
@@ -80,9 +80,9 @@ class KonselingKarirController extends Controller
     {
         $delete = DB::table($this->table)->where('id', $request->id)->delete();
         if ($delete) {
-            return redirect('konseling-karir')->with('success', 'Data berhasil dihapus!');
+            return redirect('konseling-kewirausahaan')->with('success', 'Data berhasil dihapus!');
         } else {
-            return redirect('konseling-karir')->with('failed', 'Data gagal dihapus!');
+            return redirect('konseling-kewirausahaan')->with('failed', 'Data gagal dihapus!');
         }
     }
 }
