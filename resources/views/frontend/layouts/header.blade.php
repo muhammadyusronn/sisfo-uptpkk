@@ -17,19 +17,19 @@
                 <li class="nav__item has-dropdown">
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link active">Beranda</a>
                   <ul class="dropdown-menu">
-                    <li class="nav__item">
+                    {{-- <li class="nav__item">
                       <a href="https://jcdc.polsri.ac.id/" target="_blank" class="nav__item-link">Lowongan Terbaru</a>
+                    </li><!-- /.nav-item --> --}}
+                    <li class="nav__item">
+                      <a href="#berita" class="nav__item-link">Berita Terbaru</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
-                      <a href="{{route('berita-terbaru')}}" class="nav__item-link">Berita Terbaru</a>
-                    </li><!-- /.nav-item -->
-                    <li class="nav__item">
-                      <a href="{{route('pengumuman-terbaru')}}" class="nav__item-link">Pengumuman Terbaru</a>
+                      <a href="#pengumuman" class="nav__item-link">Pengumuman Terbaru</a>
                     </li><!-- /.nav-item -->
                   </ul><!-- /.dropdown-menu -->
                 </li><!-- /.nav-item -->
                 <li class="nav__item has-dropdown">
-                  <a href="{{route('about')}}" class="nav__item-link">Profile</a>
+                  <a href="#profile" class="nav__item-link">Profile</a>
                 </li><!-- /.nav-item -->
                 <li class="nav__item has-dropdown">
                   <a href="https://uptpkk.polsri.ac.id/" target="_blank" class="dropdown-toggle nav__item-link">Tracer Study</a>
@@ -41,10 +41,10 @@
                       <a href="https://jcdc.polsri.ac.id/" target="_blank" class="nav__item-link">Lowongan Kerja</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
-                      <a href="{{route('seminar-karir')}}" class="nav__item-link">Seminar, Training & Workshop</a>
+                      <a href="#seminar-karir" class="nav__item-link">Seminar, Training & Workshop</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
-                      <a href="{{route('konseling-karir')}}" class="nav__item-link">Konseling Karir</a>
+                      <a href="#konseling-karir" class="nav__item-link">Konseling Karir</a>
                     </li><!-- /.nav-item -->
                   </ul><!-- /.dropdown-menu -->
                 </li><!-- /.nav-item -->
@@ -52,13 +52,13 @@
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Kewirausahaan</a>
                   <ul class="dropdown-menu">
                     <li class="nav__item">
-                      <a href="{{route('informasi-kewirausahaan')}}" class="nav__item-link">Informasi Kewirausahaan</a>
+                      <a href="{{route('informasi')}}" class="nav__item-link">Informasi Kewirausahaan</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
-                      <a href="{{route('seminar-kewirausahaan')}}" class="nav__item-link">Seminar, Training & Workshop</a>
+                      <a href="{{route('seminar')}}" class="nav__item-link">Seminar, Training & Workshop</a>
                     </li><!-- /.nav-item -->
                     <li class="nav__item">
-                      <a href="{{route('konseling-kewirausahaan')}}" class="nav__item-link">Konseling Kewirausahaan</a>
+                      <a href="{{route('konseling')}}" class="nav__item-link">Konseling Kewirausahaan</a>
                     </li><!-- /.nav-item -->
                   </ul><!-- /.dropdown-menu -->
                 </li><!-- /.nav-item -->

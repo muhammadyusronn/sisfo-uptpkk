@@ -27,11 +27,9 @@
                                                 </form>
                                             </div>
                                         </div>
-                                        @if (count($data_informasi) < 1)
                                         <div class="add_button ml-10">
                                             <a href="{{route('informasi-kewirausahaan.create')}}" class="btn_1">Tambah Data</a>
                                         </div>
-                                        @endif
                                     </div>
                                 </div>
                                 

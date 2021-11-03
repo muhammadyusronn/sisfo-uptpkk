@@ -1,9 +1,6 @@
 @extends('frontend.layouts.app')
 @section('content')
-<!-- ========================
-       page title 
-=========================== -->
-<section class="page-title page-title-layout12 bg-overlay bg-overlay-gradient bg-parallax text-center">
+<!-- page title --><section class="page-title page-title-layout12 bg-overlay bg-overlay-gradient bg-parallax text-center">
    <div class="bg-img"><img src="{{asset('frontend/assets/images/page-titles/13.jpg')}}" alt="background"></div>
     <div class="container">
       <div class="row">
@@ -19,10 +16,7 @@
       </div><!-- /.row -->
   </div><!-- /.container -->
 </section><!-- /.page-title -->
-<!-- ======================
-      Blog Grid
-========================= -->
-    <section class="blog-grid pb-50">
+<!-- Blog Grid --><section class="blog-grid pb-50">
         <div class="container">
             <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
@@ -113,5 +107,5 @@
             </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
-    </section><!-- /.blog Grid -->
+</section><!-- /.blog Grid -->
     @endsection

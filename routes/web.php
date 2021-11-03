@@ -23,20 +23,15 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/user', [HomeControllers::class, 'index'])->name('home');
-Route::get('/berita-terbaru', [BeritaControllers::class, 'index'])->name('berita-terbaru');
 Route::view('/detail-berita', 'frontend.page.berita.detail_berita')->name('detail-berita');
-Route::get('/pengumuman-terbaru', [PengumumanControllers::class, 'index'])->name('pengumuman-terbaru');
 Route::get('/detail-pengumuman', [PengumumanControllers::class, 'details'])->name('detail-pengumuman');
-Route::get('/about', [HomeControllers::class, 'visiMisi'])->name('about');
-Route::view('/seminar-karir', 'frontend.page.karir.seminarkarir')->name('seminar-karir');
 Route::view('/detail-seminar-karir', 'frontend.page.karir.detail-seminar')->name('detail-seminar-karir');
 Route::view('/detail-seminar-kewirausahaan', 'frontend.page.kewirausahaan.detail-seminar-kewirausahaan')->name('detail-seminar-kewirausahaan');
-Route::view('/seminar-kewirausahaan', 'frontend.page.kewirausahaan.seminarkewirausahaan')->name('seminar-kewirausahaan');
-Route::view('/konseling-karir', 'frontend.page.karir.konseling-karir')->name('konseling-karir');
+Route::get('/informasi',  [HomeControllers::class, 'informasiKewirausahaan'])->name('informasi');
+Route::get('/seminar', [HomeControllers::class, 'seminarKewirausahaan'])->name('seminar');
 Route::view('/detail-konseling-karir', 'frontend.page.karir.detail-konseling-karir')->name('detail-konseling-karir');
-Route::view('/konseling-kewirausahaan', 'frontend.page.kewirausahaan.konseling-kewirausahaan')->name('konseling-kewirausahaan');
+Route::get('/konseling', [HomeControllers::class, 'konselingKewirausahaan'])->name('konseling');
 Route::view('/detail-konseling-kewirausahaan', 'frontend.page.kewirausahaan.detail-konseling-kewirausahaan')->name('detail-konseling-kewirausahaan');
-Route::view('/informasi-kewirausahaan', 'frontend.page.kewirausahaan.informasi-kewirausahaan')->name('informasi-kewirausahaan');
 Route::get('/', function () {
     dd(Auth::user());
 });

@@ -35,108 +35,25 @@
             <div class="slick-carousel"
             data-slick='{"slidesToShow": 3, "slidesToScroll": 3, "arrows": false, "dots": false, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}]}'>
             <!-- service item #1 -->
+            @foreach ($data_konseling as $i)
             <div class="service-item">
                 {{-- <div class="service__icon">
-                <i class="icon-server"></i>
+                    <i class="icon-server"></i>
                 </div><!-- /.service__icon --> --}}
-                <h4 class="service__title">Judul Konseling Kewirausahaan</h4>
+                <h4 class="service__title"><?= $i->konseling_judul ?></h4>
                 <div class="service__content">
-                <p class="service__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ex nihil totam nesciunt doloribus nisi quod eius eum cupiditate laudantium quidem qui deserunt impedit neque deleniti eaque rerum harum eveniet.
-                </p>
-                <a href="{{route('detail-konseling-kewirausahaan')}}" class="btn btn__primary">
-                    <span>Read More</span>
-                    <i class="icon-arrow-right"></i>
-                </a>
+                    <p class="service__desc"><?= substr_replace($i->konseling_konten, "...", 150) ?>
+                    </p>
+                    <a href="{{route('detail-konseling-kewirausahaan')}}" class="btn btn__primary">
+                        <span>Read More</span>
+                        <i class="icon-arrow-right"></i>
+                    </a>
                 </div><!-- /.service-content -->
             </div><!-- /.service-item -->
-            <!-- service item #2 -->
-            <div class="service-item">
-                {{-- <div class="service__icon">
-                <i class="icon-cloud"></i>
-                </div><!-- /.service__icon --> --}}
-                <h4 class="service__title">Judul Konseling Kewirausahaan</h4>
-                <div class="service__content">
-                <p class="service__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ex nihil totam nesciunt doloribus nisi quod eius eum cupiditate laudantium quidem qui deserunt impedit neque deleniti eaque rerum harum eveniet.</p>
-                <a href="{{route('detail-konseling-kewirausahaan')}}" class="btn btn__primary">
-                    <span>Read More</span>
-                    <i class="icon-arrow-right"></i>
-                </a>
-                </div><!-- /.service-content -->
-            </div><!-- /.service-item -->
-            <!-- service item #3 -->
-            <div class="service-item">
-                {{-- <div class="service__icon">
-                <i class="icon-hosting"></i>
-                </div><!-- /.service__icon --> --}}
-                <h4 class="service__title">Judul Konseling Kewirausahaan</h4>
-                <div class="service__content">
-                <p class="service__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ex nihil totam nesciunt doloribus nisi quod eius eum cupiditate laudantium quidem qui deserunt impedit neque deleniti eaque rerum harum eveniet.
-                </p>
-                <a href="{{route('detail-konseling-kewirausahaan')}}" class="btn btn__primary">
-                    <span>Read More</span>
-                    <i class="icon-arrow-right"></i>
-                </a>
-                </div><!-- /.service-content -->
-            </div><!-- /.service-item -->
-            <!-- service item #4 -->
-            <div class="service-item">
-                <div class="service__icon">
-                <i class="icon-technician"></i>
-                </div><!-- /.service__icon -->
-                <h4 class="service__title">IT Consulting <br> Services</h4>
-                <div class="service__content">
-                <p class="service__desc">Trying to solve all your IT challenges internally can become costly and a
-                    major distraction, Leveraging knowledgeable IT consulting firms like ushelps your business.</p>
-                <a href="{{route('detail-konseling-kewirausahaan')}}" class="btn btn__primary">
-                    <span>Read More</span>
-                    <i class="icon-arrow-right"></i>
-                </a>
-                </div><!-- /.service-content -->
-            </div><!-- /.service-item -->
-            <!-- service item #5 -->
-            <div class="service-item">
-                <div class="service__icon">
-                <i class="icon-programming"></i>
-                </div><!-- /.service__icon -->
-                <h4 class="service__title">Software Dev<br> Services</h4>
-                <div class="service__content">
-                <p class="service__desc">With shorter product cycles, rapid innovation, and mergers contributing to
-                    constant change, you are faced with making business decisions every day to advance your mission.
-                </p>
-                <a href="{{route('detail-konseling-kewirausahaan')}}" class="btn btn__primary">
-                    <span>Read More</span>
-                    <i class="icon-arrow-right"></i>
-                </a>
-                </div><!-- /.service-content -->
-            </div><!-- /.service-item -->
-            <!-- service item #6 -->
-            <div class="service-item">
-                <div class="service__icon">
-                <i class="icon-programming"></i>
-                </div><!-- /.service__icon -->
-                <h4 class="service__title">Backup & Recovery<br> Services</h4>
-                <div class="service__content">
-                <p class="service__desc">While you can’t predict unexpected events, we’ll ensure the right
-                    precautions
-                    are in place to minimize downtime and keep you moving in the right direction.</p>
-                <a href="it-solutions-single.html" class="btn btn__primary">
-                    <span>Read More</span>
-                    <i class="icon-arrow-right"></i>
-                </a>
-                </div><!-- /.service-content -->
-            </div><!-- /.service-item -->
+            @endforeach
             </div><!-- /.carousel -->
         </div><!-- /.col-12 -->
         </div><!-- /.row -->
-        <div class="row">
-        <div class="col-12 text-center">
-            <p class="text__link mt-20 mb-0">Working hard to earn our customers’ trust.
-            <a href="industries.html" class="btn btn__secondary btn__link mx-1">
-                <span>Explore All Services</span> <i class="icon-arrow-right icon-outlined"></i>
-            </a>
-            </p>
-        </div><!-- /.col-lg-6 -->
-        </div>
     </div><!-- /.container -->
 </section><!-- /.Services Layout 1 -->
 @endsection

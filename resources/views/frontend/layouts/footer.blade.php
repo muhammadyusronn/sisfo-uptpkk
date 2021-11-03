@@ -24,10 +24,13 @@
               <h6 class="footer-widget__title">Website</h6>
               <ul class="contact-list list-unstyled">
                 <li>
-                  <a href="https://jcdc.polsri.ac.id/" target="_blank" style="text-decoration: none; color:white;"><i class="bi bi-globe" style="display: inline"></i> JCDC POLSRI</a>
+                  <a href="http://polsri.ac.id/" target="_blank" style="text-decoration: none; color:white;"><i class="bi bi-globe" style="display: inline"></i> Polsri</a>
                 </li>
                 <li>
                   <a href="https://uptpkk.polsri.ac.id/" target="_blank" style="text-decoration: none; color:white;"><i class="bi bi-globe" style="display: inline"></i> Tracer Study</a>
+                </li>
+                <li>
+                  <a href="https://jcdc.polsri.ac.id/" target="_blank" style="text-decoration: none; color:white;"><i class="bi bi-globe" style="display: inline"></i> JCDC POLSRI</a>
                 </li>
               </ul>
             </div><!-- /.col-lg-2 -->

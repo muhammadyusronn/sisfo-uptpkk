@@ -33,20 +33,23 @@
                   <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}"
                       alt="portfolio img"></a>
                 </div><!-- /.portfolio-img -->
+                @foreach ($data_informasi as $i)
                 <div class="portfolio__icon">
                   <img src="{{asset('frontend/assets/images/icons/database.png')}}" alt="icon">
                 </div><!-- ')}}/.portfolio__icon -->
                 <div class="portfolio__content">
-                  <h4 class="portfolio__title"><a href="#">Judul Informasi Kewirausahaan</a></h4>
-                  <p class="portfolio__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nobis facere vitae cum expedita recusandae porro voluptatibus dolore corrupti. Error voluptatum veritatis eaque voluptatibus et rerum omnis corporis esse nesciunt!</p>
+                  <h4 class="portfolio__title"><a href="#"><?= $i->informasi_judul ?></a></h4>
+                  <p class="portfolio__desc"><?= substr_replace($i->informasi_konten, "...", 150) ?></p>
                   <a href="case-studies-single.html" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                   </a>
                 </div><!-- /.portfolio-content -->
-  
+                @endforeach
+                
               </div><!-- /.portfolio-item -->
             </div><!-- /.col-lg-4 -->
-        </div><!-- /.container -->
-      </section><!-- /.portfolio layout 2 -->
+          </div><!-- /.container -->
+        </div>
+        </section><!-- /.portfolio layout 2 -->
 @endsection

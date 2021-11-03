@@ -65,13 +65,13 @@
                                             foreach($data_struktur as $i): ?>
                                             <tr>
                                                 <td>
-                                                    <img src="{{asset('storage/app/struktur_foto/'. $i->struktur_foto)}}" alt="">
+                                                    <img src="{{asset('storage/'. $i->struktur_foto)}}" alt="">
                                                 </td>
                                                 <td>
                                                     <form action="{{route('struktur-organisasi.delete')}}" method="post" class="d-inline">
                                                         @csrf
-                                                        <input type="hidden" value="{{$i->struktur_foto}}" name="struktur_foto" id="">
                                                         <input type="hidden" name="struktur_id" value="{{$i->struktur_id}}">
+                                                        <input type="hidden" value="{{$i->struktur_foto}}" name="struktur_foto">
                                                         <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
                                                     </form>
                                                     <form action="{{route('struktur-organisasi.update')}}" method="post" class="d-inline">

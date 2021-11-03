@@ -53,20 +53,20 @@ class StrukturOrganisasiController extends Controller
             }
             return redirect('struktur-organisasi')->with('success', 'Data berhasil diubah!');
         } else {
-            $data['title'] = 'Update Stuktur';
-            $data['data_stuktur'] = Organizational_structures::where('stuktur_id', $request->stuktur_id)->get();
-            return view('backend.stuktur.update_stuktur', $data);
+            $data['title'] = 'Update Struktur Organisasi';
+            $data['data_struktur'] = Organizational_structures::where('struktur_id', $request->struktur_id)->get();
+            return view('backend.struktur.update_struktur', $data);
         }
     }
 
     public function delete(Request $request)
     {
-        $delete = DB::table($this->table)->where('stuktur_id', $request->stuktur_id)->delete();
+        $delete = DB::table($this->table)->where('struktur_id', $request->struktur_id)->delete();
         if ($delete) {
             Storage::delete([$request->struktur_foto]);
-            return redirect('stuktur-organisasi')->with('success', 'Data berhasil dihapus!');
+            return redirect('struktur-organisasi')->with('success', 'Data berhasil dihapus!');
         } else {
-            return redirect('stuktur-organisasi')->with('failed', 'Data gagal dihapus!');
+            return redirect('struktur-organisasi')->with('failed', 'Data gagal dihapus!');
         }
     }
 }

@@ -3,6 +3,7 @@
 <!-- ============================
             Slider
 ============================== -->
+<!-- Slider -->
 <section class="slider">
     <div class="slick-carousel carousel-arrows-light carousel-dots-light m-slides-0"
         data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear"}'>
@@ -47,15 +48,19 @@
         </div><!-- /.container -->
         </div><!-- /.slide-item -->
     </div><!-- /.carousel -->
-</section><!-- /.slider -->
-<section class="portfolio-layout2">
+</section>
+<!-- /.slider -->
+
+<!-- Berita terbaru layout 2 -->
+<section class="portfolio-layout2" id="berita">
   <div class="container">
-    <nav>
-        <ol class="breadcrumb justify-content-center">
-            <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Berita</li>
-        </ol>
-    </nav>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+            <div class="heading text-center mb-40">
+            <h2 class="heading__subtitle">Berita Terbaru</h2>
+            </div><!-- /.heading -->
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
     <div id="filtered-items-wrap" class="row">
     @foreach ($data_berita as $item)
     <!-- portfolio item #1 -->
@@ -70,6 +75,7 @@
         </div><!-- ')}}/.portfolio__icon -->
         <div class="portfolio__content">
             <h4 class="portfolio__title"><a href="#"><?= $item->berita_judul ?></a></h4>
+            <p>Kategori : <?= $item->kategori_nama ?></p>
             <p class="portfolio__desc"><?= substr_replace($item->berita_konten, "...", 150) ?></p>
             <a href="{{route('detail-berita')}}" class="btn btn__secondary btn__link">
             <span>Read More</span>
@@ -93,13 +99,18 @@
     </div><!-- /.col-lg-12 -->
     </div><!-- /.row -->
   </div><!-- /.container -->
-</section><!-- /.berita terbaru layout 2 -->
-<section class="features-layout2">
+</section>
+<!-- /.berita terbaru layout 2 -->
+
+<!-- Pengumuman terbaru Layout 2 -->
+<section class="features-layout2" id="pengumuman">
     <div class="container">
         <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-5">
-            <h1 class="heading__subtitle color-primary">Pengumuman Terbaru</h1>
-        </div>
+            <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                <div class="heading text-center mb-20">
+                <h2 class="heading__subtitle">Pengumuman Terbaru</h2>
+                </div><!-- /.heading -->
+            </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
         <div class="row">
             <!-- Feature item #1 -->
@@ -110,6 +121,7 @@
                     <i class="icon-statistic"></i>
                 </div>
                 <h4 class="feature__title"><?= $item->pengumuman_judul ?></h4>
+                <p>Kategori : <?= $item->kategori_nama ?></p>
                 <p class="feature__desc"><?= substr_replace($item->pengumuman_konten, "...", 150) ?></p>
                 <a href="{{route('detail-pengumuman')}}" class="btn__link">
                     <i class="icon-arrow-right icon-outlined"></i>
@@ -119,5 +131,163 @@
             </div><!-- /.col-lg-3 -->
             @endforeach
         </div><!-- /.container -->
-</section><!-- /.Pengumuman terbaru Layout 2 -->
+</section>
+<!-- /.Pengumuman terbaru Layout 2 -->
+
+<!-- Seminar Karir-->
+<section class="blog-grid pb-50" id="seminar-karir">
+        <div class="container">
+            <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                <div class="heading text-center mb-40">
+                <h2 class="heading__subtitle">Karir</h2>
+                <h3 class="heading__title">Seminar, Training dan Workshop</h3>
+                </div><!-- /.heading -->
+            </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+            <div class="row">
+            <!-- Blog Item #1 -->
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="post-item">
+                <div class="post__img">
+                    <a href="{{route('detail-seminar-karir')}}">
+                    <img src="{{asset('frontend/assets/images/blog/grid/1.jpg')}}" alt="blog image">
+                    </a>
+                </div><!-- /.blog-img -->
+                @foreach ($data_seminar as $i)
+                    
+                @endforeach
+                <div class="post__body">
+                    <h4 class="post__title"><a href="#"><a href="#"><?= $i->seminar_judul ?></a>
+                    </h4>
+                    <div class="post__meta">
+                    <span class="post__meta-date"><?= $i->seminar_tanggal ?></span>
+                    </div><?= substr_replace($i->seminar_konten, "...", 150) ?></p>
+                    <a href="{{route('detail-seminar-karir')}}" class="btn btn__secondary btn__link">
+                    <span>Read More</span>
+                    <i class="icon-arrow-right"></i>
+                    </a>
+                </div><!-- /.blog-content -->
+                </div><!-- /.post-item -->
+            </div><!-- /.col-lg-4 -->
+                </div><!-- /.post-item -->
+            </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+</section>
+<!-- /.Seminar Karir-->
+
+<!-- Konseling Karirr -->
+<section class="services-layout1 services-carousel pb-10" id="konseling-karir">
+    <div class="bg-img"><img src="{{asset('frontend/assets/images/backgrounds/5.png')}}" alt="backgrounds"></div>
+    <div class="container">
+        <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+            <div class="heading text-center mb-50">
+            <h2 class="heading__subtitle">Karir</h2>
+            <h3 class="heading__title">Konseling Karir</h3>
+            </div><!-- /.heading -->
+        </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+        <div class="row">
+        <div class="col-12">
+            <div class="slick-carousel"
+            data-slick='{"slidesToShow": 3, "slidesToScroll": 3, "arrows": false, "dots": false, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}]}'>
+            <!-- service item #1 -->
+            @foreach ($data_konseling as $i)
+            <div class="service-item">
+                <h4 class="service__title"><?= $i->konseling_judul ?></h4>
+                <div class="service__content">
+                    <p class="service__desc"><?= substr_replace($i->konseling_konten, "...", 150) ?>
+                </p>
+                <a href="{{route('detail-konseling-karir')}}" class="btn btn__primary">
+                    <span>Read More</span>
+                    <i class="icon-arrow-right"></i>
+                </a>
+                </div><!-- /.service-content -->
+            </div><!-- /.service-item -->
+            @endforeach
+        </div><!-- /.carousel -->
+        </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+<!-- /.Konseling Karirr -->
+
+<!-- Profile -->
+<section class="profile-perusahaan" id="profile">
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+        <div class="heading text-center mb-50">
+        <h2 class="heading__subtitle">Profile UPTPKK</h2>
+        <h3 class="heading__title">Latar Belakang</h3>
+        </div><!-- /.heading -->
+    </div><!-- /.col-lg-6 -->
+</div>
+<section class="history-timeline pt-50 pb-50 mb-5">
+    <div class="bg-img"><img src="{{asset('frontend/assets/images/backgrounds/2.jpg')}}" alt="background"></div>
+    <div class="container">
+        <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-12">
+            <div>
+            <!-- timeline Item #1 -->
+            @foreach ($data_sejarah as $i)
+            <div class="timeline-item d-flex">
+                <p class="timeline__desc"><br><?= $i->sejarah_konten?></p>
+            </div><!-- /.timeline-item -->
+            @endforeach
+            </div>
+        </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+
+<section class="about-layout2 pt-100 pb-30" >
+    
+    <div class="row mt-20">
+        <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+            <div class="heading text-center mb-50">
+            <h3 class="heading__title">Visi, Misi dan Tujuan UPTPKK</h3>
+            </div><!-- /.heading -->
+        </div><!-- /.col-lg-6 -->
+    </div>
+    <div class="container">
+        {{-- @foreach ($data_struktur as $i)
+        <img src=""><?= $i->struktur_foto ?>
+        @endforeach --}}
+    </div>
+    <div class="container">
+        <div class="row">
+            @foreach ($data_visimisi as $i)
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div class="heading-layout2 mb-40">
+                    <h3 class="heading__title">Visi</h3>
+                </div><!-- /heading -->
+                <div class="about-text-wrapper">
+                    <div class="about__Text">
+                        <p class="font-weight-bold mb-30"><?= $i->visi_konten ?></p>
+                    </div>
+                </div>
+                <div class="heading-layout2 mb-40">
+                    <h3 class="heading__title">Misi</h3>
+                    </div><!-- /heading -->
+                    <div class="about-text-wrapper">
+                        <div class="about__Text">
+                            <p class="font-weight-bold mb-30"><?= $i->misi_konten ?></p>
+                        </div>
+                    </div>
+            </div><!-- /.col-xl-7 -->
+            @endforeach
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-5  offset-xl-1">
+                <div class="about__img mb-40">
+                    <h4 class="blockquote__title">Tujuan Pokok UPTPKK
+                    </h4>
+                    <span class="blockquote__author"><?= $i->tujuan_konten ?></span>
+                </div><!-- /.about-img -->
+                </div><!-- /.col-xl-5 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+</section>
+<!-- /.Profile -->
 @endsection

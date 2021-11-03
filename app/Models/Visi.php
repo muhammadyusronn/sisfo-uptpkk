@@ -14,5 +14,7 @@ class Visi extends Model
     protected $fillable = [
         'visi_konten',
         'visi_foto',
+        'misi_konten',
+        'tujuan_konten'
     ];
 }
