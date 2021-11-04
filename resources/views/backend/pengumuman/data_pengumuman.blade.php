@@ -57,6 +57,7 @@
                                                 <th scope="col">Judul</th>
                                                 <th scope="col">Konten</th>
                                                 <th scope="col">Kategori</th>
+                                                <th scope="col">Sampul</th>
                                                 <th scope="col">Status</th>
                                                 <th scope="col">Aksi</th>
                                             </tr>
@@ -68,6 +69,7 @@
                                                 <td><?= $i->pengumuman_judul ?></td>
                                                 <td><?= substr_replace($i->pengumuman_konten, "...", 40) ?></td>
                                                 <td><?= $i->kategori_nama ?></td>
+                                                <td><img src="{{asset('storage/pengumuman_terbaru/'.$i->pengumuman_sampul)}}" style="width: 100px"></td>
                                                 <td><?php if($i->pengumuman_status==0){
                                                     echo 'Tidak Dipublis';
                                                 }else{

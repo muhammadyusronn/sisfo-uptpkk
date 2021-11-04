@@ -30,7 +30,12 @@ class PengumumanController extends Controller
         $data['title'] = 'Form Pengumuman';
         $data['data_kategori'] = Announcements_categories::all();
         if (isset($_POST['submit'])) {
-            $path = $request->file('pengumuman_sampul')->store('pengumuman_sampul');
+            if($request->hasFile('pengumuman_sampul')){
+                $destination_path = 'public/pengumuman_terbaru';
+                $pengumuman_sampul = $request->file('pengumuman_sampul');
+                $pengumuman_sampul_name = $pengumuman_sampul->getClientOriginalName();
+                $path = $request->file('pengumuman_sampul')->storeAs($destination_path, $pengumuman_sampul_name);
+            }
             $this->validate($request, [
                 'pengumuman_judul'      => 'required',
                 'pengumuman_konten'     => 'required',
@@ -41,7 +46,7 @@ class PengumumanController extends Controller
                 'pengumuman_judul'      => $request->pengumuman_judul,
                 'pengumuman_slug'       => SlugService::createSlug(Announcements::class, 'pengumuman_slug', $request->pengumuman_judul),
                 'pengumuman_konten'     => $request->pengumuman_konten,
-                'pengumuman_sampul'     => $path,
+                'pengumuman_sampul'     => $pengumuman_sampul_name,
                 'pengumuman_author'     =>  Auth::user()->user_id,
                 'pengumuman_status'     =>  $request->pengumuman_status,
                 'pengumuman_kategori'   =>  $request->pengumuman_kategori
@@ -69,13 +74,18 @@ class PengumumanController extends Controller
                 return redirect('pengumuman')->with('success', 'Data berhasil diubah!');
             } else {
                 Storage::delete([$request->sampul]);
-                $path = $request->file('pengumuman_sampul')->store('pengumuman_sampul');
+                if($request->hasFile('pengumuman_sampul')){
+                    $destination_path = 'public/pengumuman_terbaru';
+                    $pengumuman_sampul = $request->file('pengumuman_sampul');
+                    $pengumuman_sampul_name = $pengumuman_sampul->getClientOriginalName();
+                    $path = $request->file('pengumuman_sampul')->storeAs($destination_path, $pengumuman_sampul_name);
+                }
                 $pengumuman = Announcements::find($request->pengumuman_id);
                 $pengumuman->pengumuman_judul      = $request->pengumuman_judul;
                 $pengumuman->pengumuman_slug       = SlugService::createSlug(Announcements::class, 'pengumuman_slug', $request->pengumuman_judul);
                 $pengumuman->pengumuman_konten     = $request->pengumuman_konten;
                 $pengumuman->pengumuman_author     =  Auth::user()->user_id;
-                $pengumuman->pengumuman_sampul     =  $path;
+                $pengumuman->pengumuman_sampul     =  $pengumuman_sampul_name;
                 $pengumuman->pengumuman_status     =  $request->pengumuman_status;
                 $pengumuman->pengumuman_kategori   =  $request->pengumuman_kategori;
                 $pengumuman->save();
