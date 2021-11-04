@@ -44,7 +44,7 @@
                 <div class="service__content">
                     <p class="service__desc"><?= substr_replace($i->konseling_konten, "...", 150) ?>
                     </p>
-                    <a href="{{route('detail-konseling-kewirausahaan')}}" class="btn btn__primary">
+                    <a href="{{url('detail-konseling-kewirausahaan'.$i->konseling_id)}}" class="btn btn__primary">
                         <span>Read More</span>
                         <i class="icon-arrow-right"></i>
                     </a>

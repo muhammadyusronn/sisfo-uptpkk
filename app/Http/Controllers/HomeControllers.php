@@ -29,6 +29,9 @@ class HomeControllers extends Controller
         $data['data_visimisi'] = Visi::all();
         $data['data_struktur'] = Organizational_structures::all();
         $data['data_sejarah'] = Histories::all();
+        $data['data_informasi'] = InformasiKewirausahaan::all();
+        $data['data_konselingkew'] = KonselingKewirausahaan::all();
+        $data['data_seminarkew'] = SeminarKewirausahaan::all();
             // dd($data['data_berita']);
         return view('frontend.app', $data);
     }
