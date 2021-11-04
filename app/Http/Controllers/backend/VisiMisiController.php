@@ -28,12 +28,17 @@ class VisiMisiController extends Controller
                 'misi_konten' => 'required',
                 'tujuan_konten' => 'required'
             ]);
-            $path = $request->file('visi_foto')->store('visi_foto');
+            if($request->hasFile('visi_foto')){
+                $destination_path = 'public/visimisi';
+                $visi_foto = $request->file('visi_foto');
+                $visi_foto_name = $visi_foto->getClientOriginalName();
+                $path = $request->file('visi_foto')->storeAs($destination_path, $visi_foto_name);
+            }
             Visi::create([
                 'visi_konten'   => $request->visi_konten,
                 'misi_konten' => $request->misi_konten,
                 'tujuan_konten' => $request->tujuan_konten,
-                'visi_foto'     => $path,
+                'visi_foto'     => $visi_foto_name,
             ]);
             return redirect('visimisi')->with('success', 'Data berhasil ditambah');
         } else {
@@ -46,12 +51,17 @@ class VisiMisiController extends Controller
         if (isset($_POST['submit'])) {
             if (isset($request->visi_foto)) {
                 Storage::delete([$request->sampul]);
-                $path = $request->file('visi_foto')->store('visi_foto');
+                if($request->hasFile('visi_foto')){
+                    $destination_path = 'public/visimisi';
+                    $visi_foto = $request->file('visi_foto');
+                    $visi_foto_name = $visi_foto->getClientOriginalName();
+                    $path = $request->file('visi_foto')->storeAs($destination_path, $visi_foto_name);
+                }
                 $visi = Visi::find($request->visi_id);
                 $visi->visi_konten = $request->visi_konten;
                 $visi->misi_konten = $request->misi_konten;
                 $visi->tujuan_konten = $request->tujuan_konten;
-                $visi->visi_foto = $path;
+                $visi->visi_foto = $visi_foto_name;
                 $visi->save();
             } else {
                 $visi = Visi::find($request->visi_id);

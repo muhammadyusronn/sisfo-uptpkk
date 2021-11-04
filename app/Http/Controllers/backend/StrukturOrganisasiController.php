@@ -26,9 +26,14 @@ class StrukturOrganisasiController extends Controller
             $this->validate($request, [
                 'struktur_foto'      =>  'required'
             ]);
-            $path = $request->file('struktur_foto')->store('struktur_foto');
+            if($request->hasFile('struktur_foto')){
+                $destination_path = 'public/struktur_organisasi';
+                $struktur_foto = $request->file('struktur_foto');
+                $struktur_foto_name = $struktur_foto->getClientOriginalName();
+                $path = $request->file('struktur_foto')->storeAs($destination_path, $struktur_foto_name);
+            }
             $struktur = [
-                'struktur_foto'      => $path
+                'struktur_foto'      => $struktur_foto_name
             ];
             Organizational_structures::create($struktur);
             return redirect('struktur-organisasi')->with('success', 'Data berhasil ditambah');
@@ -43,9 +48,14 @@ class StrukturOrganisasiController extends Controller
         if (isset($_POST['submit'])) {
             if (isset($request->struktur_foto)) {
                 Storage::delete([$request->sampul]);
-                $path = $request->file('struktur_foto')->store('struktur_foto');
+                if($request->hasFile('struktur_foto')){
+                    $destination_path = 'public/struktur_organisasi';
+                    $struktur_foto = $request->file('struktur_foto');
+                    $struktur_foto_name = $struktur_foto->getClientOriginalName();
+                    $path = $request->file('struktur_foto')->storeAs($destination_path, $struktur_foto_name);
+                }
                 $struktur = Organizational_structures::find($request->struktur_id);
-                $struktur->struktur_foto = $path;
+                $struktur->struktur_foto = $struktur_foto_name;
                 $struktur->save();
             } else {
                 $struktur = Organizational_structures::find($request->struktur_id);

@@ -70,7 +70,7 @@
                                                 <td><?= $i->seminar_penulis ?></td>
                                                 <td><?= substr_replace($i->seminar_konten, "...", 40) ?></td>
                                                 <td><?= $i->seminar_tanggal ?></td>
-                                                <td><?= $i->seminar_foto ?></td>
+                                                <td><img src="{{asset('storage/seminar_kewirausahaan/'.$i->seminar_foto)}}" style="width: 100px"></td>
                                                 <td>
                                                     <form action="{{route('seminar-kewirausahaan.delete')}}" method="post" class="d-inline">
                                                         @csrf

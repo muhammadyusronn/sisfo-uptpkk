@@ -65,7 +65,7 @@
                                             foreach($data_struktur as $i): ?>
                                             <tr>
                                                 <td>
-                                                    <img src="{{asset('storage/'. $i->struktur_foto)}}" alt="">
+                                                    <img src="{{asset('storage/struktur_organisasi/'.$i->struktur_foto)}}" style="width: 500px">
                                                 </td>
                                                 <td>
                                                     <form action="{{route('struktur-organisasi.delete')}}" method="post" class="d-inline">

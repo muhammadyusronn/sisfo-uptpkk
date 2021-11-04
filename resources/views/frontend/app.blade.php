@@ -219,6 +219,7 @@
 
 <!-- Profile -->
 <section class="profile-perusahaan" id="profile">
+    
 <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
         <div class="heading text-center mb-50">

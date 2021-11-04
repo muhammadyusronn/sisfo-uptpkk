@@ -30,13 +30,18 @@ class SeminarKewirausahaanController extends Controller
                 'seminar_konten'  =>  'required',
                 'seminar_tanggal' =>  'required'
             ]);
-            $path = $request->file('seminar_foto')->store('seminar_foto');
+            if($request->hasFile('seminar_foto')){
+                $destination_path = 'public/seminar_kewirausahaan';
+                $seminar_foto = $request->file('seminar_foto');
+                $seminar_foto_name = $seminar_foto->getClientOriginalName();
+                $path = $request->file('seminar_foto')->storeAs($destination_path, $seminar_foto_name);
+            }
             $histories = [
                 'seminar_judul'    =>  $request->seminar_judul,
                 'seminar_penulis'    =>  $request->seminar_penulis,
                 'seminar_konten'    =>  $request->seminar_konten,
                 'seminar_tanggal'    =>  $request->seminar_tanggal,
-                'seminar_foto'      => $path
+                'seminar_foto'      => $seminar_foto_name
             ];
             SeminarKewirausahaan::create($histories);
             return redirect('seminar-kewirausahaan')->with('success', 'Data berhasil ditambah');
@@ -52,13 +57,18 @@ class SeminarKewirausahaanController extends Controller
         if (isset($_POST['submit'])) {
             if (isset($request->seminar_foto)) {
                 Storage::delete([$request->sampul]);
-                $path = $request->file('seminar_foto')->store('seminar_foto');
+                if($request->hasFile('seminar_foto')){
+                    $destination_path = 'public/seminar_kewirausahaan';
+                    $seminar_foto = $request->file('seminar_foto');
+                    $seminar_foto_name = $seminar_foto->getClientOriginalName();
+                    $path = $request->file('seminar_foto')->storeAs($destination_path, $seminar_foto_name);
+                }
                 $seminar = SeminarKewirausahaan::find($request->id);
                 $seminar->seminar_judul = $request->seminar_judul;
                 $seminar->seminar_penulis = $request->seminar_penulis;
                 $seminar->seminar_konten = $request->seminar_konten;
                 $seminar->seminar_tanggal = $request->seminar_tanggal;
-                $seminar->seminar_foto = $path;
+                $seminar->seminar_foto = $seminar_foto_name;
                 $seminar->save();
             } else {
                 $seminar = SeminarKewirausahaan::find($request->id);

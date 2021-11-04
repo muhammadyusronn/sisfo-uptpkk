@@ -64,7 +64,10 @@
                                     <table class="table lms_table_active3 " id="myTable">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Visi dan Misi</th>
+                                                <th scope="col">Visi</th>
+                                                <th scope="col">Misi</th>
+                                                <th scope="col">Tujuan</th>
+                                                <th scope="col">Foto</th>
                                                 <th scope="col">Aksi</th>
                                             </tr>
                                         </thead>
@@ -73,6 +76,11 @@
                                             foreach($data_visimisi as $i): ?>
                                             <tr>
                                                 <td><?= substr_replace($i->visi_konten, "...", 40) ?></td>
+                                                <td><?= substr_replace($i->misi_konten, "...", 40) ?></td>
+                                                <td><?= substr_replace($i->tujuan_konten, "...", 40) ?></td>
+                                                <td>
+                                                    <img src="{{asset('storage/visimisi/'.$i->visi_foto)}}" style="width: 100px">
+                                                </td>
                                                 <td>
                                                     <form action="{{route('visimisi.delete')}}" method="post" class="d-inline">
                                                         @csrf
