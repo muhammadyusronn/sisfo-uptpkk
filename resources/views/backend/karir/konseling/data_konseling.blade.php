@@ -70,7 +70,7 @@
                                                 <td><?= $i->konseling_penulis ?></td>
                                                 <td><?= substr_replace($i->konseling_konten, "...", 40) ?></td>
                                                 <td><?= $i->konseling_tanggal ?></td>
-                                                <td><?= $i->konseling_foto ?></td>
+                                                <td><img src="{{asset('storage/konseling_karir/'.$i->konseling_foto)}}" style="width: 100px"></td>
                                                 <td>
                                                     <form action="{{route('konseling-karir.delete')}}" method="post" class="d-inline">
                                                         @csrf

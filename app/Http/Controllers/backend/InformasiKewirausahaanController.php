@@ -23,19 +23,27 @@ class InformasiKewirausahaanController extends Controller
     public function create(Request $request)
     {
         if (isset($_POST['submit'])) {
+
+            if($request->hasFile('informasi_foto')){
+                $destination_path = 'public/informasi_kewirausahaan';
+                $informasi_foto = $request->file('informasi_foto');
+                $informasi_foto_name = $informasi_foto->getClientOriginalName();
+                $path = $request->file('informasi_foto')->storeAs($destination_path, $informasi_foto_name);
+            }
+            
             $this->validate($request, [
                 'informasi_judul'   =>  'required',
                 'informasi_penulis' =>  'required',
                 'informasi_konten'  =>  'required',
                 'informasi_tanggal' =>  'required'
             ]);
-            $path = $request->file('informasi_foto')->store('informasi_foto');
+           
             $informasi = [
                 'informasi_judul'    =>  $request->informasi_judul,
                 'informasi_penulis'    =>  $request->informasi_penulis,
                 'informasi_konten'    =>  $request->informasi_konten,
                 'informasi_tanggal'    =>  $request->informasi_tanggal,
-                'informasi_foto'      => $path
+                'informasi_foto'      => $informasi_foto_name
             ];
             InformasiKewirausahaan::create($informasi);
             return redirect('informasi-kewirausahaan')->with('success', 'Data berhasil ditambah');
@@ -51,13 +59,18 @@ class InformasiKewirausahaanController extends Controller
         if (isset($_POST['submit'])) {
             if (isset($request->informasi_foto)) {
                 Storage::delete([$request->sampul]);
-                $path = $request->file('informasi_foto')->store('informasi_foto');
+                if($request->hasFile('informasi_foto')){
+                    $destination_path = 'public/informasi_kewirausahaan';
+                    $informasi_foto = $request->file('informasi_foto');
+                    $informasi_foto_name = $informasi_foto->getClientOriginalName();
+                    $path = $request->file('informasi_foto')->storeAs($destination_path, $informasi_foto_name);
+                }
                 $informasi = InformasiKewirausahaan::find($request->id);
                 $informasi->informasi_judul = $request->informasi_judul;
                 $informasi->informasi_penulis = $request->informasi_penulis;
                 $informasi->informasi_konten = $request->informasi_konten;
                 $informasi->informasi_tanggal = $request->informasi_tanggal;
-                $informasi->informasi_foto = $path;
+                $informasi->informasi_foto = $informasi_foto_name;
                 $informasi->save();
             } else {
                 $informasi = InformasiKewirausahaan::find($request->id);

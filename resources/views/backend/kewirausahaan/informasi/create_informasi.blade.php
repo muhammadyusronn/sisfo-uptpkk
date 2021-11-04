@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title', 'Form Konseling Kewirausahaan')
+@section('title', 'Form Informasi Kewirausahaan')
 @section('content')
 <div class="main_content_iner">
         <div class="container-fluid p-0 sm_padding_15px">
@@ -8,7 +8,7 @@
                     <div class="white_card card_height_100 mb_30">
                         <div class="white_card_header">
                             <div class="box_header m-0">
-                                <h3 class="m-0">Form Konseling Kewirausahaan</h3>
+                                <h3 class="m-0">Form Informasi Kewirausahaan</h3>
                             </div>
                         </div>
                         <div class="white_card_body">
@@ -27,24 +27,24 @@
                             <form method="post" action="{{route('informasi-kewirausahaan.save')}}" enctype="multipart/form-data">
                                 @csrf <!-- {{ csrf_field() }} -->
                                 <div class="form-group">
-                                    <label>Judul Konseling Kewirausahaan</label>
+                                    <label>Judul Informasi Kewirausahaan</label>
                                     <input type="text" class="form-control" name="informasi_judul" id="informasi_judul" placeholder="Masukan Judul Informasi" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Penulis Konseling Kewirausahaan</label>
+                                    <label>Penulis Informasi Kewirausahaan</label>
                                     <input type="text" class="form-control" name="informasi_penulis" id="informasi_penulis" placeholder="Masukan Penulis Informasi" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Tanggal Konseling Kewirausahaan</label>
+                                    <label>Tanggal Informasi Kewirausahaan</label>
                                     <input type="date" class="form-control" name="informasi_tanggal" id="informasi_tanggal" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Konten Konseling Kewirausahaan</label>
+                                    <label>Konten Informasi Kewirausahaan</label>
                                     <textarea name="informasi_konten" id="kt-ckeditor-1"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="informasi_foto">Foto Konseling Kewirausahaan</label>
-                                    <input type="file" class="form-control-file" name="informasi_foto" id="informasi_foto" required>
+                                    <label for="informasi_foto">Foto Informasi Kewirausahaan</label>
+                                    <input type="file" class="form-control-file" name="informasi_foto" id="informasi_foto">
                                 </div>
                                 <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                             </form>

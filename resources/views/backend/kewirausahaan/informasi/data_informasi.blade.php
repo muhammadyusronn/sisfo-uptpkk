@@ -70,7 +70,7 @@
                                                 <td><?= $i->informasi_penulis ?></td>
                                                 <td><?= substr_replace($i->informasi_konten, "...", 40) ?></td>
                                                 <td><?= $i->informasi_tanggal ?></td>
-                                                <td><?= $i->informasi_foto ?></td>
+                                                <td><img src="{{asset('storage/informasi_kewirausahaan/'.$i->informasi_foto)}}" style="width: 100px"></td>
                                                 <td>
                                                     <form action="{{route('informasi-kewirausahaan.delete')}}" method="post" class="d-inline">
                                                         @csrf

@@ -23,19 +23,27 @@ class KonselingKarirController extends Controller
     public function create(Request $request)
     {
         if (isset($_POST['submit'])) {
+
+            if($request->hasFile('konseling_foto')){
+                $destination_path = 'public/konseling_karir';
+                $konseling_foto = $request->file('konseling_foto');
+                $konseling_foto_name = $konseling_foto->getClientOriginalName();
+                $path = $request->file('konseling_foto')->storeAs($destination_path, $konseling_foto_name);
+            }
+
             $this->validate($request, [
                 'konseling_judul'   =>  'required',
                 'konseling_penulis' =>  'required',
                 'konseling_konten'  =>  'required',
                 'konseling_tanggal' =>  'required'
             ]);
-            $path = $request->file('konseling_foto')->store('konseling_foto');
+
             $konseling = [
                 'konseling_judul'    =>  $request->konseling_judul,
                 'konseling_penulis'    =>  $request->konseling_penulis,
                 'konseling_konten'    =>  $request->konseling_konten,
                 'konseling_tanggal'    =>  $request->konseling_tanggal,
-                'konseling_foto'      => $path
+                'konseling_foto'      => $konseling_foto_name
             ];
             KonselingKarir::create($konseling);
             return redirect('konseling-karir')->with('success', 'Data berhasil ditambah');
@@ -51,13 +59,18 @@ class KonselingKarirController extends Controller
         if (isset($_POST['submit'])) {
             if (isset($request->konseling_foto)) {
                 Storage::delete([$request->sampul]);
-                $path = $request->file('konseling_foto')->store('konseling_foto');
+                if($request->hasFile('konseling_foto')){
+                    $destination_path = 'public/konseling_karir';
+                    $konseling_foto = $request->file('konseling_foto');
+                    $konseling_foto_name = $konseling_foto->getClientOriginalName();
+                    $path = $request->file('konseling_foto')->storeAs($destination_path, $konseling_foto_name);
+                }
                 $konseling = KonselingKarir::find($request->id);
                 $konseling->konseling_judul = $request->konseling_judul;
                 $konseling->konseling_penulis = $request->konseling_penulis;
                 $konseling->konseling_konten = $request->konseling_konten;
                 $konseling->konseling_tanggal = $request->konseling_tanggal;
-                $konseling->konseling_foto = $path;
+                $konseling->konseling_foto = $konseling_foto_name;
                 $konseling->save();
             } else {
                 $konseling = KonselingKarir::find($request->id);
