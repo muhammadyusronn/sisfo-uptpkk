@@ -37,7 +37,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="inputSampul">Sampul</label>
-                                    <input type="file" class="form-control-file" name="berita_sampul" id="inputSampul" required>
+                                    <input type="file" class="form-control-file" name="berita_sampul" id="inputSampul">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputKategori">Kategori</label>

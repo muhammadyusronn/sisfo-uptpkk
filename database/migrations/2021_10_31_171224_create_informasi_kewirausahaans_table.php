@@ -19,7 +19,7 @@ class CreateInformasiKewirausahaansTable extends Migration
             $table->string('informasi_penulis', 50);
             $table->string('informasi_konten', 5000);
             $table->date('informasi_tanggal', 5000);
-            $table->string('informasi_foto', 5000);
+            $table->string('informasi_foto', 5000)->nullable();
             $table->timestamps();
         });
     }

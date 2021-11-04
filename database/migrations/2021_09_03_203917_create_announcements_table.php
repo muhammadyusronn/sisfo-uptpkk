@@ -18,7 +18,7 @@ class CreateAnnouncementsTable extends Migration
             $table->string('pengumuman_judul');
             $table->string('pengumuman_slug');
             $table->text('pengumuman_konten');
-            $table->string('pengumuman_sampul');
+            $table->string('pengumuman_sampul')->nullable();
             $table->unsignedBigInteger('pengumuman_author');
             $table->unsignedBigInteger('pengumuman_kategori');
             $table->boolean('pengumuman_status');

@@ -10,6 +10,7 @@
                 <div class="contact-info">
                   <img src="{{asset('frontend/assets/images/logo/mini_uptpkk_light.png')}}" alt="logo" class="mb-10">
                   <ul class="contact-list list-unstyled">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15937.645599186588!2d104.7329839!3d-2.9832189!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x63054012aa39de4f!2sPoliteknik%20Negeri%20Sriwijaya!5e0!3m2!1sen!2sid!4v1635960248318!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     <li class="color-body mt-3">Jalan Srijaya Negara Bukit Besar, Palembang, Sumatera Selatan 30139.</li>
                   </ul>
                 </div><!-- /.contact-info -->

@@ -23,8 +23,7 @@ class SejarahController extends Controller
     {
         if (isset($_POST['submit'])) {
             $this->validate($request, [
-                'sejarah_konten'    =>  'required',
-                'sejarah_foto'      =>  'required'
+                'sejarah_konten'    =>  'required'
             ]);
             $path = $request->file('sejarah_foto')->store('sejarah_foto');
             $histories = [

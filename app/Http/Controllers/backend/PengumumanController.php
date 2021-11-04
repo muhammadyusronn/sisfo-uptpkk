@@ -34,7 +34,6 @@ class PengumumanController extends Controller
             $this->validate($request, [
                 'pengumuman_judul'      => 'required',
                 'pengumuman_konten'     => 'required',
-                'pengumuman_sampul'     => 'required',
                 'pengumuman_status'     =>  'required',
                 'pengumuman_kategori'   =>  'required'
             ]);

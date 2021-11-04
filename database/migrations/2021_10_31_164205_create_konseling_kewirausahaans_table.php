@@ -19,7 +19,7 @@ class CreateKonselingKewirausahaansTable extends Migration
             $table->string('konseling_penulis', 50);
             $table->string('konseling_konten', 5000);
             $table->date('konseling_tanggal', 5000);
-            $table->string('konseling_foto', 5000);
+            $table->string('konseling_foto', 5000)->nullable();
             $table->timestamps();
         });
     }

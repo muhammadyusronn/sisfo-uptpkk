@@ -22,19 +22,32 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/user', [HomeControllers::class, 'index'])->name('home');
-Route::view('/detail-berita', 'frontend.page.berita.detail_berita')->name('detail-berita');
-Route::get('/detail-pengumuman', [PengumumanControllers::class, 'details'])->name('detail-pengumuman');
+Route::get('/', [HomeControllers::class, 'index'])->name('home');
+
+//Route frontend berita
+Route::view('/detail-berita/{id}', 'frontend.page.berita.detail_berita')->name('detail-berita');
+
+//Route frontend pengumuman
+Route::get('/detail-pengumuman/{id}', [PengumumanControllers::class, 'details'])->name('detail-pengumuman');
+
+//Route frontend seminar karir
 Route::view('/detail-seminar-karir', 'frontend.page.karir.detail-seminar')->name('detail-seminar-karir');
-Route::view('/detail-seminar-kewirausahaan', 'frontend.page.kewirausahaan.detail-seminar-kewirausahaan')->name('detail-seminar-kewirausahaan');
-Route::get('/informasi',  [HomeControllers::class, 'informasiKewirausahaan'])->name('informasi');
-Route::get('/seminar', [HomeControllers::class, 'seminarKewirausahaan'])->name('seminar');
-Route::view('/detail-konseling-karir', 'frontend.page.karir.detail-konseling-karir')->name('detail-konseling-karir');
+
+//Route frontend konseling karir
 Route::get('/konseling', [HomeControllers::class, 'konselingKewirausahaan'])->name('konseling');
-Route::view('/detail-konseling-kewirausahaan', 'frontend.page.kewirausahaan.detail-konseling-kewirausahaan')->name('detail-konseling-kewirausahaan');
-Route::get('/', function () {
-    dd(Auth::user());
-});
+Route::view('/detail-konseling-karir/{id}', 'frontend.page.karir.detail-konseling-karir')->name('detail-konseling-karir');
+
+//Route frontend seminar kewirausahaan
+Route::view('/detail-seminar-kewirausahaan/{id}', 'frontend.page.kewirausahaan.detail-seminar-kewirausahaan')->name('detail-seminar-kewirausahaan');
+
+//Route frontend informasi kewirausahaan
+Route::get('/informasi',  [HomeControllers::class, 'informasiKewirausahaan'])->name('informasi');
+
+//Route frontend seminar kewirausahaan
+Route::get('/seminar', [HomeControllers::class, 'seminarKewirausahaan'])->name('seminar');
+
+//Route konseling kewirausahaan
+Route::view('/detail-konseling-kewirausahaan/{id}', 'frontend.page.kewirausahaan.detail-konseling-kewirausahaan')->name('detail-konseling-kewirausahaan');
 
 Route::get('login', [LoginController::class, 'login'])->name('login')->middleware('guest');
 Route::post('login', [LoginController::class, 'login'])->name('auth.login');

@@ -16,7 +16,7 @@ class CreateHistoriesTable extends Migration
         Schema::create('histories', function (Blueprint $table) {
             $table->bigIncrements('sejarah_id');
             $table->string('sejarah_konten', 5000);
-            $table->string('sejarah_foto');
+            $table->string('sejarah_foto')->nullable();
             $table->timestamps();
         });
     }

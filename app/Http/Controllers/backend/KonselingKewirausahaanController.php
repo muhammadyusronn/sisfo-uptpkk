@@ -27,8 +27,7 @@ class KonselingKewirausahaanController extends Controller
                 'konseling_judul'   =>  'required',
                 'konseling_penulis' =>  'required',
                 'konseling_konten'  =>  'required',
-                'konseling_tanggal' =>  'required',
-                'konseling_foto'    =>  'required',
+                'konseling_tanggal' =>  'required'
             ]);
             $path = $request->file('konseling_foto')->store('konseling_foto');
             $konseling = [

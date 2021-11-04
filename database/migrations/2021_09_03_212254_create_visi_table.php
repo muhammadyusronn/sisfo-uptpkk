@@ -18,7 +18,7 @@ class CreateVisiTable extends Migration
             $table->string('visi_konten', 5000);
             $table->string('misi_konten', 5000);
             $table->string('tujuan_konten', 5000);
-            $table->string('visi_foto');
+            $table->string('visi_foto')->nullable();
             $table->timestamps();
         });
     }

@@ -28,8 +28,7 @@ class SeminarKewirausahaanController extends Controller
                 'seminar_judul'   =>  'required',
                 'seminar_penulis' =>  'required',
                 'seminar_konten'  =>  'required',
-                'seminar_tanggal' =>  'required',
-                'seminar_foto'    =>  'required',
+                'seminar_tanggal' =>  'required'
             ]);
             $path = $request->file('seminar_foto')->store('seminar_foto');
             $histories = [

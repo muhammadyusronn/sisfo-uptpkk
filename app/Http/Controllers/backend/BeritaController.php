@@ -28,11 +28,15 @@ class BeritaController extends Controller
         $data['title'] = 'Form Berita';
         $data['data_kategori'] = News_categories::all();
         if (isset($_POST['submit'])) {
-            $path = $request->file('berita_sampul')->store('berita_sampul');
+            if($request->hasFile('berita_sampul')){
+                $destination_path = 'public/berita_sampul';
+                $berita_sampul = $request->file('berita_sampul');
+                $berita_sampul_name = $berita_sampul->getClientOriginalName();
+                $path = $request->file('berita_sampul')->storeAs($destination_path, $berita_sampul_name);
+            }
             $this->validate($request, [
                 'berita_judul'      => 'required',
                 'berita_konten'     => 'required',
-                'berita_sampul'     => 'required',
                 'berita_status'     =>  'required',
                 'berita_kategori'   =>  'required'
             ]);
@@ -40,7 +44,7 @@ class BeritaController extends Controller
                 'berita_judul'      => $request->berita_judul,
                 'berita_slug'       => SlugService::createSlug(News::class, 'berita_slug', $request->berita_judul),
                 'berita_konten'     => $request->berita_konten,
-                'berita_sampul'     => $path,
+                'berita_sampul'     => $berita_sampul_name,
                 'berita_author'     =>  Auth::user()->user_id,
                 'berita_status'     =>  $request->berita_status,
                 'berita_kategori'   =>  $request->berita_kategori
@@ -58,12 +62,17 @@ class BeritaController extends Controller
         if (isset($_POST['submit'])) {
             if (isset($request->berita_sampul)) {
                 Storage::delete([$request->sampul]);
-                $path = $request->file('berita_sampul')->store('berita_sampul');
+                if($request->hasFile('berita_sampul')){
+                    $destination_path = 'public/berita_sampul';
+                    $berita_sampul = $request->file('berita_sampul');
+                    $berita_sampul_name = $berita_sampul->getClientOriginalName();
+                    $path = $request->file('berita_sampul')->storeAs($destination_path, $berita_sampul_name);
+                }
                 $news = News::find($request->berita_id);
                 $news->berita_judul      = $request->berita_judul;
                 $news->berita_slug       = SlugService::createSlug(News::class, 'berita_slug', $request->berita_judul);
                 $news->berita_konten     = $request->berita_konten;
-                $news->berita_sampul     = $path;
+                $news->berita_sampul     = $berita_sampul_name;
                 $news->berita_author     = Auth::user()->user_id;
                 $news->berita_status     =  $request->berita_status;
                 $news->berita_kategori   =  $request->berita_kategori;

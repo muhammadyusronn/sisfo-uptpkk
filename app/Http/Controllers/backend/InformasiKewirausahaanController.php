@@ -27,8 +27,7 @@ class InformasiKewirausahaanController extends Controller
                 'informasi_judul'   =>  'required',
                 'informasi_penulis' =>  'required',
                 'informasi_konten'  =>  'required',
-                'informasi_tanggal' =>  'required',
-                'informasi_foto'    =>  'required',
+                'informasi_tanggal' =>  'required'
             ]);
             $path = $request->file('informasi_foto')->store('informasi_foto');
             $informasi = [

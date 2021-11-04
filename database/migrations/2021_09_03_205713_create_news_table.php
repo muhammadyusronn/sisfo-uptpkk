@@ -18,7 +18,7 @@ class CreateNewsTable extends Migration
             $table->string('berita_judul');
             $table->string('berita_slug');
             $table->text('berita_konten');
-            $table->string('berita_sampul');
+            $table->string('berita_sampul')->nullable();
             $table->unsignedBigInteger('berita_author');
             $table->unsignedBigInteger('berita_kategori');
             $table->boolean('berita_status');

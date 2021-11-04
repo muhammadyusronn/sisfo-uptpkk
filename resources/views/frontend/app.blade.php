@@ -67,8 +67,11 @@
     <div class="col-sm-6 col-md-6 col-lg-4 mix filter-Support">
         <div class="portfolio-item">
         <div class="portfolio__img">
-            <a href="case-studies-single.html"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}"
-                alt="portfolio img"></a>
+            @if($item->berita_sampul)
+            <a href="#"><img src="{{asset('storage/berita_sampul/'.$item->berita_sampul)}}" alt="portfolio img"></a>
+            @else
+            <a href="#"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}" alt="portfolio img"></a>
+            @endif
         </div><!-- /.portfolio-img -->
         <div class="portfolio__icon">
             <img src="{{asset('frontend/assets/images/icons/news.png')}}" alt="icon">
@@ -77,7 +80,7 @@
             <h4 class="portfolio__title"><a href="#"><?= $item->berita_judul ?></a></h4>
             <p>Kategori : <?= $item->kategori_nama ?></p>
             <p class="portfolio__desc"><?= substr_replace($item->berita_konten, "...", 150) ?></p>
-            <a href="{{route('detail-berita')}}" class="btn btn__secondary btn__link">
+            <a href="{{url('detail-berita/'.$item->berita_id)}}" class="btn btn__secondary btn__link">
             <span>Read More</span>
             <i class="icon-arrow-right"></i>
             </a>
@@ -123,7 +126,7 @@
                 <h4 class="feature__title"><?= $item->pengumuman_judul ?></h4>
                 <p>Kategori : <?= $item->kategori_nama ?></p>
                 <p class="feature__desc"><?= substr_replace($item->pengumuman_konten, "...", 150) ?></p>
-                <a href="{{route('detail-pengumuman')}}" class="btn__link">
+                <a href="{{url('detail-pengumuman/'.$item->pengumuman_id)}}" class="btn__link">
                     <i class="icon-arrow-right icon-outlined"></i>
                     <span>Read More</span>
                 </a>
@@ -163,7 +166,7 @@
                     <div class="post__meta">
                     <span class="post__meta-date"><?= $i->seminar_tanggal ?></span>
                     </div><?= substr_replace($i->seminar_konten, "...", 150) ?></p>
-                    <a href="{{route('detail-seminar-karir')}}" class="btn btn__secondary btn__link">
+                    <a href="{{url('detail-seminar-karir')}}" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                     </a>
@@ -200,7 +203,7 @@
                 <div class="service__content">
                     <p class="service__desc"><?= substr_replace($i->konseling_konten, "...", 150) ?>
                 </p>
-                <a href="{{route('detail-konseling-karir')}}" class="btn btn__primary">
+                <a href="{{url('detail-konseling-karir/'.$i->konseling_id)}}" class="btn btn__primary">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                 </a>

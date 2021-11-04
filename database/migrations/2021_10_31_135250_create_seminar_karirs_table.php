@@ -19,7 +19,7 @@ class CreateSeminarKarirsTable extends Migration
             $table->string('seminar_penulis', 50);
             $table->string('seminar_konten', 5000);
             $table->date('seminar_tanggal', 5000);
-            $table->string('seminar_foto', 5000);
+            $table->string('seminar_foto', 5000)->nullable();
             $table->timestamps();
         });
     }
