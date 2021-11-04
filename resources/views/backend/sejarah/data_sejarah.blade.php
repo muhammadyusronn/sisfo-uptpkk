@@ -57,6 +57,7 @@
                                         <thead>
                                             <tr>
                                                 <th scope="col">Sejarah</th>
+                                                <th scope="col">Foto Sejarah</th>
                                                 <th scope="col">Aksi</th>
                                             </tr>
                                         </thead>
@@ -65,6 +66,7 @@
                                             foreach($data_sejarah as $i): ?>
                                             <tr>
                                                 <td><?= $i->sejarah_konten ?></td>
+                                                <td><img src="{{asset('storage/sejarah/'.$i->sejarah_foto)}}" style="width: 100px"></td>
                                                 <td>
                                                     <form action="{{route('sejarah.delete')}}" method="post" class="d-inline">
                                                         @csrf

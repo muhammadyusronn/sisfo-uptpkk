@@ -25,10 +25,15 @@ class SejarahController extends Controller
             $this->validate($request, [
                 'sejarah_konten'    =>  'required'
             ]);
-            $path = $request->file('sejarah_foto')->store('sejarah_foto');
+            if($request->hasFile('sejarah_foto')){
+                $destination_path = 'public/sejarah';
+                $sejarah_foto = $request->file('sejarah_foto');
+                $sejarah_foto_name = $sejarah_foto->getClientOriginalName();
+                $path = $request->file('sejarah_foto')->storeAs($destination_path, $sejarah_foto_name);
+            }
             $histories = [
                 'sejarah_konten'    =>  $request->sejarah_konten,
-                'sejarah_foto'      => $path
+                'sejarah_foto'      => $sejarah_foto_name
             ];
             Histories::create($histories);
             return redirect('sejarah')->with('success', 'Data berhasil ditambah');
@@ -43,10 +48,15 @@ class SejarahController extends Controller
         if (isset($_POST['submit'])) {
             if (isset($request->sejarah_foto)) {
                 Storage::delete([$request->sampul]);
-                $path = $request->file('sejarah_foto')->store('sejarah_foto');
+                if($request->hasFile('sejarah_foto')){
+                    $destination_path = 'public/sejarah';
+                    $sejarah_foto = $request->file('sejarah_foto');
+                    $sejarah_foto_name = $sejarah_foto->getClientOriginalName();
+                    $path = $request->file('sejarah_foto')->storeAs($destination_path, $sejarah_foto_name);
+                }
                 $sejarah = Histories::find($request->sejarah_id);
                 $sejarah->sejarah_konten = $request->sejarah_konten;
-                $sejarah->sejarah_foto = $path;
+                $sejarah->sejarah_foto = $sejarah_foto_name;
                 $sejarah->save();
             } else {
                 $sejarah = Histories::find($request->sejarah_id);
