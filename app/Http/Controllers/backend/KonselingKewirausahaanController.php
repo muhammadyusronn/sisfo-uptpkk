@@ -29,13 +29,18 @@ class KonselingKewirausahaanController extends Controller
                 'konseling_konten'  =>  'required',
                 'konseling_tanggal' =>  'required'
             ]);
-            $path = $request->file('konseling_foto')->store('konseling_foto');
+            if($request->hasFile('konseling_foto')){
+                $destination_path = 'public/konseling_kewirausahaan';
+                $konseling_foto = $request->file('konseling_foto');
+                $konseling_foto_name = $konseling_foto->getClientOriginalName();
+                $path = $request->file('konseling_foto')->storeAs($destination_path, $konseling_foto_name);
+            }
             $konseling = [
                 'konseling_judul'    =>  $request->konseling_judul,
                 'konseling_penulis'    =>  $request->konseling_penulis,
                 'konseling_konten'    =>  $request->konseling_konten,
                 'konseling_tanggal'    =>  $request->konseling_tanggal,
-                'konseling_foto'      => $path
+                'konseling_foto'      => $konseling_foto_name
             ];
             KonselingKewirausahaan::create($konseling);
             return redirect('konseling-kewirausahaan')->with('success', 'Data berhasil ditambah');
@@ -51,13 +56,18 @@ class KonselingKewirausahaanController extends Controller
         if (isset($_POST['submit'])) {
             if (isset($request->konseling_foto)) {
                 Storage::delete([$request->sampul]);
-                $path = $request->file('konseling_foto')->store('konseling_foto');
+                if($request->hasFile('konseling_foto')){
+                    $destination_path = 'public/konseling_kewirausahaan';
+                    $konseling_foto = $request->file('konseling_foto');
+                    $konseling_foto_name = $konseling_foto->getClientOriginalName();
+                    $path = $request->file('konseling_foto')->storeAs($destination_path, $konseling_foto_name);
+                }
                 $konseling = KonselingKewirausahaan::find($request->id);
                 $konseling->konseling_judul = $request->konseling_judul;
                 $konseling->konseling_penulis = $request->konseling_penulis;
                 $konseling->konseling_konten = $request->konseling_konten;
                 $konseling->konseling_tanggal = $request->konseling_tanggal;
-                $konseling->konseling_foto = $path;
+                $konseling->konseling_foto = $konseling_foto_name;
                 $konseling->save();
             } else {
                 $konseling = KonselingKewirausahaan::find($request->id);
