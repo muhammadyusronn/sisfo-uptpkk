@@ -15,6 +15,6 @@ class KonselingKarir extends Model
         'konseling_penulis',
         'konseling_konten',
         'konseling_tanggal',
-        'konseling_foto'
+        'konseling_foto',
     ];
 }

@@ -21,27 +21,15 @@
       ========================= -->
       <section class="portfolio-slider pt-5">
         <div class="container">
+          @foreach ($data as $item)
           <div class="row">
             <div class="col-9">
               <div class="container">
-                <h2 class="text-block__title mb-5"> Judul Berita</h2>
-                <p>&ensp;<i class="bi bi-calendar2-week-fill"></i>&ensp;Tanggal Publish&ensp;|&ensp;Polsri News</p>
+                <h2 class="text-block__title mb-5"><?= $item->berita_judul ?></h2>
+                <p>&ensp;<i class="bi bi-calendar2-week-fill"></i>&ensp;<?= $item->created_at ?>&ensp;|&ensp;Polsri News</p>
                 <div class="col-lg-12 col-md-8 col-lg-6">
                     <div class="text-block__content">
-                      <p class="text-block__desc">You need information security services to proactively prevent and protect
-                        confidential data, as well as detect internal and external threats. Protect your business by
-                        choosing managed security service provider. Our security services can help ensure your business
-                        Trusted by the world's best organizations.</p>
-                      <p class="text-block__desc">for 15 years and running, it has been delivering smiles to hundreds of IT
-                        advisors, developers, users, and business owners. Easy solutions for all difficult IT problems </p>
-        
-                      <p class="text-block__desc">Provide users with appropriate view and access permissions to requests,
-                        problems, changes, contracts, assets, solutions, and reports with our experienced professionals.
-                      </p>
-                      <p class="text-block__desc">Easy solutions for all difficult IT problems to ensure availability to
-                        hundreds of IT advisors, users, and business </p>
-                      <p class="text-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa praesentium laboriosam autem at, non vel iusto tempora amet magnam veniam ratione quisquam deleniti error nisi odit voluptates atque, id a.</p>
-                      <p class="text-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, et illo perferendis, deleniti quaerat rem vero numquam ea harum debitis maxime omnis laboriosam incidunt expedita adipisci sequi commodi repudiandae officiis.</p>
+                      <p class="text-block__desc"><?= $item->berita_konten ?></p>
                     </div>
                   </div><!-- /.col-lg-6 -->
                 </div><!-- /.container -->
@@ -49,20 +37,16 @@
             <div class="col-3">
               <div class="slick-carousel carousel-dots-light"
                 data-slick='{"slidesToShow": 1,"slidesToScroll": 1, "arrows": true, "dots": true}'>
-                <img src="{{asset('frontend/assets/images/portfolio/slider/1.jpg')}}" alt="slider">
+                <img src="{{asset('storage/berita_sampul/'.$item->berita_sampul)}}" alt="slider">
               </div><!-- /.portfolio-slider -->
               <br>
               <div class="slick-carousel carousel-dots-light"
                 data-slick='{"slidesToShow": 1,"slidesToScroll": 1, "arrows": true, "dots": true}'>
                 <img src="{{asset('frontend/assets/images/portfolio/slider/2.jpg')}}" alt="slider">
               </div><!-- /.portfolio-slider -->
-              <br>
-              <div class="slick-carousel carousel-dots-light"
-                    data-slick='{"slidesToShow": 1,"slidesToScroll": 1, "arrows": true, "dots": true}'>
-                    <img src="{{asset('frontend/assets/images/portfolio/slider/3.jpg')}}" alt="slider">
-              </div><!-- /.portfolio-slider -->
             </div><!-- /.col-lg-12 -->
           </div><!-- /.row -->
+          @endforeach
         </div><!-- /.container-fluid -->
       </section><!-- /.Portfolio Slider -->
       {{-- <!-- ======================

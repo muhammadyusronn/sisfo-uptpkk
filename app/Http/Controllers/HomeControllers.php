@@ -12,6 +12,7 @@ use App\Models\SeminarKewirausahaan;
 use App\Models\SeminarKarir;
 use App\Models\KonselingKarir;
 use App\Models\KonselingKewirausahaan;
+use App\Models\News;
 
 class HomeControllers extends Controller
 {
@@ -51,6 +52,48 @@ class HomeControllers extends Controller
         $data['data_konseling'] = KonselingKewirausahaan::all();
         // dd($data);
         return view('frontend.page.kewirausahaan.konseling-kewirausahaan', $data);
+    }
+
+    public function detailBerita($id){
+        $data = DB::table('news')->where('berita_id', $id)->get();
+        // dd($data);
+        return view('frontend.page.berita.detail_berita',compact('data'));
+    }
+
+    public function detailPengumuman($id){
+        $data = DB::table('announcements')->where('pengumuman_id', $id)->get();
+        // dd($data);
+        return view('frontend.page.pengumuman.detail_pengumuman',compact('data'));
+    }
+
+    public function detailSeminarKarir($id){
+        $data = DB::table('seminar_karirs')->where('id', $id)->get();
+        // dd($data);
+        return view('frontend.page.karir.detail-seminar',compact('data'));
+    }
+
+    public function detailKonselingKarir($id){
+        $data = DB::table('konseling_karirs')->where('id', $id)->get();
+        // dd($data);
+        return view('frontend.page.karir.detail-konseling-karir',compact('data'));
+    }
+
+    public function detailinformasiKewirausahaan($id){
+        $data = DB::table('informasi_kewirausahaans')->where('id', $id)->get();
+        // dd($data);
+        return view('frontend.page.kewirausahaan.detail-informasi-kewirausahaan',compact('data'));
+    }
+
+    public function detailSeminarKewirausahaan($id){
+        $data = DB::table('seminar_kewirausahaans')->where('id', $id)->get();
+        // dd($data);
+        return view('frontend.page.kewirausahaan.detail-seminar-kewirausahaan',compact('data'));
+    }
+
+    public function detailKonselingKewirausahaan($id){
+        $data = DB::table('konseling_kewirausahaans')->where('id', $id)->get();
+        // dd($data);
+        return view('frontend.page.kewirausahaan.detail-konseling-kewirausahaan',compact('data'));
     }
 
     // public function visiMisi(){

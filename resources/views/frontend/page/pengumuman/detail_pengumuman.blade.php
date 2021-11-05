@@ -6,7 +6,7 @@
        Portfolio Slider
       ========================= -->
       <section class="portfolio-slider pt-5">
-        @foreach ($data_pengumuman as $item)
+        @foreach ($data as $item)
         <div class="container">
           <div class="row">
             <div class="col-9">
@@ -23,17 +23,12 @@
             <div class="col-3">
               <div class="slick-carousel carousel-dots-light"
                 data-slick='{"slidesToShow": 1,"slidesToScroll": 1, "arrows": true, "dots": true}'>
-                <img src="{{asset('frontend/assets/images/portfolio/slider/1.jpg')}}" alt="slider">
+                <img src="{{asset('storage/pengumuman_terbaru/'.$item->pengumuman_sampul)}}" alt="slider">
               </div><!-- /.portfolio-slider -->
               <br>
               <div class="slick-carousel carousel-dots-light"
                 data-slick='{"slidesToShow": 1,"slidesToScroll": 1, "arrows": true, "dots": true}'>
                 <img src="{{asset('frontend/assets/images/portfolio/slider/2.jpg')}}" alt="slider">
-              </div><!-- /.portfolio-slider -->
-              <br>
-              <div class="slick-carousel carousel-dots-light"
-                    data-slick='{"slidesToShow": 1,"slidesToScroll": 1, "arrows": true, "dots": true}'>
-                    <img src="{{asset('frontend/assets/images/portfolio/slider/3.jpg')}}" alt="slider">
               </div><!-- /.portfolio-slider -->
             </div><!-- /.col-lg-12 -->
           </div><!-- /.row -->

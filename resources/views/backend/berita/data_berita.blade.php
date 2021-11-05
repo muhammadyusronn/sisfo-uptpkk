@@ -58,6 +58,7 @@
                                                 <th scope="col">Konten</th>
                                                 <th scope="col">Kategori</th>
                                                 <th scope="col">Status</th>
+                                                <th scope="col">Foto</th>
                                                 <th scope="col">Aksi</th>
                                             </tr>
                                         </thead>
@@ -66,13 +67,16 @@
                                             foreach($data_berita as $i): ?>
                                             <tr>
                                                 <td><?= $i->berita_judul ?></td>
-                                                <td><?= substr_replace($i->berita_konten, "...", 40) ?></td>
+                                                <td><?= substr_replace($i->berita_konten, "...", 10) ?></td>
                                                 <td><?= $i->kategori_nama ?></td>
                                                 <td><?php if($i->berita_status==0){
                                                     echo 'Tidak Dipublis';
                                                 }else{
                                                     echo 'Dipublis';
                                                 } ?></td>
+                                                <td>
+                                                    <img src="{{asset('storage/berita_sampul/'.$i->berita_sampul)}}" style="width: 100px">
+                                                </td>
                                                 <td>
                                                     <form action="{{route('berita.delete')}}" method="post" class="d-inline">
                                                         @csrf

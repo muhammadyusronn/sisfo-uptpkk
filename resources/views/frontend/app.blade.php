@@ -16,34 +16,8 @@
                 <span class="slide__subtitle">Unit Pelaksana Teknis Pengembangan Karir dan Kewirausahaan</span>
                 <h2 class="slide__title">Sisfo UPTPKK</h2>
                 <p class="slide__desc">Membantu anda mencari informasi mengenai karir dan kewirausahaan</p>
-                <div class="d-flex flex-wrap align-items-center">
-                    <a href="about-us.html" class="btn btn__primary btn__primary-style2 mr-30">
-                    <i class="icon-arrow-right"></i>
-                    <span>More About Us</span>
-                    </a>
-                    <a href="it-solutions.html" class="btn btn__white">Our Services</a>
-                </div>
                 </div><!-- /.slide-content -->
             </div><!-- /.col-xl-7 -->
-            {{-- <div class="col-xl-5 d-none d-xl-flex justify-content-end">
-                <div class="cta-banner">
-                <div class="slick-carousel" data-slick='{"slidesToShow": 1, "arrows": false, "dots": true}'>
-                    <div>
-                    <div class="cta__icon">
-                        <i class="icon-file"></i>
-                    </div>
-                    <h4 class="cta__title mb-0">Thinking insights, verified research, and make right decisions!</h4>
-                    </div>
-                    <div>
-                    <div class="cta__icon">
-                        <i class="icon-network"></i>
-                    </div>
-                    <h4 class="cta__title mb-0">Utilising the latest processing solutions & decades of experience.
-                    </h4>
-                    </div>
-                </div>
-                </div><!-- /.cta-banner -->
-            </div><!-- /.col-xl-5 --> --}}
             </div><!-- /.row -->
         </div><!-- /.container -->
         </div><!-- /.slide-item -->
@@ -68,7 +42,7 @@
         <div class="portfolio-item">
         <div class="portfolio__img">
             @if($item->berita_sampul)
-            <a href="#"><img src="{{asset('storage/berita_sampul/'.$item->berita_sampul)}}" alt="portfolio img"></a>
+            <a href="{{url('detail-berita/'.$item->berita_id)}}"><img src="{{asset('storage/berita_sampul/'.$item->berita_sampul)}}" alt="portfolio img"></a>
             @else
             <a href="#"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}" alt="portfolio img"></a>
             @endif
@@ -155,21 +129,21 @@
                 <div class="post-item">
                     <div class="post__img">
                         @if($i->seminar_foto)
-                        <a href="#"><img src="{{asset('storage/seminar_karir/'.$i->seminar_foto)}}" alt="portfolio img"></a>
+                        <a href="{{url('detail-seminar-karir/'.$i->id)}}"><img src="{{asset('storage/seminar_karir/'.$i->seminar_foto)}}" alt="portfolio img"></a>
                         @else
-                        <a href="{{route('detail-seminar-karir')}}">
+                        <a href="{{url('detail-seminar-karir/'.$i->id)}}">
                             <img src="{{asset('frontend/assets/images/blog/grid/1.jpg')}}" alt="blog image">
                         </a>
                         @endif
                     </div><!-- /.blog-img -->
                     
                     <div class="post__body">
-                        <h4 class="post__title"><a href="#"><a href="#"><?= $i->seminar_judul ?></a>
+                        <h4 class="post__title"><a href="{{url('detail-seminar-karir/'.$i->id)}}"><?= $i->seminar_judul ?></a>
                         </h4>
                         <div class="post__meta">
                             <span class="post__meta-date"><?= $i->seminar_tanggal ?></span>
                         </div><?= substr_replace($i->seminar_konten, "...", 150) ?></p>
-                        <a href="{{url('detail-seminar-karir')}}" class="btn btn__secondary btn__link">
+                        <a href="{{url('detail-seminar-karir/'.$i->id)}}" class="btn btn__secondary btn__link">
                             <span>Read More</span>
                             <i class="icon-arrow-right"></i>
                         </a>
@@ -207,7 +181,7 @@
                 <div class="service__content">
                     <p class="service__desc"><?= substr_replace($i->konseling_konten, "...", 150) ?>
                 </p>
-                <a href="{{url('detail-konseling-karir/'.$i->konseling_id)}}" class="btn btn__primary">
+                <a href="{{url('detail-konseling-karir/'.$i->id)}}" class="btn btn__primary">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                 </a>
@@ -239,9 +213,9 @@
             <div class="post-item">
                 <div class="post__img">
                     @if($i->informasi_foto)
-                    <a href="#"><img src="{{asset('storage/informasi_kewirausahaan/'.$i->informasi_foto)}}" alt="portfolio img"></a>
+                    <a href="{{url('detail-informasi-kewirausahaan/'.$i->id)}}"><img src="{{asset('storage/informasi_kewirausahaan/'.$i->informasi_foto)}}" alt="portfolio img"></a>
                     @else
-                    <a href="#">
+                    <a href="{{url('detail-informasi-kewirausahaan/'.$i->id)}}">
                         <img src="{{asset('frontend/assets/images/blog/grid/1.jpg')}}" alt="blog image">
                         </a>
                     @endif
@@ -253,7 +227,7 @@
                     <span class="post__meta-date"><?= $i->informasi_tanggal ?></span>
                 </div>
                 <p class="post__desc"><?= substr_replace($i->informasi_konten, "...", 150) ?></p>
-                <a href="#" class="btn btn__secondary btn__link">
+                <a href="{{url('detail-informasi-kewirausahaan/'.$i->id)}}" class="btn btn__secondary btn__link">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                 </a>
@@ -282,7 +256,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="post-item">
                 <div class="post__img">
-                    <a href="{{url('detail-seminar-kewirausahaan'.$i->seminar_id)}}">
+                    <a href="{{url('detail-seminar-kewirausahaan/'.$i->id)}}">
                     <img src="{{asset('frontend/assets/images/blog/grid/1.jpg')}}" alt="blog image">
                     </a>
                 </div><!-- /.blog-img -->
@@ -294,7 +268,7 @@
                         <span class="post__meta-date"><?= $i->seminar_tanggal ?></span>
                     </div>
                     <p class="post__desc"><?= substr_replace($i->seminar_konten, "...", 150) ?></p>
-                    <a href="{{url('detail-seminar-kewirausahaan'.$i->seminar_id)}}" class="btn btn__secondary btn__link">
+                    <a href="{{url('detail-seminar-kewirausahaan/'.$i->id)}}" class="btn btn__secondary btn__link">
                         <span>Read More</span>
                         <i class="icon-arrow-right"></i>
                     </a>
