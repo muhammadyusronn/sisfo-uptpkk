@@ -20,15 +20,15 @@
                 <a href="https://jcdc.polsri.ac.id/" target="_blank" class="nav__item-link">Lowongan Terbaru</a>
               </li><!-- /.nav-item --> --}}
               <li class="nav__item">
-                <a href="#berita" class="nav__item-link">Berita Terbaru</a>
+                <a href="<?= url('')?>#berita" class="nav__item-link">Berita Terbaru</a>
               </li><!-- /.nav-item -->
               <li class="nav__item">
-                <a href="#pengumuman" class="nav__item-link">Pengumuman Terbaru</a>
+                <a href="<?= url('')?>#pengumuman" class="nav__item-link">Pengumuman Terbaru</a>
               </li><!-- /.nav-item -->
             </ul><!-- /.dropdown-menu -->
           </li><!-- /.nav-item -->
           <li class="nav__item has-dropdown">
-            <a href="#profile" class="nav__item-link">Profile</a>
+            <a href="<?= url('')?>#profile" class="nav__item-link">Profile</a>
           </li><!-- /.nav-item -->
           <li class="nav__item has-dropdown">
             <a href="https://uptpkk.polsri.ac.id/" target="_blank" class="dropdown-toggle nav__item-link">Tracer Study</a>
@@ -40,10 +40,10 @@
                 <a href="https://jcdc.polsri.ac.id/" target="_blank" class="nav__item-link">Lowongan Kerja</a>
               </li><!-- /.nav-item -->
               <li class="nav__item">
-                <a href="#seminar-karir" class="nav__item-link">Seminar, Training & Workshop</a>
+                <a href="<?= url('')?>#seminar-karir" class="nav__item-link">Seminar, Training & Workshop</a>
               </li><!-- /.nav-item -->
               <li class="nav__item">
-                <a href="#konseling-karir" class="nav__item-link">Konseling Karir</a>
+                <a href="<?= url('')?>#konseling-karir" class="nav__item-link">Konseling Karir</a>
               </li><!-- /.nav-item -->
             </ul><!-- /.dropdown-menu -->
           </li><!-- /.nav-item -->
@@ -51,13 +51,13 @@
             <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Kewirausahaan</a>
             <ul class="dropdown-menu">
               <li class="nav__item">
-                <a href="#informasi-kewirausahaan" class="nav__item-link">Informasi Kewirausahaan</a>
+                <a href="<?= url('')?>#informasi-kewirausahaan" class="nav__item-link">Informasi Kewirausahaan</a>
               </li><!-- /.nav-item -->
               <li class="nav__item">
-                <a href="#seminar-kewirausahaan" class="nav__item-link">Seminar, Training & Workshop</a>
+                <a href="<?= url('')?>#seminar-kewirausahaan" class="nav__item-link">Seminar, Training & Workshop</a>
               </li><!-- /.nav-item -->
               <li class="nav__item">
-                <a href="#konseling-kewirausahaan" class="nav__item-link">Konseling Kewirausahaan</a>
+                <a href="<?= url('')?>#konseling-kewirausahaan" class="nav__item-link">Konseling Kewirausahaan</a>
               </li><!-- /.nav-item -->
             </ul><!-- /.dropdown-menu -->
           </li><!-- /.nav-item -->

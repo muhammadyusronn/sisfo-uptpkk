@@ -120,57 +120,57 @@
 
 <!-- Seminar Karir-->
 <section class="blog-grid pb-50" id="seminar-karir">
-        <div class="container">
-            <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-                <div class="heading text-center mb-40">
-                <h2 class="heading__subtitle">Karir</h2>
-                <h3 class="heading__title">Seminar, Training dan Workshop</h3>
-                </div><!-- /.heading -->
-            </div><!-- /.col-lg-6 -->
-            </div><!-- /.row -->
-            <div class="row">
-            <!-- Blog Item #1 -->
-            @foreach ($data_seminar as $i)
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="post-item">
-                    <div class="post__img">
-                        @if($i->seminar_foto)
-                        <a href="{{url('detail-seminar-karir/'.$i->id)}}" target="_blank">
-                            <img src="{{asset('storage/seminar_karir/'.$i->seminar_foto)}}" alt="portfolio img">
-                        </a>
-                        @else
-                        <a href="{{url('detail-seminar-karir/'.$i->id)}}" target="_blank">
-                            <img src="{{asset('frontend/assets/images/blog/grid/1.jpg')}}" alt="blog image">
-                        </a>
-                        @endif
-                    </div><!-- /.blog-img -->
-                    
-                    <div class="post__body">
-                        <h4 class="post__title"><a href="{{url('detail-seminar-karir/'.$i->id)}}"><?= $i->seminar_judul ?></a>
-                        </h4>
-                        <div class="post__meta">
-                            <span class="post__meta-date"><?= $i->seminar_tanggal ?></span>
-                        </div><?= substr_replace($i->seminar_konten, "...", 150) ?></p>
-                        <a href="{{url('detail-seminar-karir/'.$i->id)}}" class="btn btn__secondary btn__link" target="_blank">
-                            <span>Read More</span>
-                            <i class="icon-arrow-right"></i>
-                        </a>
-                    </div><!-- /.blog-content -->
-                </div><!-- /.post-item -->
-            </div><!-- /.col-lg-4 -->
-            @endforeach
-            </div><!-- /.row -->
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-                    <nav class="pagination-area">
-                    <ul class="pagination justify-content-center mb-0">
-                        {{$data_seminar->links()}}
-                    </ul>
-                    </nav><!-- .pagination-area -->
-                </div><!-- /.col-lg-12 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
+    <div class="container">
+        <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+            <div class="heading text-center mb-40">
+            <h2 class="heading__subtitle">Karir</h2>
+            <h3 class="heading__title">Seminar, Training dan Workshop</h3>
+            </div><!-- /.heading -->
+        </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+        <div class="row">
+        <!-- Blog Item #1 -->
+        @foreach ($data_seminar as $i)
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="post-item">
+                <div class="post__img">
+                    @if($i->seminar_foto)
+                    <a href="{{url('detail-seminar-karir/'.$i->id)}}" target="_blank">
+                        <img src="{{asset('storage/seminar_karir/'.$i->seminar_foto)}}" alt="portfolio img">
+                    </a>
+                    @else
+                    <a href="{{url('detail-seminar-karir/'.$i->id)}}" target="_blank">
+                        <img src="{{asset('frontend/assets/images/blog/grid/1.jpg')}}" alt="blog image">
+                    </a>
+                    @endif
+                </div><!-- /.blog-img -->
+                
+                <div class="post__body">
+                    <h4 class="post__title"><a href="{{url('detail-seminar-karir/'.$i->id)}}"><?= $i->seminar_judul ?></a>
+                    </h4>
+                    <div class="post__meta">
+                        <span class="post__meta-date"><?= $i->seminar_tanggal ?></span>
+                    </div><?= substr_replace($i->seminar_konten, "...", 150) ?></p>
+                    <a href="{{url('detail-seminar-karir/'.$i->id)}}" class="btn btn__secondary btn__link" target="_blank">
+                        <span>Read More</span>
+                        <i class="icon-arrow-right"></i>
+                    </a>
+                </div><!-- /.blog-content -->
+            </div><!-- /.post-item -->
+        </div><!-- /.col-lg-4 -->
+        @endforeach
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                <nav class="pagination-area">
+                <ul class="pagination justify-content-center mb-0">
+                    {{$data_seminar->links()}}
+                </ul>
+                </nav><!-- .pagination-area -->
+            </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
 </section>
 <!-- /.Seminar Karir-->
 
