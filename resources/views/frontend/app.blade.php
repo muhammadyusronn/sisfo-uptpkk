@@ -42,9 +42,9 @@
         <div class="portfolio-item">
         <div class="portfolio__img">
             @if($item->berita_sampul)
-            <a href="{{url('detail-berita/'.$item->berita_id)}}"><img src="{{asset('storage/berita_sampul/'.$item->berita_sampul)}}" alt="portfolio img"></a>
+            <a href="{{url('detail-berita/'.$item->berita_id)}}" target="_blank"><img src="{{asset('storage/berita_sampul/'.$item->berita_sampul)}}" alt="portfolio img"></a>
             @else
-            <a href="#"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}" alt="portfolio img"></a>
+            <a href="{{url('detail-berita/'.$item->berita_id)}}" target="_blank"><img src="{{asset('frontend/assets/images/berita/news.jpg')}}" alt="portfolio img"></a>
             @endif
         </div><!-- /.portfolio-img -->
         <div class="portfolio__icon">
@@ -54,12 +54,11 @@
             <h4 class="portfolio__title"><a href="#"><?= $item->berita_judul ?></a></h4>
             <p>Kategori : <?= $item->kategori_nama ?></p>
             <p class="portfolio__desc"><?= substr_replace($item->berita_konten, "...", 150) ?></p>
-            <a href="{{url('detail-berita/'.$item->berita_id)}}" class="btn btn__secondary btn__link">
+            <a href="{{url('detail-berita/'.$item->berita_id)}}" class="btn btn__secondary btn__link" target="_blank">
             <span>Read More</span>
             <i class="icon-arrow-right"></i>
             </a>
         </div><!-- /.portfolio-content -->
-
         </div><!-- /.portfolio-item -->
     </div><!-- /.col-lg-4 -->
     @endforeach
@@ -68,9 +67,7 @@
     <div class="col-sm-12 col-md-12 col-lg-12 text-center">
         <nav class="pagination-area">
         <ul class="pagination justify-content-center mb-0">
-            <li><a class="current" href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#"><i class="icon-arrow-right"></i></a></li>
+            {{$data_berita->links()}}
         </ul>
         </nav><!-- .pagination-area -->
     </div><!-- /.col-lg-12 -->
@@ -95,19 +92,29 @@
             <div class="col-sm-6 col-md-6 col-lg-3">
                 <div class="feature-item">
                 <div class="feature__icon">
-                    <i class="icon-statistic"></i>
+                    <i class="bi bi-megaphone"></i>
                 </div>
                 <h4 class="feature__title"><?= $item->pengumuman_judul ?></h4>
                 <p>Kategori : <?= $item->kategori_nama ?></p>
                 <p class="feature__desc"><?= substr_replace($item->pengumuman_konten, "...", 150) ?></p>
-                <a href="{{url('detail-pengumuman/'.$item->pengumuman_id)}}" class="btn__link">
+                <a href="{{url('detail-pengumuman/'.$item->pengumuman_id)}}" class="btn__link" target="_blank">
                     <i class="icon-arrow-right icon-outlined"></i>
                     <span>Read More</span>
                 </a>
                 </div><!-- /.feature-item -->
             </div><!-- /.col-lg-3 -->
             @endforeach
-        </div><!-- /.container -->
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                <nav class="pagination-area">
+                <ul class="pagination justify-content-center mb-0">
+                    {{$data_pengumuman->links()}}
+                </ul>
+                </nav><!-- .pagination-area -->
+            </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
 </section>
 <!-- /.Pengumuman terbaru Layout 2 -->
 
@@ -129,9 +136,11 @@
                 <div class="post-item">
                     <div class="post__img">
                         @if($i->seminar_foto)
-                        <a href="{{url('detail-seminar-karir/'.$i->id)}}"><img src="{{asset('storage/seminar_karir/'.$i->seminar_foto)}}" alt="portfolio img"></a>
+                        <a href="{{url('detail-seminar-karir/'.$i->id)}}" target="_blank">
+                            <img src="{{asset('storage/seminar_karir/'.$i->seminar_foto)}}" alt="portfolio img">
+                        </a>
                         @else
-                        <a href="{{url('detail-seminar-karir/'.$i->id)}}">
+                        <a href="{{url('detail-seminar-karir/'.$i->id)}}" target="_blank">
                             <img src="{{asset('frontend/assets/images/blog/grid/1.jpg')}}" alt="blog image">
                         </a>
                         @endif
@@ -143,7 +152,7 @@
                         <div class="post__meta">
                             <span class="post__meta-date"><?= $i->seminar_tanggal ?></span>
                         </div><?= substr_replace($i->seminar_konten, "...", 150) ?></p>
-                        <a href="{{url('detail-seminar-karir/'.$i->id)}}" class="btn btn__secondary btn__link">
+                        <a href="{{url('detail-seminar-karir/'.$i->id)}}" class="btn btn__secondary btn__link" target="_blank">
                             <span>Read More</span>
                             <i class="icon-arrow-right"></i>
                         </a>
@@ -151,8 +160,15 @@
                 </div><!-- /.post-item -->
             </div><!-- /.col-lg-4 -->
             @endforeach
-                </div><!-- /.post-item -->
-            </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    <nav class="pagination-area">
+                    <ul class="pagination justify-content-center mb-0">
+                        {{$data_seminar->links()}}
+                    </ul>
+                    </nav><!-- .pagination-area -->
+                </div><!-- /.col-lg-12 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
 </section>
@@ -181,7 +197,7 @@
                 <div class="service__content">
                     <p class="service__desc"><?= substr_replace($i->konseling_konten, "...", 150) ?>
                 </p>
-                <a href="{{url('detail-konseling-karir/'.$i->id)}}" class="btn btn__primary">
+                <a href="{{url('detail-konseling-karir/'.$i->id)}}" class="btn btn__primary" target="_blank">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                 </a>
@@ -190,6 +206,15 @@
             @endforeach
         </div><!-- /.carousel -->
         </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                <nav class="pagination-area">
+                <ul class="pagination justify-content-center mb-0">
+                    {{$data_konseling->links()}}
+                </ul>
+                </nav><!-- .pagination-area -->
+            </div><!-- /.col-lg-12 -->
         </div><!-- /.row -->
     </div><!-- /.container -->
 </section>
@@ -213,9 +238,11 @@
             <div class="post-item">
                 <div class="post__img">
                     @if($i->informasi_foto)
-                    <a href="{{url('detail-informasi-kewirausahaan/'.$i->id)}}"><img src="{{asset('storage/informasi_kewirausahaan/'.$i->informasi_foto)}}" alt="portfolio img"></a>
+                    <a href="{{url('detail-informasi-kewirausahaan/'.$i->id)}}" target="_blank">
+                        <img src="{{asset('storage/informasi_kewirausahaan/'.$i->informasi_foto)}}" alt="portfolio img">
+                    </a>
                     @else
-                    <a href="{{url('detail-informasi-kewirausahaan/'.$i->id)}}">
+                    <a href="{{url('detail-informasi-kewirausahaan/'.$i->id)}}" target="_blank">
                         <img src="{{asset('frontend/assets/images/blog/grid/1.jpg')}}" alt="blog image">
                         </a>
                     @endif
@@ -227,7 +254,7 @@
                     <span class="post__meta-date"><?= $i->informasi_tanggal ?></span>
                 </div>
                 <p class="post__desc"><?= substr_replace($i->informasi_konten, "...", 150) ?></p>
-                <a href="{{url('detail-informasi-kewirausahaan/'.$i->id)}}" class="btn btn__secondary btn__link">
+                <a href="{{url('detail-informasi-kewirausahaan/'.$i->id)}}" class="btn btn__secondary btn__link" target="_blank">
                     <span>Read More</span>
                     <i class="icon-arrow-right"></i>
                 </a>
@@ -235,6 +262,15 @@
             </div><!-- /.post-item -->
         </div><!-- /.col-lg-4 -->
         @endforeach
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                <nav class="pagination-area">
+                <ul class="pagination justify-content-center mb-0">
+                    {{$data_informasi->links()}}
+                </ul>
+                </nav><!-- .pagination-area -->
+            </div><!-- /.col-lg-12 -->
         </div><!-- /.row -->
     </div><!-- /.container -->
 </section><!-- /.blog Grid -->
@@ -253,14 +289,20 @@
             </div><!-- /.row -->
             <div class="row">
             <!-- Blog Item #1 -->
+            @foreach ($data_seminarkew as $i)
             <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="post-item">
                 <div class="post__img">
-                    <a href="{{url('detail-seminar-kewirausahaan/'.$i->id)}}">
-                    <img src="{{asset('frontend/assets/images/blog/grid/1.jpg')}}" alt="blog image">
+                @if($i->seminar_foto)
+                    <a href="{{url('detail-seminar-kewirausahaan/'.$i->id)}}"  target="_blank">
+                        <img src="{{asset('storage/seminar_kewirausahaan/'.$i->seminar_foto)}}" alt="blog image">
                     </a>
+                @else
+                    <a href="{{url('detail-seminar-kewirausahaan/'.$i->id)}}"  target="_blank">
+                        <img src="{{asset('frontend/assets/images/blog/grid/1.jpg')}}" alt="blog image">
+                    </a>
+                @endif
                 </div><!-- /.blog-img -->
-                @foreach ($data_seminarkew as $i)
                 <div class="post__body">
                     <h4 class="post__title"><a href="#"><?= $i->seminar_judul ?></a>
                     </h4>
@@ -268,7 +310,7 @@
                         <span class="post__meta-date"><?= $i->seminar_tanggal ?></span>
                     </div>
                     <p class="post__desc"><?= substr_replace($i->seminar_konten, "...", 150) ?></p>
-                    <a href="{{url('detail-seminar-kewirausahaan/'.$i->id)}}" class="btn btn__secondary btn__link">
+                    <a href="{{url('detail-seminar-kewirausahaan/'.$i->id)}}" class="btn btn__secondary btn__link" target="_blank">
                         <span>Read More</span>
                         <i class="icon-arrow-right"></i>
                     </a>
@@ -277,6 +319,15 @@
             @endforeach
         </div><!-- /.col-lg-4 -->
         </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                <nav class="pagination-area">
+                <ul class="pagination justify-content-center mb-0">
+                    {{$data_seminarkew->links()}}
+                </ul>
+                </nav><!-- .pagination-area -->
+            </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
     </div>
 </section>
 <!-- /.Seminar kewirausahaan -->
@@ -307,7 +358,7 @@
                 <div class="service__content">
                     <p class="service__desc"><?= substr_replace($i->konseling_konten, "...", 150) ?>
                     </p>
-                    <a href="{{url('detail-konseling-kewirausahaan'.$i->konseling_id)}}" class="btn btn__primary">
+                    <a href="{{url('detail-konseling-kewirausahaan'.$i->id)}}" class="btn btn__primary" target="_blank">
                         <span>Read More</span>
                         <i class="icon-arrow-right"></i>
                     </a>
@@ -316,6 +367,15 @@
             @endforeach
             </div><!-- /.carousel -->
         </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                <nav class="pagination-area">
+                <ul class="pagination justify-content-center mb-0">
+                    {{$data_konselingkew->links()}}
+                </ul>
+                </nav><!-- .pagination-area -->
+            </div><!-- /.col-lg-12 -->
         </div><!-- /.row -->
     </div><!-- /.container -->
 </section>
